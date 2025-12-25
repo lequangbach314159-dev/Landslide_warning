@@ -1,0 +1,189 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com9'
+���A%�Speed      : 4�I (13) boot: ESP-IDF v5.5-dirty 2nd stage bootloader
+[0;32mI (13) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.0[0m
+[0;32mI (17) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (21) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (35) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (48) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (61) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31548h (202056) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=00041570 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00041598 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=00045508 vaddr=40080000 size=0ab10h ( 43792) load[0m
+[0;32mI (169) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a7294h (684692) map[0m
+[0;32mI (403) esp_image: segment 5: paddr=000f72bc vaddr=4008ab10 size=0e980h ( 59776) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (449) cpu_start: Multicore app[0m
+[0;32mI (458) cpu_start: Pro cpu start user code[0m
+[0;32mI (458) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (458) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     landslide_receiver[0m
+[0;32mI (463) app_init: App version:      v5.5-dirty[0m
+[0;32mI (467) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (472) app_init: ELF file SHA256:  3d8dfabd9...[0m
+[0;32mI (476) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (484) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (488) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB8838 len 000277C8 (157 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 40099490 len 00006B70 (26 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (529) spi_flash: flash io: dio[0m
+[0;33mW (532) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (544) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (604) wifi:wifi driver task: 3ffc086c, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (624) wifi:wifi certification version: v7.0[0m
+[0;32mI (624) wifi:config NVS flash: enabled[0m
+[0;32mI (624) wifi:config nano formatting: disabled[0m
+[0;32mI (624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (634) wifi:Init management short buffer num: 32[0m
+[0;32mI (634) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (644) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (644) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (654) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (664) wifi_init: udp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp tx win: 5760[0m
+[0;32mI (674) wifi_init: tcp rx win: 5760[0m
+[0;32mI (674) wifi_init: tcp mss: 1440[0m
+[0;32mI (674) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (684) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (684) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (694) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (774) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (774) wifi:enable tsf[0m
+[0;32mI (794) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (804) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (814) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (904) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (904) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (1184) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1184) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (1194) wifi:pm start, type: 1[0m
+
+[0;32mI (1194) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1214) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1284) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2624) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3904) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4904) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5254) main_task: Returned from app_main()[0m
+[0;32mI (5584) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (6004) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8354) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting retransmission[0m
+[0;32mI (8354) LANDSLIDE_RECEIVER: 📡 Retransmit request sent: RETX_REQ[0m
+[0;32mI (9364) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (13) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.0[0m
+[0;32mI (17) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (21) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (35) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (48) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (61) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31548h (202056) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=00041570 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00041598 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=00045508 vaddr=40080000 size=0ab10h ( 43792) load[0m
+[0;32mI (169) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a7294h (684692) map[0m
+[0;32mI (403) esp_image: segment 5: paddr=000f72bc vaddr=4008ab10 size=0e980h ( 59776) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (449) cpu_start: Multicore app[0m
+[0;32mI (458) cpu_start: Pro cpu start user code[0m
+[0;32mI (458) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (458) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     landslide_receiver[0m
+[0;32mI (463) app_init: App version:      v5.5-dirty[0m
+[0;32mI (467) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (472) app_init: ELF file SHA256:  3d8dfabd9...[0m
+[0;32mI (476) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (484) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (488) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB8838 len 000277C8 (157 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 40099490 len 00006B70 (26 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (529) spi_flash: flash io: dio[0m
+[0;33mW (532) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (544) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (604) wifi:wifi driver task: 3ffc086c, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (624) wifi:wifi certification version: v7.0[0m
+[0;32mI (624) wifi:config NVS flash: enabled[0m
+[0;32mI (624) wifi:config nano formatting: disabled[0m
+[0;32mI (624) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (634) wifi:Init management short buffer num: 32[0m
+[0;32mI (634) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (644) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (644) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (654) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (664) wifi_init: udp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp tx win: 5760[0m
+[0;32mI (674) wifi_init: tcp rx win: 5760[0m
+[0;32mI (674) wifi_init: tcp mss: 1440[0m
+[0;32mI (674) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (684) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (684) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (694) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (774) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (774) wifi:enable tsf[0m
+[0;32mI (794) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (794) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (804) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (814) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (904) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (904) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (1184) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1184) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (1194) wifi:pm start, type: 1[0m
+
+[0;32mI (1194) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1214) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1224) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2234) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3904) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4904) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5254) main_task: Returned from app_main()[0m
+[0;32mI (5534) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (5944) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8354) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting retransmission[0m
+[0;32mI (8354) LANDSLIDE_RECEIVER: 📡 Retransmit request sent: RETX_REQ[0m
+[0;32mI (9014) esp-x509-crt-bundle: Certificate validated[0m

@@ -1,0 +1,1084 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com7'
+&'�A%�Speed      : �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30fc8h (200648) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00040ff0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00041018 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00044f88 vaddr=40080000 size=0b090h ( 45200) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a69c8h (682440) map[0m
+[0;32mI (419) esp_image: segment 5: paddr=000f69f0 vaddr=4008b090 size=0e3e0h ( 58336) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (465) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (474) app_init: Project name:     landslide_receiver[0m
+[0;32mI (478) app_init: App version:      v5.5-dirty[0m
+[0;32mI (483) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (488) app_init: ELF file SHA256:  c0716236a...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (496) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (500) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (504) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (508) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (514) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB87B8 len 00027848 (158 KiB): DRAM[0m
+[0;32mI (524) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (535) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (542) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (559) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (570) main_task: Started on CPU0[0m
+[0;32mI (580) main_task: Calling app_main()[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc07ec, prio:23, stack:6656, core=0[0m
+[0;32mI (640) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (640) wifi:wifi certification version: v7.0[0m
+[0;32mI (640) wifi:config NVS flash: enabled[0m
+[0;32mI (640) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (650) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (660) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (670) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (680) wifi_init: tcpip mbox: 32[0m
+[0;32mI (680) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (690) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (700) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (790) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (790) wifi:enable tsf[0m
+[1;31mE (820) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (870) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (870) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (880) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (890) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1180) main_task: Returned from app_main()[0m
+[0;32mI (1260) wifi:connected with nhà đầm trấu, aid = 7, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1270) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (1270) wifi:pm start, type: 1[0m
+
+[0;32mI (1270) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1280) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1300) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2720) esp_netif_handlers: sta ip: 192.168.71.103, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3540) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (3970) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (29660) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (30360) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (30920) LANDSLIDE_RECEIVER: RECEIVED: 7.4[0m
+[0;32mI (30920) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=7.4°, Level=0-AN TOAN[0m
+[0;32mI (30920) TELEGRAM: Alert sent: Level 0-AN TOAN[0m
+[0;32mI (31890) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (210300) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (211000) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (211560) LANDSLIDE_RECEIVER: RECEIVED: 7.9[0m
+[0;32mI (211560) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=7.9°, Level=0-AN TOAN[0m
+[0;32mI (391060) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (391640) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (392340) LANDSLIDE_RECEIVER: RECEIVED: 8.1[0m
+[0;32mI (392340) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=8.1°, Level=0-AN TOAN[0m
+[0;32mI (571490) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (572190) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (572750) LANDSLIDE_RECEIVER: RECEIVED: 7.9[0m
+[0;32mI (572750) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=7.9°, Level=0-AN TOAN[0m
+[0;32mI (670850) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (671550) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (672090) LANDSLIDE_RECEIVER: RECEIVED: 12.6[0m
+[0;32mI (672090) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.6°, Level=0-AN TOAN[0m
+[0;32mI (850790) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (851350) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (852050) LANDSLIDE_RECEIVER: RECEIVED: 12.7[0m
+[0;32mI (852050) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.7°, Level=0-AN TOAN[0m
+[0;32mI (1030950) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1031500) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1032210) LANDSLIDE_RECEIVER: RECEIVED: 12.6[0m
+[0;32mI (1032210) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.6°, Level=0-AN TOAN[0m
+[0;32mI (1210910) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1211610) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1212150) LANDSLIDE_RECEIVER: RECEIVED: 12.4[0m
+[0;32mI (1212150) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.4°, Level=0-AN TOAN[0m
+[0;32mI (1391250) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1391820) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1392530) LANDSLIDE_RECEIVER: RECEIVED: 12.6[0m
+[0;32mI (1392530) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.6°, Level=0-AN TOAN[0m
+[0;32mI (1571510) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1572210) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1572770) LANDSLIDE_RECEIVER: RECEIVED: 12.8[0m
+[0;32mI (1572780) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.8°, Level=0-AN TOAN[0m
+[0;32mI (1751940) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1752640) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1753200) LANDSLIDE_RECEIVER: RECEIVED: 12.7[0m
+[0;32mI (1753200) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.7°, Level=0-AN TOAN[0m
+[0;32mI (1932140) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1932840) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1933400) LANDSLIDE_RECEIVER: RECEIVED: 12.5[0m
+[0;32mI (1933400) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.5°, Level=0-AN TOAN[0m
+[0;32mI (2112410) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2113110) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2113680) LANDSLIDE_RECEIVER: RECEIVED: 12.5[0m
+[0;32mI (2113680) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.5°, Level=0-AN TOAN[0m
+[0;32mI (2292780) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2293480) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2294020) LANDSLIDE_RECEIVER: RECEIVED: 8.5[0m
+[0;32mI (2294020) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=8.5°, Level=0-AN TOAN[0m
+[0;32mI (2472930) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2473490) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2474190) LANDSLIDE_RECEIVER: RECEIVED: 5.2[0m
+[0;32mI (2474190) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=5.2°, Level=0-AN TOAN[0m
+[0;32mI (2653090) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2653790) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2654350) LANDSLIDE_RECEIVER: RECEIVED: 6.1[0m
+[0;32mI (2654360) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.1°, Level=0-AN TOAN[0m
+[0;32mI (2833270) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2833980) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2834540) LANDSLIDE_RECEIVER: RECEIVED: 6.8[0m
+[0;32mI (2834540) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.8°, Level=0-AN TOAN[0m
+[0;32mI (3013440) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3014020) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3014720) LANDSLIDE_RECEIVER: RECEIVED: 6.7[0m
+[0;32mI (3014720) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.7°, Level=0-AN TOAN[0m
+[0;32mI (3193630) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3194330) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3194890) LANDSLIDE_RECEIVER: RECEIVED: 6.6[0m
+[0;32mI (3194890) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.6°, Level=0-AN TOAN[0m
+[0;32mI (3374070) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3374770) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3375330) LANDSLIDE_RECEIVER: RECEIVED: 6.5[0m
+[0;32mI (3375330) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.5°, Level=0-AN TOAN[0m
+[0;32mI (3554270) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3554970) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3555530) LANDSLIDE_RECEIVER: RECEIVED: 6.4[0m
+[0;32mI (3555530) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.4°, Level=0-AN TOAN[0m
+[0;32mI (3734430) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3734960) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3735660) LANDSLIDE_RECEIVER: RECEIVED: 6.5[0m
+[0;32mI (3735660) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.5°, Level=0-AN TOAN[0m
+[0;32mI (3914400) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3915100) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3915660) LANDSLIDE_RECEIVER: RECEIVED: 6.4[0m
+[0;32mI (3915660) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.4°, Level=0-AN TOAN[0m
+[0;32mI (4094560) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4095260) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4095810) LANDSLIDE_RECEIVER: RECEIVED: 6.5[0m
+[0;32mI (4095820) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.5°, Level=0-AN TOAN[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30fc8h (200648) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00040ff0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00041018 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00044f88 vaddr=40080000 size=0b090h ( 45200) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a69c8h (682440) map[0m
+I (419) esp_image: segment 5: paddr=000f69f0 vaddr=4008b090 size=0e3e0h ( 58336) load
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (465) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (474) app_init: Project name:     landslide_receiver[0m
+[0;32mI (478) app_init: App version:      v5.5-dirty[0m
+[0;32mI (483) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (488) app_init: ELF file SHA256:  c0716236a...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (496) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (500) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (504) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (508) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (514) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB87B8 len 00027848 (158 KiB): DRAM[0m
+[0;32mI (524) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (535) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (542) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (559) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (570) main_task: Started on CPU0[0m
+[0;32mI (580) main_task: Calling app_main()[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc07ec, prio:23, stack:6656, core=0[0m
+[0;32mI (640) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (640) wifi:wifi certification version: v7.0[0m
+[0;32mI (640) wifi:config NVS flash: enabled[0m
+[0;32mI (640) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (650) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (660) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (670) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (680) wifi_init: tcpip mbox: 32[0m
+[0;32mI (680) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (690) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (700) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (790) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (800) wifi:enable tsf[0m
+[0;32mI (810) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (820) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (820) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (830) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (840) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1170) main_task: Returned from app_main()[0m
+[0;32mI (1210) wifi:connected with nhà đầm trấu, aid = 7, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1210) wifi:security: WPA2-PSK, phy: bgn, rssi: -58[0m
+[0;32mI (1220) wifi:pm start, type: 1[0m
+
+[0;32mI (1220) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1230) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1250) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2240) esp_netif_handlers: sta ip: 192.168.71.103, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3510) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (3910) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10780) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (11480) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (12040) LANDSLIDE_RECEIVER: RECEIVED: 15.6[0m
+[0;32mI (12040) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.6°, Level=0-AN TOAN[0m
+[0;32mI (12040) TELEGRAM: Alert sent: Level 0-AN TOAN[0m
+[0;32mI (12730) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (190820) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (191520) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (192080) LANDSLIDE_RECEIVER: RECEIVED: 7.3[0m
+[0;32mI (192080) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=7.3°, Level=0-AN TOAN[0m
+[0;32mI (222470) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (229590) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (230750) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (230750) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=0.0°, Level=0-AN TOAN[0m
+[0;32mI (231450) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (232010) LANDSLIDE_RECEIVER: RECEIVED: 7.2[0m
+[0;32mI (236310) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (236310) LANDSLIDE_RECEIVER: ALGORITHM: Rain=100.0%, Soil=7.2%, Tilt=0.0°, Level=0-AN TOAN[0m
+[0;32mI (237610) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (239550) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (240250) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (240250) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=0.0°, Level=0-AN TOAN[0m
+[0;32mI (251570) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (252270) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (252830) LANDSLIDE_RECEIVER: RECEIVED: 24.9[0m
+[0;32mI (252830) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=24.9°, Level=0-AN TOAN[0m
+[0;32mI (431530) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (432120) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (441690) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (441690) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=0.0°, Level=0-AN TOAN[0m
+[0;32mI (448590) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (449290) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (449820) LANDSLIDE_RECEIVER: RECEIVED: 5.0[0m
+[0;32mI (449820) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=5.0°, Level=0-AN TOAN[0m
+[0;32mI (521010) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (521710) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (522270) LANDSLIDE_RECEIVER: RECEIVED: 0.6[0m
+[0;32mI (522270) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=0.6°, Level=0-AN TOAN[0m
+[0;32mI (563170) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (563710) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (564410) LANDSLIDE_RECEIVER: RECEIVED: 1.9[0m
+[0;32mI (564410) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=1.9°, Level=0-AN TOAN[0m
+[0;32mI (644710) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (645240) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (645940) LANDSLIDE_RECEIVER: RECEIVED: 2.7[0m
+[0;32mI (645940) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=2.7°, Level=1-THEO DOI[0m
+[0;32mI (645940) TELEGRAM: Alert sent: Level 1-THEO DOI[0m
+[0;32mI (646710) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (652080) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (652780) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (657080) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (657080) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.0°, Level=1-THEO DOI[0m
+[0;32mI (657670) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (658370) LANDSLIDE_RECEIVER: RECEIVED: 2.7[0m
+[0;32mI (659680) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (659680) LANDSLIDE_RECEIVER: ALGORITHM: Rain=100.0%, Soil=2.7%, Tilt=0.0°, Level=1-THEO DOI[0m
+[0;32mI (660380) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (661480) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (662030) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (662030) LANDSLIDE_RECEIVER: ALGORITHM: Rain=100.0%, Soil=0.0%, Tilt=100.0°, Level=1-THEO DOI[0m
+[0;32mI (662740) LANDSLIDE_RECEIVER: RECEIVED: 1.3[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30fc8h (200648) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00040ff0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00041018 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00044f88 vaddr=40080000 size=0b090h ( 45200) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a69c8h (682440) map[0m
+[0;32mI (419) esp_image: segment 5: paddr=000f69f0 vaddr=4008b090 size=0e3e0h ( 58336) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (465) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (474) app_init: Project name:     landslide_receiver[0m
+[0;32mI (478) app_init: App version:      v5.5-dirty[0m
+[0;32mI (483) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (488) app_init: ELF file SHA256:  c0716236a...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (496) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (500) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (504) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (508) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (514) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB87B8 len 00027848 (158 KiB): DRAM[0m
+[0;32mI (524) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (535) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (542) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (559) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (570) main_task: Started on CPU0[0m
+[0;32mI (580) main_task: Calling app_main()[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc07ec, prio:23, stack:6656, core=0[0m
+[0;32mI (640) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (640) wifi:wifi certification version: v7.0[0m
+[0;32mI (640) wifi:config NVS flash: enabled[0m
+[0;32mI (640) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (650) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (660) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (670) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (680) wifi_init: tcpip mbox: 32[0m
+[0;32mI (680) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (690) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (700) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (790) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (860) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (860) wifi:enable tsf[0m
+[0;32mI (880) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (880) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (890) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (890) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (910) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1240) main_task: Returned from app_main()[0m
+[0;32mI (1320) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1320) wifi:security: WPA2-PSK, phy: bgn, rssi: -68[0m
+[0;32mI (1320) wifi:pm start, type: 1[0m
+
+[0;32mI (1320) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1340) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1340) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2360) esp_netif_handlers: sta ip: 192.168.71.103, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3500) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (3910) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (14440) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (15340) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16040) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (16040) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=100.0°, Level=0-AN TOAN[0m
+[0;32mI (16040) TELEGRAM: Alert sent: Level 0-AN TOAN[0m
+[0;32mI (16600) LANDSLIDE_RECEIVER: RECEIVED: 2.7[0m
+[0;32mI (16720) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (19750) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20450) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (20450) LANDSLIDE_RECEIVER: ALGORITHM: Rain=2.7%, Soil=0.0%, Tilt=100.0°, Level=0-AN TOAN[0m
+[0;32mI (21010) LANDSLIDE_RECEIVER: RECEIVED: 2.2[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30fc8h (200648) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00040ff0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00041018 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00044f88 vaddr=40080000 size=0b090h ( 45200) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a69c8h (682440) map[0m
+[0;32mI (419) esp_image: segment 5: paddr=000f69f0 vaddr=4008b090 size=0e3e0h ( 58336) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (465) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (474) app_init: Project name:     landslide_receiver[0m
+[0;32mI (478) app_init: App version:      v5.5-dirty[0m
+[0;32mI (483) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (488) app_init: ELF file SHA256:  c0716236a...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (496) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (500) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (504) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (508) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (514) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB87B8 len 00027848 (158 KiB): DRAM[0m
+[0;32mI (524) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (535) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (542) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (559) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (570) main_task: Started on CPU0[0m
+[0;32mI (580) main_task: Calling app_main()[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc07ec, prio:23, stack:6656, core=0[0m
+[0;32mI (640) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (640) wifi:wifi certification version: v7.0[0m
+[0;32mI (640) wifi:config NVS flash: enabled[0m
+[0;32mI (640) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (650) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (660) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (670) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (680) wifi_init: tcpip mbox: 32[0m
+[0;32mI (680) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (690) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (700) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (790) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (810) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (810) wifi:enable tsf[0m
+[1;31mE (840) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (910) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (910) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (920) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (930) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1200) main_task: Returned from app_main()[0m
+[0;32mI (1310) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1310) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (1310) wifi:pm start, type: 1[0m
+
+[0;32mI (1310) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1320) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1340) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2360) esp_netif_handlers: sta ip: 192.168.71.103, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3470) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (3900) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10400) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (10990) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (11690) LANDSLIDE_RECEIVER: RECEIVED: 1.0[0m
+[0;32mI (11690) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=1.0°, Level=0-AN TOAN[0m
+[0;32mI (11690) TELEGRAM: Alert sent: Level 0-AN TOAN[0m
+[0;32mI (12390) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (32660) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (33360) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (33920) LANDSLIDE_RECEIVER: RECEIVED: 1.4[0m
+[0;32mI (33920) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=1.4°, Level=1-THEO DOI[0m
+[0;32mI (33920) TELEGRAM: Alert sent: Level 1-THEO DOI[0m
+[0;32mI (34600) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (51440) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (52140) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (52700) LANDSLIDE_RECEIVER: RECEIVED: 1.1[0m
+[0;32mI (52700) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=1.1°, Level=1-THEO DOI[0m
+[0;32mI (96220) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (96920) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (97480) LANDSLIDE_RECEIVER: RECEIVED: 1.0[0m
+[0;32mI (97480) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=1.0°, Level=1-THEO DOI[0m
+[0;32mI (196390) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (196970) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (197670) LANDSLIDE_RECEIVER: RECEIVED: 0.5[0m
+[0;32mI (197670) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.5°, Level=1-THEO DOI[0m
+[0;32mI (354370) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (355070) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (355610) LANDSLIDE_RECEIVER: RECEIVED: 0.9[0m
+[0;32mI (355610) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.9°, Level=1-THEO DOI[0m
+[0;32mI (534910) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (535470) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (536170) LANDSLIDE_RECEIVER: RECEIVED: 0.2[0m
+[0;32mI (536170) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.2°, Level=1-THEO DOI[0m
+[0;32mI (715270) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (715810) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (716510) LANDSLIDE_RECEIVER: RECEIVED: 0.1[0m
+[0;32mI (716510) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.1°, Level=1-THEO DOI[0m
+[0;32mI (895610) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (896310) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (896860) LANDSLIDE_RECEIVER: RECEIVED: 0.1[0m
+[0;32mI (896860) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.1°, Level=1-THEO DOI[0m
+[0;32mI (1076160) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1076720) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (1077420) LANDSLIDE_RECEIVER: RECEIVED: 0.1[0m
+[0;32mI (1077420) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.1°, Level=1-THEO DOI[0m
+[0;32mI (1256720) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1257420) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1257960) LANDSLIDE_RECEIVER: RECEIVED: 0.1[0m
+[0;32mI (1257960) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=0.1°, Level=1-THEO DOI[0m
+[0;32mI (1437070) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1437660) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1438360) LANDSLIDE_RECEIVER: RECEIVED: 0.0[0m
+[0;32mI (1438360) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=0.0°, Level=0-AN TOAN[0m
+[0;32mI (1438360) TELEGRAM: Alert sent: Level 0-AN TOAN[0m
+[0;32mI (1439110) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (1617260) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1617960) LANDSLIDE_RECEIVER: RECEIVED: 92%[0m
+[0;32mI (1618500) LANDSLIDE_RECEIVER: RECEIVED: 0.0[0m
+[0;32mI (1618500) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=92.0%, Tilt=0.0°, Level=0-AN TOAN[0m
+[0;32mI (1798000) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1798550) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (1799250) LANDSLIDE_RECEIVER: RECEIVED: 0.6[0m
+[0;32mI (1799250) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.6°, Level=1-THEO DOI[0m
+[0;32mI (1799250) TELEGRAM: Alert sent: Level 1-THEO DOI[0m
+[0;32mI (1800270) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (2339190) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2339890) LANDSLIDE_RECEIVER: RECEIVED: 77%[0m
+[0;32mI (2340450) LANDSLIDE_RECEIVER: RECEIVED: 8.4[0m
+[0;32mI (2340450) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=77.0%, Tilt=8.4°, Level=1-THEO DOI[0m
+[0;32mI (2468950) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2469500) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (2508200) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2508200) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=0.0°, Level=1-THEO DOI[0m
+[0;32mI (2508790) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (2509490) LANDSLIDE_RECEIVER: RECEIVED: 10.7[0m
+[0;32mI (2514460) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2514460) LANDSLIDE_RECEIVER: ALGORITHM: Rain=100.0%, Soil=10.7%, Tilt=0.0°, Level=1-THEO DOI[0m
+[0;32mI (2515160) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (2515720) LANDSLIDE_RECEIVER: RECEIVED: 12.7[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=30fc8h (200648) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00040ff0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00041018 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00044f88 vaddr=40080000 size=0b090h ( 45200) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a69c8h (682440) map[0m
+[0;32mI (419) esp_image: segment 5: paddr=000f69f0 vaddr=4008b090 size=0e3e0h ( 58336) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (465) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (474) app_init: Project name:     landslide_receiver[0m
+[0;32mI (478) app_init: App version:      v5.5-dirty[0m
+[0;32mI (483) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (488) app_init: ELF file SHA256:  c0716236a...[0m
+[0;32mI (492) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (496) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (500) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (504) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (508) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (514) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB87B8 len 00027848 (158 KiB): DRAM[0m
+[0;32mI (524) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (535) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (542) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (559) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (570) main_task: Started on CPU0[0m
+[0;32mI (580) main_task: Calling app_main()[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc07ec, prio:23, stack:6656, core=0[0m
+[0;32mI (640) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (640) wifi:wifi certification version: v7.0[0m
+[0;32mI (640) wifi:config NVS flash: enabled[0m
+[0;32mI (640) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (650) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (660) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (670) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (680) wifi_init: tcpip mbox: 32[0m
+[0;32mI (680) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (690) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (700) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (790) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (790) wifi:enable tsf[0m
+[1;31mE (820) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (850) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (850) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (860) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (870) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1170) main_task: Returned from app_main()[0m
+[0;32mI (1250) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1250) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (1250) wifi:pm start, type: 1[0m
+
+[0;32mI (1250) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1260) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1280) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3090) esp_netif_handlers: sta ip: 192.168.71.103, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3530) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (3930) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (4370) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4910) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (5610) LANDSLIDE_RECEIVER: RECEIVED: 12.1[0m
+[0;32mI (5610) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=12.1°, Level=0-AN TOAN[0m
+[0;32mI (5610) TELEGRAM: Alert sent: Level 0-AN TOAN[0m
+[0;32mI (6180) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (34110) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (34810) LANDSLIDE_RECEIVER: RECEIVED: 17%[0m
+[0;32mI (35360) LANDSLIDE_RECEIVER: RECEIVED: 11.7[0m
+[0;32mI (35360) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=17.0%, Tilt=11.7°, Level=0-AN TOAN[0m
+[0;32mI (40660) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (41230) LANDSLIDE_RECEIVER: RECEIVED: 16%[0m
+[0;32mI (41930) LANDSLIDE_RECEIVER: RECEIVED: 11.2[0m
+[0;32mI (41930) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=16.0%, Tilt=11.2°, Level=0-AN TOAN[0m
+[0;32mI (51830) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (52380) LANDSLIDE_RECEIVER: RECEIVED: 98%[0m
+[0;32mI (53080) LANDSLIDE_RECEIVER: RECEIVED: 5.0[0m
+[0;32mI (53080) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=98.0%, Tilt=5.0°, Level=0-AN TOAN[0m
+[0;32mI (231980) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (232570) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (233270) LANDSLIDE_RECEIVER: RECEIVED: 6.5[0m
+[0;32mI (233270) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.5°, Level=0-AN TOAN[0m
+[0;32mI (412370) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (412930) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (413630) LANDSLIDE_RECEIVER: RECEIVED: 6.2[0m
+[0;32mI (413630) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.2°, Level=0-AN TOAN[0m
+[0;32mI (592730) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (593310) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (594010) LANDSLIDE_RECEIVER: RECEIVED: 6.0[0m
+[0;32mI (594010) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.0°, Level=0-AN TOAN[0m
+[0;32mI (772990) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (773690) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (774250) LANDSLIDE_RECEIVER: RECEIVED: 6.0[0m
+[0;32mI (774250) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.0°, Level=0-AN TOAN[0m
+[0;32mI (953400) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (954100) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (954660) LANDSLIDE_RECEIVER: RECEIVED: 6.1[0m
+[0;32mI (954660) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.1°, Level=0-AN TOAN[0m
+[0;32mI (1133860) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1134560) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1135130) LANDSLIDE_RECEIVER: RECEIVED: 16.0[0m
+[0;32mI (1135130) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=16.0°, Level=0-AN TOAN[0m
+[0;32mI (1314250) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1314950) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1315510) LANDSLIDE_RECEIVER: RECEIVED: 16.0[0m
+[0;32mI (1315510) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=16.0°, Level=0-AN TOAN[0m
+[0;32mI (1494810) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1495350) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1496050) LANDSLIDE_RECEIVER: RECEIVED: 15.4[0m
+[0;32mI (1496050) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.4°, Level=0-AN TOAN[0m
+[0;32mI (1675430) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1676130) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1676690) LANDSLIDE_RECEIVER: RECEIVED: 16.0[0m
+[0;32mI (1676690) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=16.0°, Level=0-AN TOAN[0m
+[0;32mI (1856190) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1856750) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1857450) LANDSLIDE_RECEIVER: RECEIVED: 15.7[0m
+[0;32mI (1857450) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.7°, Level=0-AN TOAN[0m
+[0;32mI (2036600) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2037300) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2037860) LANDSLIDE_RECEIVER: RECEIVED: 15.9[0m
+[0;32mI (2037860) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.9°, Level=0-AN TOAN[0m
+[0;32mI (2217040) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2217740) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2218300) LANDSLIDE_RECEIVER: RECEIVED: 15.8[0m
+[0;32mI (2218300) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.8°, Level=0-AN TOAN[0m
+[0;32mI (2397400) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2397980) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2398680) LANDSLIDE_RECEIVER: RECEIVED: 16.0[0m
+[0;32mI (2398680) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=16.0°, Level=0-AN TOAN[0m
+[0;32mI (2577780) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2578480) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2579020) LANDSLIDE_RECEIVER: RECEIVED: 16.2[0m
+[0;32mI (2579020) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=16.2°, Level=0-AN TOAN[0m
+[0;32mI (2757990) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2758690) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2759250) LANDSLIDE_RECEIVER: RECEIVED: 15.8[0m
+[0;32mI (2759250) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.8°, Level=0-AN TOAN[0m
+[0;32mI (2938560) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2939090) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (2939790) LANDSLIDE_RECEIVER: RECEIVED: 15.7[0m
+[0;32mI (2939790) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.7°, Level=0-AN TOAN[0m
+[0;32mI (3118780) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3119480) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3120040) LANDSLIDE_RECEIVER: RECEIVED: 15.8[0m
+[0;32mI (3120040) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.8°, Level=0-AN TOAN[0m
+[0;32mI (3299340) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3300040) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3300590) LANDSLIDE_RECEIVER: RECEIVED: 15.8[0m
+[0;32mI (3300590) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.8°, Level=0-AN TOAN[0m
+[0;32mI (3480090) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3480800) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3481360) LANDSLIDE_RECEIVER: RECEIVED: 15.8[0m
+[0;32mI (3481360) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.8°, Level=0-AN TOAN[0m
+[0;32mI (3660860) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3661420) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (3662120) LANDSLIDE_RECEIVER: RECEIVED: 15.7[0m
+[0;32mI (3662120) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.7°, Level=0-AN TOAN[0m
+[0;32mI (4202630) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4203330) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4203870) LANDSLIDE_RECEIVER: RECEIVED: 15.7[0m
+[0;32mI (4203870) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.7°, Level=0-AN TOAN[0m
+[0;32mI (4383020) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4383720) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4384280) LANDSLIDE_RECEIVER: RECEIVED: 15.9[0m
+[0;32mI (4384280) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.9°, Level=0-AN TOAN[0m
+[0;32mI (4563590) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4564130) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4564840) LANDSLIDE_RECEIVER: RECEIVED: 15.6[0m
+[0;32mI (4564840) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.6°, Level=0-AN TOAN[0m
+[0;32mI (4743910) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4744610) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4745170) LANDSLIDE_RECEIVER: RECEIVED: 15.4[0m
+[0;32mI (4745170) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.4°, Level=0-AN TOAN[0m
+[0;32mI (4924470) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (4925170) LANDSLIDE_RECEIVER: RECEIVED: 3%[0m
+[0;32mI (4925710) LANDSLIDE_RECEIVER: RECEIVED: 15.7[0m
+[0;32mI (4925720) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=3.0%, Tilt=15.7°, Level=0-AN TOAN[0m
+[0;32mI (5104880) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (5105580) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (5106140) LANDSLIDE_RECEIVER: RECEIVED: 15.7[0m
+[0;32mI (5106140) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.7°, Level=0-AN TOAN[0m
+[0;32mI (14006730) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14007430) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14007990) LANDSLIDE_RECEIVER: RECEIVED: 20.3[0m
+[0;32mI (14007990) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=20.3°, Level=0-AN TOAN[0m
+[0;32mI (14186970) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14187670) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14188230) LANDSLIDE_RECEIVER: RECEIVED: 20.2[0m
+[0;32mI (14188230) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=20.2°, Level=0-AN TOAN[0m
+[0;32mI (14367530) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14368100) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14368800) LANDSLIDE_RECEIVER: RECEIVED: 20.2[0m
+[0;32mI (14368800) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=20.2°, Level=0-AN TOAN[0m
+[0;32mI (14547900) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14548460) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14549160) LANDSLIDE_RECEIVER: RECEIVED: 20.2[0m
+[0;32mI (14549160) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=20.2°, Level=0-AN TOAN[0m
+[0;32mI (14728090) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14728790) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (14729350) LANDSLIDE_RECEIVER: RECEIVED: 20.3[0m
+[0;32mI (14729350) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=20.3°, Level=0-AN TOAN[0m
+[0;32mI (15622280) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (15622840) LANDSLIDE_RECEIVER: RECEIVED: 76%[0m
+[0;32mI (15623550) LANDSLIDE_RECEIVER: RECEIVED: 11.4[0m
+[0;32mI (15623550) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=76.0%, Tilt=11.4°, Level=0-AN TOAN[0m
+[0;32mI (15630300) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (15631000) LANDSLIDE_RECEIVER: RECEIVED: 78%[0m
+[0;32mI (15631560) LANDSLIDE_RECEIVER: RECEIVED: 7.8[0m
+[0;32mI (15631560) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=78.0%, Tilt=7.8°, Level=0-AN TOAN[0m
+[0;32mI (15810660) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (15811190) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (15811890) LANDSLIDE_RECEIVER: RECEIVED: 10.7[0m
+[0;32mI (15811890) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.7°, Level=0-AN TOAN[0m
+[0;32mI (15990830) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (15991530) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (15992090) LANDSLIDE_RECEIVER: RECEIVED: 10.5[0m
+[0;32mI (15992090) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.5°, Level=0-AN TOAN[0m
+[0;32mI (16171390) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16172090) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16172630) LANDSLIDE_RECEIVER: RECEIVED: 12.9[0m
+[0;32mI (16172630) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.9°, Level=0-AN TOAN[0m
+[0;32mI (16352130) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16352670) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16353370) LANDSLIDE_RECEIVER: RECEIVED: 10.3[0m
+[0;32mI (16353370) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.3°, Level=0-AN TOAN[0m
+[0;32mI (16532670) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16533210) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16533910) LANDSLIDE_RECEIVER: RECEIVED: 10.6[0m
+[0;32mI (16533910) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.6°, Level=0-AN TOAN[0m
+[0;32mI (16713010) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16713710) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16714270) LANDSLIDE_RECEIVER: RECEIVED: 10.4[0m
+[0;32mI (16714270) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.4°, Level=0-AN TOAN[0m
+[0;32mI (16893570) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16894270) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (16894820) LANDSLIDE_RECEIVER: RECEIVED: 10.4[0m
+[0;32mI (16894830) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.4°, Level=0-AN TOAN[0m
+[0;32mI (17074130) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17074700) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17075400) LANDSLIDE_RECEIVER: RECEIVED: 10.5[0m
+[0;32mI (17075400) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.5°, Level=0-AN TOAN[0m
+[0;32mI (17254500) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17255070) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17255770) LANDSLIDE_RECEIVER: RECEIVED: 10.4[0m
+[0;32mI (17255770) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.4°, Level=0-AN TOAN[0m
+[0;32mI (17434740) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17435440) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17436000) LANDSLIDE_RECEIVER: RECEIVED: 10.4[0m
+[0;32mI (17436000) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.4°, Level=0-AN TOAN[0m
+[0;32mI (17615300) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17615830) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17616530) LANDSLIDE_RECEIVER: RECEIVED: 10.5[0m
+[0;32mI (17616530) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=10.5°, Level=0-AN TOAN[0m
+[0;32mI (17750080) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17750780) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17751340) LANDSLIDE_RECEIVER: RECEIVED: 15.2[0m
+[0;32mI (17751350) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.2°, Level=0-AN TOAN[0m
+[0;32mI (17929850) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17930550) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (17931110) LANDSLIDE_RECEIVER: RECEIVED: 14.9[0m
+[0;32mI (17931110) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.9°, Level=0-AN TOAN[0m
+[0;32mI (18110090) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18110790) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18111350) LANDSLIDE_RECEIVER: RECEIVED: 14.9[0m
+[0;32mI (18111350) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.9°, Level=0-AN TOAN[0m
+[0;32mI (18290250) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18290800) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18291500) LANDSLIDE_RECEIVER: RECEIVED: 15.0[0m
+[0;32mI (18291500) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.0°, Level=0-AN TOAN[0m
+[0;32mI (18470350) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18471050) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18471610) LANDSLIDE_RECEIVER: RECEIVED: 14.9[0m
+[0;32mI (18471610) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.9°, Level=0-AN TOAN[0m
+[0;32mI (18650600) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18651300) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18651860) LANDSLIDE_RECEIVER: RECEIVED: 15.0[0m
+[0;32mI (18651870) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.0°, Level=0-AN TOAN[0m
+[0;32mI (18830970) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18831560) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (18832260) LANDSLIDE_RECEIVER: RECEIVED: 14.9[0m
+[0;32mI (18832260) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.9°, Level=0-AN TOAN[0m
+[0;32mI (19011180) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19011880) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19012440) LANDSLIDE_RECEIVER: RECEIVED: 14.9[0m
+[0;32mI (19012440) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.9°, Level=0-AN TOAN[0m
+[0;32mI (19191430) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19192130) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19192690) LANDSLIDE_RECEIVER: RECEIVED: 14.8[0m
+[0;32mI (19192690) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.8°, Level=0-AN TOAN[0m
+[0;32mI (19371590) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19372290) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19372840) LANDSLIDE_RECEIVER: RECEIVED: 14.8[0m
+[0;32mI (19372840) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.8°, Level=0-AN TOAN[0m
+[0;32mI (19551600) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19552300) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19552860) LANDSLIDE_RECEIVER: RECEIVED: 14.6[0m
+[0;32mI (19552860) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.6°, Level=0-AN TOAN[0m
+[0;32mI (19731970) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19732670) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19733230) LANDSLIDE_RECEIVER: RECEIVED: 14.8[0m
+[0;32mI (19733230) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.8°, Level=0-AN TOAN[0m
+[0;32mI (19912130) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19912830) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (19913380) LANDSLIDE_RECEIVER: RECEIVED: 14.7[0m
+[0;32mI (19913380) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.7°, Level=0-AN TOAN[0m
+[0;32mI (20092340) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20093040) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20093600) LANDSLIDE_RECEIVER: RECEIVED: 14.8[0m
+[0;32mI (20093600) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.8°, Level=0-AN TOAN[0m
+[0;32mI (20272500) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20273200) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20273730) LANDSLIDE_RECEIVER: RECEIVED: 15.4[0m
+[0;32mI (20273730) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.4°, Level=0-AN TOAN[0m
+[0;32mI (20452870) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20453570) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20454130) LANDSLIDE_RECEIVER: RECEIVED: 13.9[0m
+[0;32mI (20454130) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.9°, Level=0-AN TOAN[0m
+[0;32mI (20633110) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20633810) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20634370) LANDSLIDE_RECEIVER: RECEIVED: 14.3[0m
+[0;32mI (20634370) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.3°, Level=0-AN TOAN[0m
+[0;32mI (20813130) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20813830) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20814390) LANDSLIDE_RECEIVER: RECEIVED: 14.1[0m
+[0;32mI (20814390) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.1°, Level=0-AN TOAN[0m
+[0;32mI (20993370) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20994070) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (20994630) LANDSLIDE_RECEIVER: RECEIVED: 14.0[0m
+[0;32mI (20994630) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.0°, Level=0-AN TOAN[0m
+[0;32mI (21173530) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21174230) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21174780) LANDSLIDE_RECEIVER: RECEIVED: 14.1[0m
+[0;32mI (21174780) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.1°, Level=0-AN TOAN[0m
+[0;32mI (21353880) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21354460) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21355160) LANDSLIDE_RECEIVER: RECEIVED: 14.1[0m
+[0;32mI (21355160) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.1°, Level=0-AN TOAN[0m
+[0;32mI (21534260) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21534790) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21535490) LANDSLIDE_RECEIVER: RECEIVED: 14.1[0m
+[0;32mI (21535490) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.1°, Level=0-AN TOAN[0m
+[0;32mI (21714590) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21715150) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21715850) LANDSLIDE_RECEIVER: RECEIVED: 14.0[0m
+[0;32mI (21715850) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.0°, Level=0-AN TOAN[0m
+[0;32mI (21894930) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21895630) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (21896190) LANDSLIDE_RECEIVER: RECEIVED: 14.1[0m
+[0;32mI (21896190) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.1°, Level=0-AN TOAN[0m
+[0;32mI (22075180) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (22075880) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (22076440) LANDSLIDE_RECEIVER: RECEIVED: 13.9[0m
+[0;32mI (22076440) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.9°, Level=0-AN TOAN[0m
+[0;32mI (22255340) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (22255880) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (22256580) LANDSLIDE_RECEIVER: RECEIVED: 14.1[0m
+[0;32mI (22256580) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=14.1°, Level=0-AN TOAN[0m
+[0;32mI (186210) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (186800) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (187500) LANDSLIDE_RECEIVER: RECEIVED: 15.1[0m
+[0;32mI (187500) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=15.1°, Level=0-AN TOAN[0m
+[0;32mI (366400) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (366940) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (367640) LANDSLIDE_RECEIVER: RECEIVED: 13.0[0m
+[0;32mI (367640) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.0°, Level=0-AN TOAN[0m
+[0;32mI (546540) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (547240) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (547780) LANDSLIDE_RECEIVER: RECEIVED: 13.1[0m
+[0;32mI (547780) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.1°, Level=0-AN TOAN[0m
+[0;32mI (726680) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (727250) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (727950) LANDSLIDE_RECEIVER: RECEIVED: 13.0[0m
+[0;32mI (727950) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.0°, Level=0-AN TOAN[0m
+[0;32mI (906520) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (907230) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (907790) LANDSLIDE_RECEIVER: RECEIVED: 13.2[0m
+[0;32mI (907790) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.2°, Level=0-AN TOAN[0m
+[0;32mI (1086570) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1087270) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1087830) LANDSLIDE_RECEIVER: RECEIVED: 13.0[0m
+[0;32mI (1087830) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.0°, Level=0-AN TOAN[0m
+[0;32mI (1266930) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1267630) LANDSLIDE_RECEIVER: RECEIVED: 100%[0m
+[0;32mI (1268180) LANDSLIDE_RECEIVER: RECEIVED: 12.9[0m
+[0;32mI (1268180) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=12.9°, Level=0-AN TOAN[0m
+[0;32mI (1447330) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1448030) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1448590) LANDSLIDE_RECEIVER: RECEIVED: 13.1[0m
+[0;32mI (1448590) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.1°, Level=0-AN TOAN[0m
+[0;32mI (1627490) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1628190) LANDSLIDE_RECEIVER: RECEIVED: 33%[0m
+[0;32mI (1628730) LANDSLIDE_RECEIVER: RECEIVED: 12.2[0m
+[0;32mI (1628730) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=33.0%, Tilt=12.2°, Level=0-AN TOAN[0m
+[0;32mI (1807830) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1808350) LANDSLIDE_RECEIVER: RECEIVED: 0%[0m
+[0;32mI (1809050) LANDSLIDE_RECEIVER: RECEIVED: 12.5[0m
+[0;32mI (1809050) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=12.5°, Level=0-AN TOAN[0m

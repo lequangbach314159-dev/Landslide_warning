@@ -1,0 +1,166 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\landslide_transmitter.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+[0;32mI (13) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.1[0m
+[0;32mI (17) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (35) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (48) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (61) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c76ch ( 51052) map[0m
+[0;32mI (89) esp_image: segment 1: paddr=0001c794 vaddr=3ff80064 size=00020h (    32) load[0m
+[0;32mI (89) esp_image: segment 2: paddr=0001c7bc vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (96) esp_image: segment 3: paddr=0001ebfc vaddr=40080000 size=0141ch (  5148) load[0m
+[0;32mI (102) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1e28ch (123532) map[0m
+[0;32mI (150) esp_image: segment 5: paddr=0003e2b4 vaddr=4008141c size=0e8c0h ( 59584) load[0m
+[0;32mI (173) esp_image: segment 6: paddr=0004cb7c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (181) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (181) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Multicore app[0m
+[0;32mI (202) cpu_start: Pro cpu start user code[0m
+[0;32mI (202) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (202) app_init: Application information:[0m
+[0;32mI (202) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (207) app_init: App version:      v5.5-dirty[0m
+[0;32mI (211) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (216) app_init: ELF file SHA256:  5097cf27c...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (225) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (229) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (233) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (237) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFB2DA0 len 0002D260 (180 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (264) heap_init: At 4008FCDC len 00010324 (64 KiB): IRAM[0m
+[0;33mW (271) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (280) spi_flash: detected chip: generic[0m
+[0;32mI (283) spi_flash: flash io: dio[0m
+[0;33mW (286) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (298) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (309) main_task: Started on CPU0[0m
+[0;32mI (319) main_task: Calling app_main()[0m
+[0;32mI (319) LORA_SENDER: === FIRST BOOT / RESET ===[0m
+[0;32mI (439) LORA_SENDER: Starting sensor and transmission task...[0m
+[0;32mI (439) LORA_SENDER: Waking up LoRa[0m
+[0;32mI (439) main_task: Returned from app_main()[0m
+[0;32mI (769) LORA_SENDER: SENT SENSORS: R:100% S:100% T:29.8[0m
+[0;32mI (1949) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1969) LORA_SENDER: Going to deep sleep for 3 minutes...[0m
+����������������������������������������������������������������5) boot: ESP-IDF v5.5-dirty 2nd stage bootloader
+[0;32mI (15) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (16) boot: chip revision: v3.1[0m
+[0;32mI (18) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (22) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (26) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (29) boot: Enabling RNG early entropy source...[0m
+[0;32mI (34) boot: Partition Table:[0m
+[0;32mI (36) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (43) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (49) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (56) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (62) boot: End of partition table[0m
+[0;32mI (66) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c76ch ( 51052) map[0m
+[0;32mI (91) esp_image: segment 1: paddr=0001c794 vaddr=3ff80064 size=00020h (    32) [0m
+[0;32mI (91) esp_image: segment 2: paddr=0001c7bc vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (97) esp_image: segment 3: paddr=0001ebfc vaddr=40080000 size=0141ch (  5148) load[0m
+[0;32mI (103) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1e28ch (123532) map[0m
+[0;32mI (151) esp_image: segment 5: paddr=0003e2b4 vaddr=4008141c size=0e8c0h ( 59584) load[0m
+[0;32mI (175) esp_image: segment 6: paddr=0004cb7c vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (183) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (183) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (208) app_init: App version:      v5.5-dirty[0m
+[0;32mI (212) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (217) app_init: ELF file SHA256:  5097cf27c...[0m
+[0;32mI (222) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (226) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (238) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (244) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FFB2DA0 len 0002D260 (180 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (265) heap_init: At 4008FCDC len 00010324 (64 KiB): IRAM[0m
+[0;33mW (272) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (281) spi_flash: detected chip: generic[0m
+[0;32mI (284) spi_flash: flash io: dio[0m
+[0;33mW (287) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (299) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (310) main_task: Started on CPU0[0m
+[0;32mI (320) main_task: Calling app_main()[0m
+[0;32mI (320) LORA_SENDER: === WAKE UP FROM TIMER ===[0m
+[0;32mI (440) LORA_SENDER: Starting sensor and transmission task...[0m
+[0;32mI (440) LORA_SENDER: Waking up LoRa[0m
+[0;32mI (440) main_task: Returned from app_main()[0m
+[0;32mI (770) LORA_SENDER: SENT SENSORS: R:38% S:36% T:30.0[0m
+[0;32mI (1950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1970) LORA_SENDER: Going to deep sleep for 3 minutes...[0m
+[0;32mI (15) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (15) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (16) boot: chip revision: v3.1[0m
+[0;32mI (18) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (22) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (26) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (29) boot: Enabling RNG early entropy source...[0m
+[0;32mI (34) boot: Partition Table:[0m
+[0;32mI (36) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (43) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (49) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (56) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (62) boot: End of partition table[0m
+[0;32mI (66) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c76ch ( 51052) map[0m
+[0;32mI (91) esp_image: segment 1: paddr=0001c794 vaddr=3ff80064 size=00020h (    32) [0m
+[0;32mI (91) esp_image: segment 2: paddr=0001c7bc vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (97) esp_image: segment 3: paddr=0001ebfc vaddr=40080000 size=0141ch (  5148) load[0m
+[0;32mI (103) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1e28ch (123532) map[0m
+[0;32mI (151) esp_image: segment 5: paddr=0003e2b4 vaddr=4008141c size=0e8c0h ( 59584) load[0m
+[0;32mI (175) esp_image: segment 6: paddr=0004cb7c vaddr=400c0000 size=00064h (   100) [0m
+[0;32mI (183) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (183) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (208) app_init: App version:      v5.5-dirty[0m
+[0;32mI (212) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (217) app_init: ELF file SHA256:  5097cf27c...[0m
+[0;32mI (222) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (226) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (238) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (244) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FFB2DA0 len 0002D260 (180 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (265) heap_init: At 4008FCDC len 00010324 (64 KiB): IRAM[0m
+[0;33mW (272) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (281) spi_flash: detected chip: generic[0m
+[0;32mI (284) spi_flash: flash io: dio[0m
+[0;33mW (287) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (299) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (310) main_task: Started on CPU0[0m
+[0;32mI (320) main_task: Calling app_main()[0m
+[0;32mI (320) LORA_SENDER: === WAKE UP FROM TIMER ===[0m
+[0;32mI (440) LORA_SENDER: Starting sensor and transmission task...[0m
+[0;32mI (440) LORA_SENDER: Waking up LoRa[0m
+[0;32mI (440) main_task: Returned from app_main()[0m
+[0;32mI (770) LORA_SENDER: SENT SENSORS: R:21% S:15% T:30.0[0m
+[0;32mI (1950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1970) LORA_SENDER: Going to deep sleep for 3 minutes...[0m

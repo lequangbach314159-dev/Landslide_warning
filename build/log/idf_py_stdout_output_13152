@@ -1,0 +1,33 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=1 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig 'C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig'
+-- Found Git: C:/PROJECT_ESP32/Espressif/tools/idf-git/2.44.0/cmd/git.exe (found version "2.44.0.windows.1")
+-- Minimal build - ON
+-- ccache will be used for faster recompilation
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: C:/PROJECT_ESP32/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/PROJECT_ESP32/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/PROJECT_ESP32/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig
+Loading defaults file C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig.defaults...
+warning: unknown kconfig symbol 'BLINK_LED_GPIO' assigned to 'y' in C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig.defaults
+warning: unknown kconfig symbol 'BLINK_GPIO' assigned to '8' in C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig.defaults
+Loading defaults file C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig.defaults.esp32...
+warning: unknown kconfig symbol 'BLINK_LED_GPIO' assigned to 'y' in C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig.defaults.esp32
+warning: unknown kconfig symbol 'BLINK_GPIO' assigned to '8' in C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig.defaults.esp32
+warning: unknown kconfig symbol 'BLINK_GPIO' assigned to '5' in C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/sdkconfig.defaults.esp32
+-- Components: 
+-- Component paths: 
+-- Configuring done (6.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build

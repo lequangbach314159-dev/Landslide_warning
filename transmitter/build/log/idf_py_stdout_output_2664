@@ -1,0 +1,389 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\landslide_transmitter.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2b4h ( 49844) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c2dc vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c304 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e724 vaddr=40080000 size=018f4h (  6388) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1d360h (119648) map[0m
+[0;32mI (165) esp_image: segment 5: paddr=0003d388 vaddr=400818f4 size=0cf5ch ( 53084) load[0m
+[0;32mI (193) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (193) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (212) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (217) app_init: App version:      v5.5-dirty[0m
+[0;32mI (221) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  182b35103...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (235) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (239) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (247) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (253) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFB2D10 len 0002D2F0 (180 KiB): DRAM[0m
+[0;32mI (263) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (274) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (290) spi_flash: detected chip: generic[0m
+[0;32mI (293) spi_flash: flash io: dio[0m
+[0;33mW (296) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (308) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (319) main_task: Started on CPU0[0m
+[0;32mI (329) main_task: Calling app_main()[0m
+[0;32mI (349) main_task: Returned from app_main()[0m
+[0;32mI (649) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[1;31mE (649) MOISTURE_SENSOR: NGUY HIỂM: Độ ẩm đất quá cao![0m
+[0;33mW (989) LORA_SENDER: GỬI CẢNH BÁO: ALERT! Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[0;32mI (6299) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:100.0% Tilt:35.2 deg[0m
+[1;31mE (6299) MOISTURE_SENSOR: NGUY HIỂM: Độ ẩm đất quá cao![0m
+[0;33mW (6649) LORA_SENDER: GỬI CẢNH BÁO: ALERT! Rain:0.0% Moisture:100.0% Tilt:35.2 deg[0m
+����������������������������������������������������������������(11939) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:100.0% Tilt:0.0 deg
+[1;31mE (11939) MOISTURE_SENSOR: NGUY HIỂM: Độ ẩm đất quá cao![0m
+[0;33mW (12289) LORA_SENDER: GỬI CẢNH BÁO: ALERT! Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[0;32mI (17579) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[1;31mE (17579) MOISTURE_SENSOR: NGUY HIỂM: Độ ẩm đất quá cao![0m
+[0;33mW (17929) LORA_SENDER: GỬI CẢNH BÁO: ALERT! Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[0;32mI (23219) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[1;31mE (23219) MOISTURE_SENSOR: NGUY HIỂM: Độ ẩm đất quá cao![0m
+[0;33mW (23569) LORA_SENDER: GỬI CẢNH BÁO: ALERT! Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[0;32mI (28859) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 000ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2b4h ( 49844) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c2dc vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c304 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e724 vaddr=40080000 size=018f4h (  6388) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1d360h (119648) map[0m
+[0;32mI (165) esp_image: segment 5: paddr=0003d388 vaddr=400818f4 size=0cf5ch ( 53084) load[0m
+[0;32mI (193) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (193) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (212) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (217) app_init: App version:      v5.5-dirty[0m
+[0;32mI (221) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  182b35103...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (235) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (239) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (247) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (253) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFB2D10 len 0002D2F0 (180 KiB): DRAM[0m
+[0;32mI (263) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (274) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (290) spi_flash: detected chip: generic[0m
+[0;32mI (293) spi_flash: flash io: dio[0m
+[0;33mW (296) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (319) main_task: Started on CPU0[0m
+[0;32mI (329) main_task: Calling app_main()[0m
+[0;32mI (349) main_task: Returned from app_main()[0m
+[0;32mI (649) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[1;31mE (649) MOISTURE_SENSOR: NGUY HIỂM: Độ ẩm đất quá cao![0m
+[0;33mW (989) LORA_SENDER: GỬI CẢNH BÁO: ALERT! Rain:0.0% Moisture:100.0% Tilt:0.0 deg[0m
+[0;32mI (6279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (12319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (17359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (22649) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (27939) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (32979) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (38019) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (43059) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (48099) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (53139) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (58429) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (63469) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (68509) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.4 deg[0m
+[0;32mI (73549) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:31.8 deg[0m
+[0;32mI (78589) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.4 deg[0m
+[0;32mI (83879) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (89169) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (94459) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (99749) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (105039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (110329) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (115619) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (120659) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (125699) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (130739) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (135779) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (140819) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (145859) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:39.1 deg[0m
+[0;32mI (150899) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:12.4 deg[0m
+[0;32mI (155939) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:1.5 deg[0m
+[0;32mI (160979) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:2.7 deg[0m
+[0;32mI (166019) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:2.8 deg[0m
+[0;32mI (171059) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.5 deg[0m
+[0;32mI (176099) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:53.4 deg[0m
+[0;32mI (181139) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.8 deg[0m
+[0;32mI (186179) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.4 deg[0m
+[0;32mI (191219) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:45.2 deg[0m
+[0;32mI (196259) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.2 deg[0m
+[0;32mI (201299) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.8 deg[0m
+[0;32mI (206339) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.7 deg[0m
+[0;32mI (211629) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:41.9 deg[0m
+[0;32mI (216919) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:41.1 deg[0m
+[0;32mI (221959) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:41.1 deg[0m
+[0;32mI (226999) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:41.2 deg[0m
+[0;32mI (232039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:40.5 deg[0m
+[0;32mI (237079) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:40.4 deg[0m
+[0;32mI (242119) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:40.2 deg[0m
+[0;32mI (247159) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:40.0 deg[0m
+[0;32mI (252199) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:39.6 deg[0m
+[0;32mI (257239) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:39.4 deg[0m
+[0;32mI (262279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:39.2 deg[0m
+[0;32mI (267319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:39.1 deg[0m
+[0;32mI (272359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:38.8 deg[0m
+[0;32mI (277399) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:39.0 deg[0m
+[0;32mI (282439) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:38.9 deg[0m
+[0;32mI (287479) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:38.7 deg[0m
+[0;32mI (292519) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:38.5 deg[0m
+[0;32mI (297559) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:38.2 deg[0m
+[0;32mI (302599) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.5 deg[0m
+[0;32mI (307639) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.1 deg[0m
+[0;32mI (312679) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.7 deg[0m
+[0;32mI (317719) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.8 deg[0m
+[0;32mI (322759) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.3 deg[0m
+[0;32mI (327799) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.4 deg[0m
+[0;32mI (332839) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.6 deg[0m
+[0;32mI (337879) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.1 deg[0m
+[0;32mI (342919) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.0 deg[0m
+[0;32mI (347959) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.9 deg[0m
+[0;32mI (352999) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.0 deg[0m
+[0;32mI (358039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.1 deg[0m
+[0;32mI (363079) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.8 deg[0m
+[0;32mI (368119) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.7 deg[0m
+[0;32mI (373159) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.8 deg[0m
+[0;32mI (378199) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.9 deg[0m
+[0;32mI (383239) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.5 deg[0m
+[0;32mI (388279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.3 deg[0m
+[0;32mI (393319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.0 deg[0m
+[0;32mI (398359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.5 deg[0m
+[0;32mI (403399) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.8 deg[0m
+[0;32mI (408439) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.1 deg[0m
+[0;32mI (413479) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.7 deg[0m
+[0;32mI (418519) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.8 deg[0m
+[0;32mI (423559) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.8 deg[0m
+[0;32mI (428599) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.4 deg[0m
+[0;32mI (433639) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.5 deg[0m
+[0;32mI (438679) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.5 deg[0m
+[0;32mI (443719) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.7 deg[0m
+[0;32mI (448759) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.3 deg[0m
+[0;32mI (453799) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.4 deg[0m
+[0;32mI (458839) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.8 deg[0m
+[0;32mI (463879) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:19.8 deg[0m
+[0;32mI (468919) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:34.8 deg[0m
+[0;32mI (473959) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:34.2 deg[0m
+[0;32mI (478999) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:34.7 deg[0m
+[0;32mI (484039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:33.9 deg[0m
+[0;32mI (489079) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:34.1 deg[0m
+[0;32mI (494119) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:34.3 deg[0m
+[0;32mI (499159) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.6 deg[0m
+[0;32mI (504199) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:36.9 deg[0m
+[0;32mI (509239) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.4 deg[0m
+[0;32mI (514279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:41.9 deg[0m
+[0;32mI (519319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:35.4 deg[0m
+[0;32mI (524359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:54.6 deg[0m
+[0;32mI (529399) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.1 deg[0m
+[0;32mI (534439) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.4 deg[0m
+[0;32mI (539479) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:42.8 deg[0m
+[0;32mI (544519) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.5 deg[0m
+[0;32mI (549559) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (554599) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.5 deg[0m
+[0;32mI (559639) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (564679) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.7 deg[0m
+[0;32mI (569719) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:42.0 deg[0m
+[0;32mI (574759) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:42.3 deg[0m
+[0;32mI (579799) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:42.1 deg[0m
+[0;32mI (584839) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:42.5 deg[0m
+[0;32mI (589879) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:42.2 deg[0m
+[0;32mI (594919) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:42.7 deg[0m
+���������������������������������������������������������������� (599959) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:41.7 deg
+[0;32mI (604999) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.9 deg[0m
+[0;32mI (610039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.8 deg[0m
+[0;32mI (615079) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.1 deg[0m
+[0;32mI (620119) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (625159) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.4 deg[0m
+[0;32mI (630199) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (635239) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.1 deg[0m
+[0;32mI (640279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (645319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.1 deg[0m
+[0;32mI (650359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.1 deg[0m
+[0;32mI (655399) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.1 deg[0m
+[0;32mI (660439) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.8 deg[0m
+[0;32mI (665479) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.8 deg[0m
+[0;32mI (670519) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.1 deg[0m
+[0;32mI (675559) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (680599) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (685639) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (690679) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.9 deg[0m
+[0;32mI (695719) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.9 deg[0m
+[0;32mI (700759) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (705799) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.2 deg[0m
+[0;32mI (710839) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.3 deg[0m
+[0;32mI (715879) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.6 deg[0m
+[0;32mI (720919) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (725959) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.1 deg[0m
+[0;32mI (730999) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.8 deg[0m
+[0;32mI (736039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.9 deg[0m
+[0;32mI (741079) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.2 deg[0m
+[0;32mI (746119) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (751159) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.3 deg[0m
+[0;32mI (756199) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (761239) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.4 deg[0m
+[0;32mI (766279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.9 deg[0m
+[0;32mI (771319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.6 deg[0m
+[0;32mI (776359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:53.7 deg[0m
+[0;32mI (781399) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.9 deg[0m
+[0;32mI (786439) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.0 deg[0m
+[0;32mI (791479) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:48.5 deg[0m
+[0;32mI (796519) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.4 deg[0m
+[0;32mI (801559) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:37.0 deg[0m
+[0;32mI (806599) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.2 deg[0m
+[0;32mI (811639) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.5 deg[0m
+[0;32mI (816679) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.3 deg[0m
+[0;32mI (821719) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.5 deg[0m
+[0;32mI (826759) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.6 deg[0m
+[0;32mI (831799) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.7 deg[0m
+[0;32mI (836839) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.7 deg[0m
+[0;32mI (841879) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:45.8 deg[0m
+[0;32mI (846919) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:49.5 deg[0m
+[0;32mI (851959) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.7 deg[0m
+[0;32mI (856999) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:47.7 deg[0m
+[0;32mI (862039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:46.1 deg[0m
+[0;32mI (867079) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.3 deg[0m
+[0;32mI (872119) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.2 deg[0m
+[0;32mI (877159) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.1 deg[0m
+[0;32mI (882199) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:41.1 deg[0m
+[0;32mI (887239) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.8 deg[0m
+[0;32mI (892279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (897319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.2 deg[0m
+[0;32mI (902359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (907399) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.7 deg[0m
+[0;32mI (912439) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.8 deg[0m
+[0;32mI (917479) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (922519) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.7 deg[0m
+����������������������������������������������������������������NDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.1 deg
+[0;32mI (932599) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (937639) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (942679) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+���������������������������������������������������������������� (947719) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.3 deg
+[0;32mI (952759) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (957799) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.4 deg[0m
+[0;32mI (962839) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.6 deg[0m
+[0;32mI (967879) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (972919) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.7 deg[0m
+[0;32mI (977959) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.7 deg[0m
+[0;32mI (982999) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.1 deg[0m
+[0;32mI (988039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (993079) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.4 deg[0m
+[0;32mI (998119) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (1003159) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (1008199) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.1 deg[0m
+[0;32mI (1013239) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.2 deg[0m
+[0;32mI (1018279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.4 deg[0m
+[0;32mI (1023319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.7 deg[0m
+[0;32mI (1028359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.3 deg[0m
+[0;32mI (1033399) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.1 deg[0m
+[0;32mI (1038439) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (1043479) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (1048519) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.1 deg[0m
+[0;32mI (1053559) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.3 deg[0m
+[0;32mI (1058599) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (1063639) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (1068679) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.3 deg[0m
+[0;32mI (1073719) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.8 deg[0m
+[0;32mI (1078759) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (1083799) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (1088839) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (1093879) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (1098919) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.5 deg[0m
+[0;32mI (1103959) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.3 deg[0m
+[0;32mI (1108999) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.2 deg[0m
+[0;32mI (1114039) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (1119079) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.7 deg[0m
+[0;32mI (1124119) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.0 deg[0m
+[0;32mI (1129159) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.3 deg[0m
+[0;32mI (1134199) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.4 deg[0m
+[0;32mI (1139239) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.4 deg[0m
+[0;32mI (1144279) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.5 deg[0m
+[0;32mI (1149319) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:43.9 deg[0m
+[0;32mI (1154359) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.6 deg[0m
+[0;32mI (1159399) LORA_SENDER: Đã GỬI: Rain:0.0% Moisture:0.1% Tilt:44.7 deg[0m

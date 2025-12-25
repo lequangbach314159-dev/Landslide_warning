@@ -1,0 +1,348 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com8'
+*��Speed      : 40MHz
+[0;32mI (37) b�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=315d8h (202200) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041600 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00041628 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00045598 vaddr=40080000 size=0aa80h ( 43648) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a7028h (684072) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f7050 vaddr=4008aa80 size=0e9f0h ( 59888) load[0m
+[0;32mI (456) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (466) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     landslide_receiver[0m
+[0;32mI (480) app_init: App version:      v5.5-dirty[0m
+[0;32mI (484) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (489) app_init: ELF file SHA256:  13eb9fc2b...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB8828 len 000277D8 (157 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (571) main_task: Started on CPU0[0m
+[0;32mI (581) main_task: Calling app_main()[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc08e0, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (671) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (681) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (691) wifi_init: tcp rx win: 5760[0m
+[0;32mI (691) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (711) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (791) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (811) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (811) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (821) LANDSLIDE_RECEIVER: Alarm GPIO initialized - Relay: 25, Button: 2[0m
+[0;32mI (821) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (821) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (831) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (1201) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1201) wifi:security: WPA2-PSK, phy: bgn, rssi: -58[0m
+[0;32mI (1211) wifi:pm start, type: 1[0m
+
+[0;32mI (1211) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1231) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1291) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2641) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3831) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4831) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5181) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (5181) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (5181) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (5181) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (5181) main_task: Returned from app_main()[0m
+[0;32mI (5281) LANDSLIDE_RECEIVER: RECEIVED: 2:71%[0m
+[0;32mI (5281) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 71%[0m
+[0;32mI (5281) LANDSLIDE_RECEIVER: Soil packet received: 71%[0m
+[0;32mI (5381) LANDSLIDE_RECEIVER: RECEIVED: 3:7.2[0m
+[0;32mI (5381) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.2[0m
+[0;32mI (5381) LANDSLIDE_RECEIVER: Tilt packet received: 7.2[0m
+[0;32mI (5481) LANDSLIDE_RECEIVER: RECEIVED: 4:65.5%[0m
+[0;32mI (5481) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.5%[0m
+[0;32mI (5481) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.5%[0m
+[0;32mI (5481) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (5491) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=71.0%, Tilt=7.2°, Level=0-AN TOAN[0m
+[0;32mI (5491) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (5501) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (5501) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (5521) TELEGRAM: Alert sent: Level 0-AN TOAN, Alarm: OFF[0m
+[0;32mI (5911) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6241) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (9821) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (9821) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (9821) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (9821) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (10401) LANDSLIDE_RECEIVER: RECEIVED: 2:70%[0m
+[0;32mI (10401) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 70%[0m
+[0;32mI (10401) LANDSLIDE_RECEIVER: Soil packet received: 70%[0m
+[0;32mI (11111) LANDSLIDE_RECEIVER: RECEIVED: 3:7.1[0m
+[0;32mI (11111) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.1[0m
+[0;32mI (11111) LANDSLIDE_RECEIVER: Tilt packet received: 7.1[0m
+[0;32mI (11691) LANDSLIDE_RECEIVER: RECEIVED: 4:65.4%[0m
+[0;32mI (11691) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.4%[0m
+[0;32mI (11691) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.4%[0m
+[0;32mI (11691) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (11701) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=70.0%, Tilt=7.1°, Level=0-AN TOAN[0m
+[0;32mI (11711) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (11711) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (18421) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (18421) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (18421) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (18421) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (18991) LANDSLIDE_RECEIVER: RECEIVED: 2:70%[0m
+[0;32mI (18991) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 70%[0m
+[0;32mI (18991) LANDSLIDE_RECEIVER: Soil packet received: 70%[0m
+[0;32mI (19701) LANDSLIDE_RECEIVER: RECEIVED: 3:7.4[0m
+[0;32mI (19701) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.4[0m
+[0;32mI (19701) LANDSLIDE_RECEIVER: Tilt packet received: 7.4[0m
+[0;32mI (20281) LANDSLIDE_RECEIVER: RECEIVED: 4:65.3%[0m
+[0;32mI (20281) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.3%[0m
+[0;32mI (20281) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.3%[0m
+[0;32mI (20281) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (20291) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=70.0%, Tilt=7.4°, Level=1-THEO DOI[0m
+[0;32mI (20301) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=NO, Acknowledged=NO[0m
+[0;32mI (20301) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (20311) LANDSLIDE_RECEIVER: 🚨 ALARM ACTIVATED! Press button to acknowledge.[0m
+[0;32mI (20331) TELEGRAM: Alert sent: Level 1-THEO DOI, Alarm: ACTIVE[0m
+[0;32mI (21061) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (27031) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (27031) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (27031) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (27031) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (27581) LANDSLIDE_RECEIVER: RECEIVED: 2:70%[0m
+[0;32mI (27581) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 70%[0m
+[0;32mI (27581) LANDSLIDE_RECEIVER: Soil packet received: 70%[0m
+[0;32mI (28281) LANDSLIDE_RECEIVER: RECEIVED: 3:7.3[0m
+[0;32mI (28281) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.3[0m
+[0;32mI (28281) LANDSLIDE_RECEIVER: Tilt packet received: 7.3[0m
+[0;32mI (28861) LANDSLIDE_RECEIVER: RECEIVED: 4:65.3%[0m
+[0;32mI (28861) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.3%[0m
+[0;32mI (28861) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.3%[0m
+[0;32mI (28871) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (28871) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=70.0%, Tilt=7.3°, Level=1-THEO DOI[0m
+[0;32mI (28881) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (28891) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (35591) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (35591) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (35591) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (35591) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (36161) LANDSLIDE_RECEIVER: RECEIVED: 2:71%[0m
+[0;32mI (36161) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 71%[0m
+[0;32mI (36161) LANDSLIDE_RECEIVER: Soil packet received: 71%[0m
+[0;32mI (36871) LANDSLIDE_RECEIVER: RECEIVED: 3:7.1[0m
+[0;32mI (36871) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.1[0m
+[0;32mI (36871) LANDSLIDE_RECEIVER: Tilt packet received: 7.1[0m
+[0;32mI (37451) LANDSLIDE_RECEIVER: RECEIVED: 4:65.3%[0m
+[0;32mI (37451) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.3%[0m
+[0;32mI (37451) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.3%[0m
+[0;32mI (37451) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (37461) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=71.0%, Tilt=7.1°, Level=1-THEO DOI[0m
+[0;32mI (37471) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (37471) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (44181) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (44181) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (44181) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (44181) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (44751) LANDSLIDE_RECEIVER: RECEIVED: 2:71%[0m
+[0;32mI (44751) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 71%[0m
+[0;32mI (44751) LANDSLIDE_RECEIVER: Soil packet received: 71%[0m
+[0;32mI (45461) LANDSLIDE_RECEIVER: RECEIVED: 3:7.3[0m
+[0;32mI (45461) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.3[0m
+[0;32mI (45461) LANDSLIDE_RECEIVER: Tilt packet received: 7.3[0m
+[0;32mI (46041) LANDSLIDE_RECEIVER: RECEIVED: 4:65.5%[0m
+[0;32mI (46041) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.5%[0m
+[0;32mI (46041) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.5%[0m
+[0;32mI (46041) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (46051) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=71.0%, Tilt=7.3°, Level=1-THEO DOI[0m
+[0;32mI (46061) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (46061) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (52771) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (52771) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (52771) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (52771) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (53351) LANDSLIDE_RECEIVER: RECEIVED: 2:71%[0m
+[0;32mI (53351) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 71%[0m
+[0;32mI (53351) LANDSLIDE_RECEIVER: Soil packet received: 71%[0m
+[0;32mI (54051) LANDSLIDE_RECEIVER: RECEIVED: 3:7.0[0m
+[0;32mI (54051) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.0[0m
+[0;32mI (54051) LANDSLIDE_RECEIVER: Tilt packet received: 7.0[0m
+[0;32mI (54631) LANDSLIDE_RECEIVER: RECEIVED: 4:65.3%[0m
+[0;32mI (54631) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.3%[0m
+[0;32mI (54631) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.3%[0m
+[0;32mI (54631) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (54641) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=71.0%, Tilt=7.0°, Level=1-THEO DOI[0m
+[0;32mI (54651) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (54661) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (61361) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (61361) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (61361) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (61361) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (61931) LANDSLIDE_RECEIVER: RECEIVED: 2:73%[0m
+[0;32mI (61931) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 73%[0m
+[0;32mI (61931) LANDSLIDE_RECEIVER: Soil packet received: 73%[0m
+[0;32mI (62641) LANDSLIDE_RECEIVER: RECEIVED: 3:7.0[0m
+[0;32mI (62641) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.0[0m
+[0;32mI (62641) LANDSLIDE_RECEIVER: Tilt packet received: 7.0[0m
+[0;32mI (63221) LANDSLIDE_RECEIVER: RECEIVED: 4:65.5%[0m
+[0;32mI (63221) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.5%[0m
+[0;32mI (63221) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.5%[0m
+[0;32mI (63221) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (63231) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=73.0%, Tilt=7.0°, Level=1-THEO DOI[0m
+[0;32mI (63241) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (63241) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (69951) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (69951) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (69951) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (69951) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (70521) LANDSLIDE_RECEIVER: RECEIVED: 2:73%[0m
+[0;32mI (70521) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 73%[0m
+[0;32mI (70521) LANDSLIDE_RECEIVER: Soil packet received: 73%[0m
+[0;32mI (71231) LANDSLIDE_RECEIVER: RECEIVED: 3:7.1[0m
+[0;32mI (71231) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.1[0m
+[0;32mI (71231) LANDSLIDE_RECEIVER: Tilt packet received: 7.1[0m
+[0;32mI (71811) LANDSLIDE_RECEIVER: RECEIVED: 4:65.6%[0m
+[0;32mI (71811) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.6%[0m
+[0;32mI (71811) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.6%[0m
+[0;32mI (71811) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (71821) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=73.0%, Tilt=7.1°, Level=1-THEO DOI[0m
+[0;32mI (71831) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (71841) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (78541) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (78541) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (78541) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (78541) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (79111) LANDSLIDE_RECEIVER: RECEIVED: 2:72%[0m
+[0;32mI (79111) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 72%[0m
+[0;32mI (79111) LANDSLIDE_RECEIVER: Soil packet received: 72%[0m
+[0;32mI (79821) LANDSLIDE_RECEIVER: RECEIVED: 3:7.2[0m
+[0;32mI (79821) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.2[0m
+[0;32mI (79821) LANDSLIDE_RECEIVER: Tilt packet received: 7.2[0m
+[0;32mI (80401) LANDSLIDE_RECEIVER: RECEIVED: 4:65.0%[0m
+[0;32mI (80401) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.0%[0m
+[0;32mI (80401) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.0%[0m
+[0;32mI (80401) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (80411) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=72.0%, Tilt=7.2°, Level=1-THEO DOI[0m
+[0;32mI (80421) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (80421) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (87131) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (87131) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (87131) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (87131) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (87701) LANDSLIDE_RECEIVER: RECEIVED: 2:71%[0m
+[0;32mI (87701) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 71%[0m
+[0;32mI (87701) LANDSLIDE_RECEIVER: Soil packet received: 71%[0m
+[0;32mI (88401) LANDSLIDE_RECEIVER: RECEIVED: 3:7.1[0m
+[0;32mI (88401) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.1[0m
+[0;32mI (88401) LANDSLIDE_RECEIVER: Tilt packet received: 7.1[0m
+[0;32mI (88981) LANDSLIDE_RECEIVER: RECEIVED: 4:65.2%[0m
+[0;32mI (88981) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.2%[0m
+[0;32mI (88981) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.2%[0m
+[0;32mI (88991) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (88991) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=71.0%, Tilt=7.1°, Level=1-THEO DOI[0m
+[0;32mI (89001) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (89011) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (95711) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (95711) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (95711) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (95711) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (96291) LANDSLIDE_RECEIVER: RECEIVED: 2:71%[0m
+[0;32mI (96291) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 71%[0m
+[0;32mI (96291) LANDSLIDE_RECEIVER: Soil packet received: 71%[0m
+[0;32mI (96991) LANDSLIDE_RECEIVER: RECEIVED: 3:7.2[0m
+[0;32mI (96991) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.2[0m
+[0;32mI (96991) LANDSLIDE_RECEIVER: Tilt packet received: 7.2[0m
+[0;32mI (97581) LANDSLIDE_RECEIVER: RECEIVED: 4:65.7%[0m
+[0;32mI (97581) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.7%[0m
+[0;32mI (97581) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.7%[0m
+[0;32mI (97581) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (97591) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=71.0%, Tilt=7.2°, Level=1-THEO DOI[0m
+[0;32mI (97591) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (97601) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (104311) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (104311) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (104311) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (104311) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (104881) LANDSLIDE_RECEIVER: RECEIVED: 2:71%[0m
+[0;32mI (104881) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 71%[0m
+[0;32mI (104881) LANDSLIDE_RECEIVER: Soil packet received: 71%[0m
+[0;32mI (105581) LANDSLIDE_RECEIVER: RECEIVED: 3:7.0[0m
+[0;32mI (105581) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.0[0m
+[0;32mI (105581) LANDSLIDE_RECEIVER: Tilt packet received: 7.0[0m
+[0;32mI (106171) LANDSLIDE_RECEIVER: RECEIVED: 4:65.5%[0m
+[0;32mI (106171) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.5%[0m
+[0;32mI (106171) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.5%[0m
+[0;32mI (106171) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (106181) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=71.0%, Tilt=7.0°, Level=1-THEO DOI[0m
+[0;32mI (106181) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (106191) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m
+[0;32mI (112901) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (112901) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (112901) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (112901) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (113471) LANDSLIDE_RECEIVER: RECEIVED: 2:71%[0m
+[0;32mI (113471) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 71%[0m
+[0;32mI (113471) LANDSLIDE_RECEIVER: Soil packet received: 71%[0m
+[0;32mI (114171) LANDSLIDE_RECEIVER: RECEIVED: 3:7.3[0m
+[0;32mI (114171) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.3[0m
+[0;32mI (114171) LANDSLIDE_RECEIVER: Tilt packet received: 7.3[0m
+[0;32mI (114751) LANDSLIDE_RECEIVER: RECEIVED: 4:65.5%[0m
+[0;32mI (114751) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 65.5%[0m
+[0;32mI (114751) LANDSLIDE_RECEIVER: GPIO26 packet received: 65.5%[0m
+[0;32mI (114761) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (114761) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=71.0%, Tilt=7.3°, Level=1-THEO DOI[0m
+[0;32mI (114771) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=1, Active=YES, Acknowledged=NO[0m
+[0;32mI (114781) LANDSLIDE_RECEIVER: 📢 SHOULD ACTIVATE ALARM - Level=1[0m

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build",
+  "command": "C:\\PROJECT_ESP32\\Espressif\\tools\\xtensa-esp-elf\\esp-14.2.0_20241119\\xtensa-esp-elf\\bin\\xtensa-esp32-elf-gcc.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -o CMakeFiles\\landslide_warning.elf.dir\\project_elf_src_esp32.c.obj -c C:\\PROJECT_ESP32\\Espressif\\frameworks\\esp-idf-v5.5\\examples\\get-started\\landslide_warning\\build\\project_elf_src_esp32.c",
+  "file": "C:\\PROJECT_ESP32\\Espressif\\frameworks\\esp-idf-v5.5\\examples\\get-started\\landslide_warning\\build\\project_elf_src_esp32.c",
+  "output": "CMakeFiles\\landslide_warning.elf.dir\\project_elf_src_esp32.c.obj"
+}
+]

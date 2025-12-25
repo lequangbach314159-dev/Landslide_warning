@@ -1,0 +1,29 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\esp-idf\esptool_py && C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/landslide_receiver.c.obj
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/main/landslide_receiver.c: In function 'lora_read_packet':
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/main/landslide_receiver.c:105:39: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  105 |     if (len <= 0 || data == 0 || data > MAX_PACKET_SIZE) {
+      |                                       ^
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/main/landslide_receiver.c: At top level:
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/main/landslide_receiver.c:14:16: warning: 'lcd_backlight_state' defined but not used [-Wunused-variable]
+   14 | static uint8_t lcd_backlight_state = LCD_BACKLIGHT;
+      |                ^~~~~~~~~~~~~~~~~~~
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/main/landslide_receiver.c:12:20: warning: 'LCD_TAG' defined but not used [-Wunused-variable]
+   12 | static const char *LCD_TAG = "LCD_I2C";
+      |                    ^~~~~~~
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable landslide_receiver.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.9.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/build/landslide_receiver.bin
+[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\esp-idf\esptool_py && C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/build/partition_table/partition-table.bin C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/receiver/build/landslide_receiver.bin"
+landslide_receiver.bin binary size 0x32440 bytes. Smallest app partition is 0x100000 bytes. 0xcdbc0 bytes (80%) free.

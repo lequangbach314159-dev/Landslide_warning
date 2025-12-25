@@ -1,0 +1,429 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\landslide_transmitter.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2e4h ( 49892) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c30c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c334 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e754 vaddr=40080000 size=018c4h (  6340) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1dac8h (121544) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003daf0 vaddr=400818c4 size=0cf8ch ( 53132) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  62de4e1c0...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (240) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (244) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.3 deg Level:0-AN TOÀN[0m
+[0;32mI (11560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.0 deg Level:0-AN TOÀN[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2e4h ( 49892) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c30c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c334 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e754 vaddr=40080000 size=018c4h (  6340) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1dac8h (121544) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003daf0 vaddr=400818c4 size=0cf8ch ( 53132) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  62de4e1c0...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (240) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (244) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.5 deg Level:0-AN TOÀN[0m
+[0;32mI (11550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.5 deg Level:0-AN TOÀN[0m
+[0;32mI (16930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.8 deg Level:0-AN TOÀN[0m
+[0;32mI (22300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.7 deg Level:0-AN TOÀN[0m
+[0;32mI (27670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:41.5 deg Level:0-AN TOÀN[0m
+[0;32mI (33040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.7 deg Level:0-AN TOÀN[0m
+[0;32mI (38400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.0 deg Level:0-AN TOÀN[0m
+[0;32mI (43780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.7 deg Level:0-AN TOÀN[0m
+[0;32mI (49150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.1 deg Level:0-AN TOÀN[0m
+[0;32mI (54520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.2 deg Level:0-AN TOÀN[0m
+[0;32mI (59890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.1 deg Level:0-AN TOÀN[0m
+[0;32mI (65260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.8 deg Level:0-AN TOÀN[0m
+���������������������������������������������������������������� (70630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.0 deg Level:0-AN TOÀN
+[0;32mI (75990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.0 deg Level:0-AN TOÀN[0m
+[0;32mI (81370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.0 deg Level:0-AN TOÀN[0m
+[0;32mI (86740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:44.6 deg Level:0-AN TOÀN[0m
+[0;32mI (92100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:45.0 deg Level:0-AN TOÀN[0m
+[0;32mI (97470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.7 deg Level:0-AN TOÀN[0m
+[0;32mI (102850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.3 deg Level:0-AN TOÀN[0m
+[0;32mI (108220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:45.3 deg Level:0-AN TOÀN[0m
+[0;32mI (113590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:39.7 deg Level:0-AN TOÀN[0m
+[0;32mI (118960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.7 deg Level:0-AN TOÀN[0m
+[0;32mI (124320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.2 deg Level:0-AN TOÀN[0m
+[0;32mI (129700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:43.0 deg Level:0-AN TOÀN[0m
+[0;32mI (135060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:42.8 deg Level:0-AN TOÀN[0m
+[0;32mI (140440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:41.0 deg Level:0-AN TOÀN[0m
+[0;32mI (145810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:40.7 deg Level:0-AN TOÀN[0m
+[0;32mI (151180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:40.4 deg Level:0-AN TOÀN[0m
+[0;32mI (156550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:40.2 deg Level:0-AN TOÀN[0m
+[0;32mI (161920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:39.5 deg Level:0-AN TOÀN[0m
+[0;32mI (167290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:39.2 deg Level:0-AN TOÀN[0m
+[0;32mI (172660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:37.6 deg Level:0-AN TOÀN[0m
+[0;32mI (178030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:17.8 deg Level:0-AN TOÀN[0m
+[0;32mI (183370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:0.2 deg Level:0-AN TOÀN[0m
+[0;32mI (188740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:26.6 deg Level:0-AN TOÀN[0m
+[0;32mI (194110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.0 deg Level:0-AN TOÀN[0m
+[0;32mI (199480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.1 deg Level:0-AN TOÀN[0m
+[0;32mI (204850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (210220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (215590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.7 deg Level:0-AN TOÀN[0m
+[0;32mI (220950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.6 deg Level:0-AN TOÀN[0m
+[0;32mI (226330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:61.8 deg Level:0-AN TOÀN[0m
+[0;32mI (231700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:65.8 deg Level:0-AN TOÀN[0m
+[0;32mI (237070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:66.7 deg Level:0-AN TOÀN[0m
+[0;32mI (242440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.2 deg Level:0-AN TOÀN[0m
+[0;32mI (247800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.3 deg Level:0-AN TOÀN[0m
+[0;32mI (253180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:55.9 deg Level:0-AN TOÀN[0m
+[0;32mI (258550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:55.4 deg Level:0-AN TOÀN[0m
+[0;32mI (263920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:55.2 deg Level:0-AN TOÀN[0m
+[0;32mI (269290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.8 deg Level:0-AN TOÀN[0m
+[0;32mI (274660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.8 deg Level:0-AN TOÀN[0m
+[0;32mI (280030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.5 deg Level:0-AN TOÀN[0m
+[0;32mI (285400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.5 deg Level:0-AN TOÀN[0m
+[0;32mI (290760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.3 deg Level:0-AN TOÀN[0m
+[0;32mI (296140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.5 deg Level:0-AN TOÀN[0m
+[0;32mI (301510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.5 deg Level:0-AN TOÀN[0m
+[0;32mI (306880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.7 deg Level:0-AN TOÀN[0m
+[0;32mI (312250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.6 deg Level:0-AN TOÀN[0m
+[0;32mI (317620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.6 deg Level:0-AN TOÀN[0m
+[0;32mI (322990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.7 deg Level:0-AN TOÀN[0m
+[0;32mI (328360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.5 deg Level:0-AN TOÀN[0m
+[0;32mI (333730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.8 deg Level:0-AN TOÀN[0m
+[0;32mI (339100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.1 deg Level:0-AN TOÀN[0m
+[0;32mI (344470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.9 deg Level:0-AN TOÀN[0m
+[0;32mI (349840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.9 deg Level:0-AN TOÀN[0m
+[0;32mI (355210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.0 deg Level:0-AN TOÀN[0m
+[0;32mI (360580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.1 deg Level:0-AN TOÀN[0m
+[0;32mI (365950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.4 deg Level:0-AN TOÀN[0m
+[0;32mI (371320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.7 deg Level:0-AN TOÀN[0m
+[0;32mI (376690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.8 deg Level:0-AN TOÀN[0m
+[0;32mI (382060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.1 deg Level:0-AN TOÀN[0m
+[0;32mI (387430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.0 deg Level:0-AN TOÀN[0m
+[0;32mI (392800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.9 deg Level:0-AN TOÀN[0m
+[0;32mI (398160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.1 deg Level:0-AN TOÀN[0m
+[0;32mI (403540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.0 deg Level:0-AN TOÀN[0m
+[0;32mI (408900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.2 deg Level:0-AN TOÀN[0m
+[0;32mI (414280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.0 deg Level:0-AN TOÀN[0m
+[0;32mI (419650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.9 deg Level:0-AN TOÀN[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2e4h ( 49892) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c30c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c334 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e754 vaddr=40080000 size=018c4h (  6340) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1dac8h (121544) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003daf0 vaddr=400818c4 size=0cf8ch ( 53132) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  62de4e1c0...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (240) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (244) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.1 deg Level:0-AN TOÀN[0m
+[0;32mI (11560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.9 deg Level:0-AN TOÀN[0m
+[0;32mI (16920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.5 deg Level:0-AN TOÀN[0m
+[0;32mI (22300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:63.3 deg Level:0-AN TOÀN[0m
+[0;32mI (27670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.6 deg Level:0-AN TOÀN[0m
+[0;32mI (33040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.2 deg Level:0-AN TOÀN[0m
+[0;32mI (38410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.7 deg Level:0-AN TOÀN[0m
+[0;32mI (43780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.7 deg Level:0-AN TOÀN[0m
+[0;32mI (49150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.7 deg Level:0-AN TOÀN[0m
+[0;32mI (54520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.2 deg Level:0-AN TOÀN[0m
+[0;32mI (59880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.2 deg Level:0-AN TOÀN[0m
+[0;32mI (65260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (70630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.3 deg Level:0-AN TOÀN[0m
+[0;32mI (76000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.4 deg Level:0-AN TOÀN[0m
+[0;32mI (81360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.3 deg Level:0-AN TOÀN[0m
+[0;32mI (86740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.4 deg Level:0-AN TOÀN[0m
+[0;32mI (92100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.3 deg Level:0-AN TOÀN[0m
+[0;32mI (97480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.0 deg Level:0-AN TOÀN[0m
+[0;32mI (102850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.2 deg Level:0-AN TOÀN[0m
+[0;32mI (108220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.4 deg Level:0-AN TOÀN[0m
+[0;32mI (113590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (118960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (124330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.7 deg Level:0-AN TOÀN[0m
+[0;32mI (129700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.3 deg Level:0-AN TOÀN[0m
+[0;32mI (135070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.5 deg Level:0-AN TOÀN[0m
+[0;32mI (140440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (145810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.0 deg Level:0-AN TOÀN[0m
+[0;32mI (151180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.0 deg Level:0-AN TOÀN[0m
+[0;32mI (156550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.8 deg Level:0-AN TOÀN[0m
+[0;32mI (161920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.7 deg Level:0-AN TOÀN[0m
+[0;32mI (167280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.8 deg Level:0-AN TOÀN[0m
+[0;32mI (172660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.6 deg Level:0-AN TOÀN[0m
+[0;32mI (178030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.0 deg Level:0-AN TOÀN[0m
+[0;32mI (183400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.9 deg Level:0-AN TOÀN[0m
+[0;32mI (188770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.1 deg Level:0-AN TOÀN[0m
+[0;32mI (194140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.6 deg Level:0-AN TOÀN[0m
+[0;32mI (199510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (204880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:61.0 deg Level:0-AN TOÀN[0m
+[0;32mI (210240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.7 deg Level:0-AN TOÀN[0m
+[0;32mI (215620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:80.1 deg Level:0-AN TOÀN[0m
+[0;32mI (220990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:81.4 deg Level:0-AN TOÀN[0m
+[0;32mI (226360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:78.3 deg Level:0-AN TOÀN[0m
+[0;32mI (231720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (237090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.9 deg Level:0-AN TOÀN[0m
+[0;32mI (242470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.6 deg Level:0-AN TOÀN[0m
+[0;32mI (247840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.2 deg Level:0-AN TOÀN[0m
+[0;32mI (253200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:81.1 deg Level:0-AN TOÀN[0m
+[0;32mI (258570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (263950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (269320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:71.3 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������4690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN
+[0;32mI (280060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.0 deg Level:0-AN TOÀN[0m
+[0;32mI (285430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (290790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.3 deg Level:0-AN TOÀN[0m
+[0;32mI (296170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.2 deg Level:0-AN TOÀN[0m
+[0;32mI (301540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.6 deg Level:0-AN TOÀN[0m
+[0;32mI (306910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.0 deg Level:0-AN TOÀN[0m
+[0;32mI (312280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (317650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:66.1 deg Level:0-AN TOÀN[0m
+[0;32mI (323020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:61.7 deg Level:0-AN TOÀN[0m
+[0;32mI (328380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:61.5 deg Level:0-AN TOÀN[0m
+[0;32mI (333760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.6 deg Level:0-AN TOÀN[0m
+[0;32mI (339130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.8 deg Level:0-AN TOÀN[0m
+[0;32mI (344500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.1 deg Level:0-AN TOÀN[0m
+[0;32mI (349870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.4 deg Level:0-AN TOÀN[0m
+[0;32mI (355230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.5 deg Level:0-AN TOÀN[0m
+[0;32mI (360610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.5 deg Level:0-AN TOÀN[0m
+[0;32mI (365980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.4 deg Level:0-AN TOÀN[0m
+[0;32mI (371350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.2 deg Level:0-AN TOÀN[0m
+[0;32mI (376720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.5 deg Level:0-AN TOÀN[0m
+[0;32mI (382090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.3 deg Level:0-AN TOÀN[0m
+[0;32mI (387460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.3 deg Level:0-AN TOÀN[0m
+[0;32mI (392830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.0 deg Level:0-AN TOÀN[0m
+[0;32mI (398190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (403570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:63.8 deg Level:0-AN TOÀN[0m
+[0;32mI (408930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:61.5 deg Level:0-AN TOÀN[0m
+[0;32mI (414310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:62.9 deg Level:0-AN TOÀN[0m
+[0;32mI (419670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:61.6 deg Level:0-AN TOÀN[0m
+[0;32mI (425050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.8 deg Level:0-AN TOÀN[0m
+[0;32mI (430420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.0 deg Level:0-AN TOÀN[0m
+[0;32mI (435790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (441160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.4 deg Level:0-AN TOÀN[0m
+[0;32mI (446530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.2 deg Level:0-AN TOÀN[0m
+[0;32mI (451890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.2 deg Level:0-AN TOÀN[0m
+[0;32mI (457270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.0 deg Level:0-AN TOÀN[0m
+[0;32mI (462640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.9 deg Level:0-AN TOÀN[0m
+[0;32mI (468010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.0 deg Level:0-AN TOÀN[0m
+[0;32mI (473380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.9 deg Level:0-AN TOÀN[0m
+[0;32mI (478750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.8 deg Level:0-AN TOÀN[0m
+[0;32mI (484110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.9 deg Level:0-AN TOÀN[0m
+[0;32mI (489490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.0 deg Level:0-AN TOÀN[0m
+[0;32mI (494860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.8 deg Level:0-AN TOÀN[0m
+[0;32mI (500230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.8 deg Level:0-AN TOÀN[0m
+[0;32mI (505600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.3 deg Level:0-AN TOÀN[0m
+[0;32mI (510970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.8 deg Level:0-AN TOÀN[0m
+[0;32mI (516340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.9 deg Level:0-AN TOÀN[0m
+[0;32mI (521700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.5 deg Level:0-AN TOÀN[0m
+[0;32mI (527080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.2 deg Level:0-AN TOÀN[0m
+[0;32mI (532440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.7 deg Level:0-AN TOÀN[0m
+[0;32mI (537820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.4 deg Level:0-AN TOÀN[0m
+[0;32mI (543190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.6 deg Level:0-AN TOÀN[0m
+[0;32mI (548560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:61.2 deg Level:0-AN TOÀN[0m
+[0;32mI (553930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:63.3 deg Level:0-AN TOÀN[0m
+[0;32mI (559300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.0 deg Level:0-AN TOÀN[0m
+[0;32mI (564670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.6 deg Level:0-AN TOÀN[0m
+[0;32mI (570030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (575410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.0 deg Level:0-AN TOÀN[0m
+[0;32mI (580770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.7 deg Level:0-AN TOÀN[0m
+[0;32mI (586140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.0 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������(591520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.7 deg Level:0-AN TOÀN
+[0;32mI (596880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.2 deg Level:0-AN TOÀN[0m
+[0;32mI (602250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.2 deg Level:0-AN TOÀN[0m
+[0;32mI (607630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.7 deg Level:0-AN TOÀN[0m
+[0;32mI (612990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.4 deg Level:0-AN TOÀN[0m
+[0;32mI (618370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.4 deg Level:0-AN TOÀN[0m
+[0;32mI (623740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.1 deg Level:0-AN TOÀN[0m
+[0;32mI (629100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.0 deg Level:0-AN TOÀN[0m
+[0;32mI (634470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.3 deg Level:0-AN TOÀN[0m
+[0;32mI (639850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.2 deg Level:0-AN TOÀN[0m
+[0;32mI (645220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.7 deg Level:0-AN TOÀN[0m
+[0;32mI (650590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.1 deg Level:0-AN TOÀN[0m
+[0;32mI (655960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.4 deg Level:0-AN TOÀN[0m
+[0;32mI (661330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.3 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������(666700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.1 deg Level:0-AN TOÀN
+[0;32mI (672070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.9 deg Level:0-AN TOÀN[0m
+[0;32mI (677440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.7 deg Level:0-AN TOÀN[0m
+[0;32mI (682810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.0 deg Level:0-AN TOÀN[0m
+[0;32mI (688170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.8 deg Level:0-AN TOÀN[0m
+[0;32mI (693550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.2 deg Level:0-AN TOÀN[0m
+[0;32mI (698920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.9 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������(704290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.3 deg Level:0-AN TOÀN
+[0;32mI (709650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.6 deg Level:0-AN TOÀN[0m
+[0;32mI (715020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.0 deg Level:0-AN TOÀN[0m
+[0;32mI (720400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.6 deg Level:0-AN TOÀN[0m
+[0;32mI (725770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:63.5 deg Level:0-AN TOÀN[0m
+[0;32mI (731130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.5 deg Level:0-AN TOÀN[0m
+[0;32mI (736510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:61.2 deg Level:0-AN TOÀN[0m
+[0;32mI (741880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:59.5 deg Level:0-AN TOÀN[0m
+[0;32mI (747250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:60.4 deg Level:0-AN TOÀN[0m
+[0;32mI (752620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.9 deg Level:0-AN TOÀN[0m
+[0;32mI (757990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.2 deg Level:0-AN TOÀN[0m
+[0;32mI (763360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.1 deg Level:0-AN TOÀN[0m
+[0;32mI (768730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.1 deg Level:0-AN TOÀN[0m
+[0;32mI (774100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:55.6 deg Level:0-AN TOÀN[0m
+[0;32mI (779460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:54.4 deg Level:0-AN TOÀN[0m
+[0;32mI (784840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:53.8 deg Level:0-AN TOÀN[0m
+[0;32mI (790210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:53.3 deg Level:0-AN TOÀN[0m
+[0;32mI (795580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.7 deg Level:0-AN TOÀN[0m
+[0;32mI (800950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:53.0 deg Level:0-AN TOÀN[0m
+[0;32mI (806320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:53.2 deg Level:0-AN TOÀN[0m
+[0;32mI (811690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.6 deg Level:0-AN TOÀN[0m
+[0;32mI (817060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.9 deg Level:0-AN TOÀN[0m
+[0;32mI (822430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.6 deg Level:0-AN TOÀN[0m
+[0;32mI (827800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.7 deg Level:0-AN TOÀN[0m
+[0;32mI (833170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.7 deg Level:0-AN TOÀN[0m
+[0;32mI (838540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:53.0 deg Level:0-AN TOÀN[0m
+[0;32mI (843910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.5 deg Level:0-AN TOÀN[0m
+[0;32mI (849280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.2 deg Level:0-AN TOÀN[0m
+[0;32mI (854650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.5 deg Level:0-AN TOÀN[0m
+[0;32mI (860020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:52.3 deg Level:0-AN TOÀN[0m
+[0;32mI (865390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.4 deg Level:0-AN TOÀN[0m
+[0;32mI (870760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.0 deg Level:0-AN TOÀN[0m
+[0;32mI (876130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.8 deg Level:0-AN TOÀN[0m
+[0;32mI (881500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:56.8 deg Level:0-AN TOÀN[0m
+[0;32mI (886870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.0 deg Level:0-AN TOÀN[0m
+[0;32mI (892240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.4 deg Level:0-AN TOÀN[0m
+[0;32mI (897600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:57.5 deg Level:0-AN TOÀN[0m
+[0;32mI (902980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:58.2 deg Level:0-AN TOÀN[0m

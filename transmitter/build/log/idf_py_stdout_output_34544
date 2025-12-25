@@ -1,0 +1,129 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\landslide_transmitter.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c274h ( 49780) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c29c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c2c4 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e6e4 vaddr=40080000 size=01934h (  6452) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1da74h (121460) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003da9c vaddr=40081934 size=0cf1ch ( 53020) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  85609b1a9...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (239) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (290) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (319) main_task: Started on CPU0[0m
+[0;32mI (329) main_task: Calling app_main()[0m
+[0;32mI (449) main_task: Returned from app_main()[0m
+[0;32mI (459) LORA_SENDER: SENT: 0.0,0.1,83.3[0m
+[0;32mI (5469) LORA_SENDER: SENT: 0.0,0.1,82.9[0m
+[0;32mI (10479) LORA_SENDER: SENT: 0.0,0.1,83.6[0m
+[0;32mI (15489) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (20499) LORA_SENDER: SENT: 0.0,0.1,83.1[0m
+[0;32mI (25509) LORA_SENDER: SENT: 0.0,0.1,82.9[0m
+[0;32mI (30519) LORA_SENDER: SENT: 0.0,0.1,83.7[0m
+[0;32mI (35529) LORA_SENDER: SENT: 0.0,0.1,83.1[0m
+[0;32mI (40539) LORA_SENDER: SENT: 0.0,0.1,83.5[0m
+[0;32mI (45549) LORA_SENDER: SENT: 0.0,0.1,83.8[0m
+[0;32mI (50559) LORA_SENDER: SENT: 0.0,0.1,83.4[0m
+[0;32mI (55569) LORA_SENDER: SENT: 0.0,0.1,82.8[0m
+[0;32mI (60579) LORA_SENDER: SENT: 0.0,0.1,82.9[0m
+[0;32mI (65589) LORA_SENDER: SENT: 0.0,0.1,82.9[0m
+[0;32mI (70599) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (75609) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (80619) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (85629) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (90639) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (95649) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (100659) LORA_SENDER: SENT: 0.0,0.1,82.8[0m
+[0;32mI (105669) LORA_SENDER: SENT: 0.0,0.1,82.9[0m
+[0;32mI (110679) LORA_SENDER: SENT: 0.0,0.1,82.3[0m
+[0;32mI (115689) LORA_SENDER: SENT: 0.0,0.1,82.8[0m
+[0;32mI (120699) LORA_SENDER: SENT: 0.0,0.1,83.3[0m
+[0;32mI (125709) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (130719) LORA_SENDER: SENT: 0.0,0.1,82.8[0m
+[0;32mI (135729) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (140739) LORA_SENDER: SENT: 0.0,0.1,84.3[0m
+[0;32mI (145749) LORA_SENDER: SENT: 0.0,0.1,83.7[0m
+[0;32mI (150759) LORA_SENDER: SENT: 0.0,0.1,83.7[0m
+[0;32mI (155769) LORA_SENDER: SENT: 0.0,0.1,84.1[0m
+[0;32mI (160779) LORA_SENDER: SENT: 0.0,0.1,83.8[0m
+[0;32mI (165789) LORA_SENDER: SENT: 0.0,0.1,83.8[0m
+[0;32mI (170799) LORA_SENDER: SENT: 0.0,0.1,83.7[0m
+[0;32mI (175809) LORA_SENDER: SENT: 0.0,0.1,83.7[0m
+[0;32mI (180819) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (185829) LORA_SENDER: SENT: 0.0,0.1,83.6[0m
+[0;32mI (190839) LORA_SENDER: SENT: 0.0,0.1,83.3[0m
+[0;32mI (195849) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (200859) LORA_SENDER: SENT: 0.0,0.1,82.8[0m
+[0;32mI (205869) LORA_SENDER: SENT: 0.0,0.1,83.4[0m
+[0;32mI (210879) LORA_SENDER: SENT: 0.0,0.1,83.3[0m
+[0;32mI (215889) LORA_SENDER: SENT: 0.0,0.1,83.1[0m
+[0;32mI (220899) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (225909) LORA_SENDER: SENT: 0.0,0.1,83.3[0m
+[0;32mI (230919) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (235929) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (240939) LORA_SENDER: SENT: 0.0,0.1,83.1[0m
+[0;32mI (245949) LORA_SENDER: SENT: 0.0,0.1,82.7[0m
+[0;32mI (250959) LORA_SENDER: SENT: 0.0,0.1,83.1[0m
+[0;32mI (255969) LORA_SENDER: SENT: 0.0,0.1,82.9[0m
+[0;32mI (260979) LORA_SENDER: SENT: 0.0,0.1,83.3[0m
+[0;32mI (265989) LORA_SENDER: SENT: 0.0,0.1,83.5[0m
+[0;32mI (270999) LORA_SENDER: SENT: 0.0,0.1,83.6[0m
+[0;32mI (276009) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (281019) LORA_SENDER: SENT: 0.0,0.1,83.9[0m
+[0;32mI (286029) LORA_SENDER: SENT: 0.0,0.1,83.8[0m
+[0;32mI (291039) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (296049) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (301059) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (306069) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (311079) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (316089) LORA_SENDER: SENT: 0.0,0.1,83.0[0m
+[0;32mI (321099) LORA_SENDER: SENT: 0.0,0.1,83.2[0m
+[0;32mI (326109) LORA_SENDER: SENT: 0.0,0.1,83.1[0m
+[0;32mI (331119) LORA_SENDER: SENT: 0.0,0.1,83.4[0m
+[0;32mI (336129) LORA_SENDER: SENT: 0.0,0.1,82.8[0m
+[0;32mI (341139) LORA_SENDER: SENT: 0.0,0.1,83.4[0m

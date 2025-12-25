@@ -1,0 +1,2 @@
+Command: ninja flash
+ninja: error: unknown target 'flash'

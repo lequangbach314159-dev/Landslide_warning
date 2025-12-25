@@ -1,0 +1,945 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com8'
+ג��A%�Speed      :�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=314f4h (201972) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=0004151c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00041544 vaddr=3ffb0000 size=03f58h ( 16216) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=000454a4 vaddr=40080000 size=0ab74h ( 43892) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a50a0h (676000) map[0m
+[0;32mI (417) esp_image: segment 5: paddr=000f50c8 vaddr=4008ab74 size=0e8fch ( 59644) load[0m
+[0;32mI (453) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (453) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (472) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     landslide_receiver[0m
+[0;32mI (477) app_init: App version:      v5.5-dirty[0m
+[0;32mI (481) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (486) app_init: ELF file SHA256:  ae1cdc88c...[0m
+[0;32mI (490) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (494) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB8750 len 000278B0 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;33mW (545) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (558) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (568) main_task: Started on CPU0[0m
+[0;32mI (578) main_task: Calling app_main()[0m
+[0;32mI (578) LANDSLIDE_RECEIVER: === LANDSLIDE WARNING SYSTEM - RECEIVER ===[0m
+[0;32mI (578) LANDSLIDE_RECEIVER: Initializing LoRa Receiver with Telegram alerts...[0m
+[0;32mI (578) TELEGRAM: Initializing NVS and WiFi...[0m
+[0;32mI (628) wifi:wifi driver task: 3ffc0808, prio:23, stack:6656, core=0[0m
+[0;32mI (648) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (648) wifi:wifi certification version: v7.0[0m
+[0;32mI (648) wifi:config NVS flash: enabled[0m
+[0;32mI (648) wifi:config nano formatting: disabled[0m
+[0;32mI (648) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (658) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (658) wifi:Init management short buffer num: 32[0m
+[0;32mI (658) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (668) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (668) wifi:Init static rx buffer num: 10[0m
+[0;32mI (678) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (678) wifi_init: rx ba win: 6[0m
+[0;32mI (678) wifi_init: accept mbox: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (688) wifi_init: udp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp tx win: 5760[0m
+[0;32mI (698) wifi_init: tcp rx win: 5760[0m
+[0;32mI (698) wifi_init: tcp mss: 1440[0m
+[0;32mI (698) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (708) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (708) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (718) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (798) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (798) wifi:enable tsf[0m
+[0;32mI (808) TELEGRAM: Wi-Fi STA connecting to SSID:nhà đầm trấu[0m
+[0;32mI (808) LANDSLIDE_RECEIVER: Initializing LoRa communication...[0m
+[0;32mI (818) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (828) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (828) LCD_I2C: Initializing LCD display...[0m
+[1;31mE (828) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (828) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (838) LCD_I2C: I2C initialized successfully[0m
+[0;32mI (838) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (888) LCD_I2C: LCD initialized successfully[0m
+[0;32mI (918) LANDSLIDE_RECEIVER: === SYSTEM READY ===[0m
+[0;32mI (928) LANDSLIDE_RECEIVER: LoRa: Receiving landslide data[0m
+[0;32mI (928) LANDSLIDE_RECEIVER: LCD: Displaying real-time status[0m
+[0;32mI (928) LANDSLIDE_RECEIVER: Telegram: Sending alerts to 7352036697[0m
+[0;32mI (928) LANDSLIDE_RECEIVER: LoRa Receiver started[0m
+[0;33mW (1038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (1218) wifi:connected with nhà đầm trấu, aid = 12, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1218) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (1218) wifi:pm start, type: 1[0m
+
+[0;32mI (1218) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;33mW (1238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (1238) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1248) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;33mW (1438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (1638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (1838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (2038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (2238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (2278) esp_netif_handlers: sta ip: 192.168.71.104, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (2278) TELEGRAM: Wi-Fi connected, got IP: 192.168.71.104[0m
+[0;33mW (2438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (2638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (2838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (3938) TELEGRAM: Sending Telegram alert: Landslide Warning System STARTED![0m
+Receiver ready to monitor alerts.
+[0;32mI (3938) main_task: Returned from app_main()[0m
+[0;33mW (4038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (4228) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;33mW (4238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (4438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (4638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (4638) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (4838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (6038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (6178) TELEGRAM: Telegram alert sent successfully, HTTP status: 200[0m
+[0;33mW (6238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (6438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (6608) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (6608) TELEGRAM: Warning level 0 Telegram alert sent![0m
+[0;32mI (6618) TELEGRAM: Sending Telegram alert: HE THONG CANH BAO SAT LO DAT[0m
+CAP DO: Level 0 - AN TOAN
+DU LIEU CAM BIEN: N/A
+TRANG THAI: Level:0-AN TOAN
+THOI GIAN: NOW
+[0;33mW (6808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (7298) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (7408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (8838) TELEGRAM: Telegram alert sent successfully, HTTP status: 200[0m
+[0;33mW (9008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (10908) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:41.4[0m
+[0;33mW (11108) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11308) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11508) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11708) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11908) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (12008) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (12208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (12408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (12608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (12808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (17388) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (17588) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17788) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17988) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18188) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18388) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18588) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18788) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18988) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19188) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19388) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19588) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19788) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19988) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20188) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20388) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20588) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20788) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20988) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (21188) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (21388) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (21588) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (21688) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:41.8[0m
+[0;33mW (21888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35488) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35688) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35888) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (36088) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (36288) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=314f4h (201972) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=0004151c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00041544 vaddr=3ffb0000 size=03f58h ( 16216) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=000454a4 vaddr=40080000 size=0ab74h ( 43892) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a50a0h (676000) map[0m
+[0;32mI (417) esp_image: segment 5: paddr=000f50c8 vaddr=4008ab74 size=0e8fch ( 59644) load[0m
+[0;32mI (453) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (453) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (472) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     landslide_receiver[0m
+[0;32mI (477) app_init: App version:      v5.5-dirty[0m
+[0;32mI (481) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (486) app_init: ELF file SHA256:  ae1cdc88c...[0m
+[0;32mI (490) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (494) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB8750 len 000278B0 (158 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;33mW (545) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (558) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (568) main_task: Started on CPU0[0m
+[0;32mI (578) main_task: Calling app_main()[0m
+[0;32mI (578) LANDSLIDE_RECEIVER: === LANDSLIDE WARNING SYSTEM - RECEIVER ===[0m
+[0;32mI (578) LANDSLIDE_RECEIVER: Initializing LoRa Receiver with Telegram alerts...[0m
+[0;32mI (578) TELEGRAM: Initializing NVS and WiFi...[0m
+[0;32mI (628) wifi:wifi driver task: 3ffc0808, prio:23, stack:6656, core=0[0m
+[0;32mI (648) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (648) wifi:wifi certification version: v7.0[0m
+[0;32mI (648) wifi:config NVS flash: enabled[0m
+[0;32mI (648) wifi:config nano formatting: disabled[0m
+[0;32mI (648) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (658) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (658) wifi:Init management short buffer num: 32[0m
+[0;32mI (658) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (668) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (668) wifi:Init static rx buffer num: 10[0m
+[0;32mI (678) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (678) wifi_init: rx ba win: 6[0m
+[0;32mI (678) wifi_init: accept mbox: 6[0m
+[0;32mI (688) wifi_init: tcpip mbox: 32[0m
+[0;32mI (688) wifi_init: udp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp tx win: 5760[0m
+[0;32mI (698) wifi_init: tcp rx win: 5760[0m
+[0;32mI (698) wifi_init: tcp mss: 1440[0m
+[0;32mI (698) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (708) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (708) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (718) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (798) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (798) wifi:enable tsf[0m
+[0;32mI (808) TELEGRAM: Wi-Fi STA connecting to SSID:nhà đầm trấu[0m
+[0;32mI (808) LANDSLIDE_RECEIVER: Initializing LoRa communication...[0m
+[0;32mI (818) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (818) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (828) LCD_I2C: Initializing LCD display...[0m
+[1;31mE (828) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (828) LCD_I2C: I2C initialized successfully[0m
+[0;32mI (838) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (848) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (888) LCD_I2C: LCD initialized successfully[0m
+[0;32mI (918) LANDSLIDE_RECEIVER: === SYSTEM READY ===[0m
+[0;32mI (918) LANDSLIDE_RECEIVER: LoRa: Receiving landslide data[0m
+[0;32mI (918) LANDSLIDE_RECEIVER: LCD: Displaying real-time status[0m
+[0;32mI (928) LANDSLIDE_RECEIVER: Telegram: Sending alerts to 7352036697[0m
+[0;32mI (928) LANDSLIDE_RECEIVER: LoRa Receiver started[0m
+[0;33mW (1038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (1218) wifi:connected with nhà đầm trấu, aid = 12, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1218) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (1228) wifi:pm start, type: 1[0m
+
+[0;32mI (1228) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;33mW (1238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (1248) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1278) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;33mW (1438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (1638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (1838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (2038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (2238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (2438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (2638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (2648) esp_netif_handlers: sta ip: 192.168.71.104, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (2648) TELEGRAM: Wi-Fi connected, got IP: 192.168.71.104[0m
+[0;33mW (2838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (3838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (3938) TELEGRAM: Sending Telegram alert: Landslide Warning System STARTED![0m
+Receiver ready to monitor alerts.
+[0;32mI (3938) main_task: Returned from app_main()[0m
+[0;33mW (4038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (4238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (4278) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;33mW (4438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (4638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (4668) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (4838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (5838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (6038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (6108) TELEGRAM: Telegram alert sent successfully, HTTP status: 200[0m
+[0;33mW (6238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (6438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (6638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (6838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (7838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (8838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (9838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (10838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (11838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (12038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (12238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (12438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (12638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (12838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (13838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (14838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (15838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (16838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (17838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (18838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (19838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (20838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (21038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (21238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (21438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (21638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (21838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (22838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (23838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (24838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (25838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (26838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (27838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (28838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (29838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (30838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (31838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (32838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (33838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (34838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (35838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (36038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (36238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (36438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (36638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (36838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (37038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (37238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (37438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (37638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (37838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (38038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (38238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (38438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (38638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (38838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (39038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (39238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (39438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (39638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (39838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (40038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (40238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (40438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (40638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (40838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (41038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (41238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (41438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (41638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (41838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (42038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (42238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (42438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (42638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (42838) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (43038) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (43238) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (43438) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (43638) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (43818) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:41.6[0m
+[0;33mW (44018) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (44218) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (44418) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (44618) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (44818) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (44998) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (45008) TELEGRAM: Warning level 0 Telegram alert sent![0m
+[0;32mI (45008) TELEGRAM: Sending Telegram alert: HE THONG CANH BAO SAT LO DAT[0m
+CAP DO: Level 0 - AN TOAN
+DU LIEU CAM BIEN: R:0.0 S:0.1 T:41
+TRANG THAI: Level:0-AN TOAN
+THOI GIAN: NOW
+[0;33mW (45208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (45408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (45608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (45738) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (45808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (46008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (46208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (46408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (46608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (46808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (47008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (47208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (47268) TELEGRAM: Telegram alert sent successfully, HTTP status: 200[0m
+[0;33mW (47408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (47608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (47808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (48008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (48208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (48408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (48608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (48808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (49008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (49208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (49408) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (49608) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (49808) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (50008) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (50208) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (50398) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (50598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (50798) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (50998) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (51198) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (51398) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (51598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (51798) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (51998) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (52198) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (52398) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (52598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (52798) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (52998) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (53198) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (53398) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (53598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (53798) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (53998) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (54198) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (54398) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (54598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (54698) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:41.6[0m
+[0;33mW (54898) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (55098) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (55298) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (55498) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (55698) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (55798) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (55998) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (56198) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (56398) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (56598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (56798) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (56998) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (57198) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (57398) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (57598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (57798) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (57998) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (58198) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (58398) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (58598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (58798) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (58998) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (59198) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (59398) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (59598) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (59798) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (59988) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:41.3[0m
+[0;33mW (60188) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (60388) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (60588) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (60788) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (60938) TELEGRAM: Sending Telegram alert: 📊 BAO CAO DINH KY - HE THONG CANH BAO SAT LO DAT[0m
+⏰ Thoi gian: NOW
+📡 Trang thai LoRa: HOAT DONG
+💾 Du lieu cam bien cuoi: R:0.0 S:0.1 T:41
+🎚️ Muc canh bao cuoi: Level:0-AN TOAN
+📱 Receiver: ONLINE
+[0;33mW (60988) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (61168) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (61378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (61578) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (61618) esp-x509-crt-bundle: Certificate validated[0m
+[0;33mW (61778) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (61978) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (62178) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (62378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (62578) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (62778) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (62978) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (63178) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (63378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (63578) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (63778) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (63858) TELEGRAM: Telegram alert sent successfully, HTTP status: 200[0m
+[0;33mW (63978) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (64178) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (64378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (64578) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (64778) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (64978) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (65178) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (65378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (65478) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:2.5[0m
+[0;33mW (65678) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (65878) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (66078) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (66278) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (66478) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (66578) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (66778) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (66978) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (67178) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (67378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (67578) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (67778) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (67978) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (68178) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (68378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (68578) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (68778) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (68978) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (69178) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (69378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (69578) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (69778) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (69978) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (70178) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (70378) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (70578) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (70768) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:4.9[0m
+[0;33mW (70968) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (71168) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (71368) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (71568) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (71768) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (71958) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (72158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (72358) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (72558) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (72758) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (72958) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (73158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (73358) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (73558) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (73758) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (73958) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (74158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (74358) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (74558) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (74758) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (74958) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (75158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (75358) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (75558) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (75758) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (75958) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (76158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (76258) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:2.7[0m
+[0;33mW (76458) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (76658) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (76858) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (77058) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (77258) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (77358) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (77558) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (77758) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (77958) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (78158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (78358) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (78558) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (78758) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (78958) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (79158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (79358) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (79558) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (79758) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (79958) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (80158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (80358) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (80558) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (80758) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (80958) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (81158) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (81358) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (81548) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:2.8[0m
+[0;33mW (81748) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (81948) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (82148) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (82348) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (82548) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (82728) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (82928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (83128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (83328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (83528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (83728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (83928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (84128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (84328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (84528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (84728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (84928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (85128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (85328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (85528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (85728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (85928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (86128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (86328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (86528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (86728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (86928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (87028) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:2.8[0m
+[0;33mW (87228) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (87428) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (87628) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (87828) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (88028) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (88128) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (88328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (88528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (88728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (88928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (89128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (89328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (89528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (89728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (89928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (90128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (90328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (90528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (90728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (90928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (91128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (91328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (91528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (91728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (91928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (92128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (92328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (92428) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:2.8[0m
+[0;33mW (92628) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (92828) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (93028) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (93228) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (93428) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (93528) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (93728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (93928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (94128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (94328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (94528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (94728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (94928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (95128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (95328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (95528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (95728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (95928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (96128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (96328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (96528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (96728) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (96928) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (97128) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (97328) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (97528) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (97718) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:2.8[0m
+[0;33mW (97918) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (98118) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (98318) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (98518) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (98718) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;32mI (98898) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;33mW (99098) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (99298) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (99498) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (99698) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (99898) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (100098) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (100298) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (100498) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (100698) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (100898) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (101098) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (101298) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m
+[0;33mW (101498) LANDSLIDE_RECEIVER: Khong nhan duoc du lieu tu LoRa[0m

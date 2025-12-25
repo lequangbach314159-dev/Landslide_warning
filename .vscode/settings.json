@@ -1,0 +1,10 @@
+{
+    "idf.currentSetup": "C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/",
+    "files.associations": {
+        "stdio.h": "c",
+        "esp_log.h": "c",
+        "cstdint": "c",
+        "uart.h": "c",
+        "stdlib.h": "c"
+    }
+}

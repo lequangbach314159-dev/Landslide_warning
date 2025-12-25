@@ -1,0 +1,2 @@
+source C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/gdbinit/symbols
+source C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/gdbinit/connect

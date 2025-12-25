@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/CMakeFiles/bootloader
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/CMakeFiles/bootloader.rule
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/CMakeFiles/bootloader-complete.rule
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/transmitter/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -1,0 +1,310 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com9'
+: SPI Speed      : 40M�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31838h (202808) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00041860 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00041888 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (168) esp_image: segment 3: paddr=000457f8 vaddr=40080000 size=0a820h ( 43040) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a7484h (685188) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f74ac vaddr=4008a820 size=0ec70h ( 60528) load[0m
+[0;32mI (456) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     landslide_receiver[0m
+[0;32mI (480) app_init: App version:      v5.5-dirty[0m
+[0;32mI (484) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (489) app_init: ELF file SHA256:  c11182dd5...[0m
+[0;32mI (494) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB8838 len 000277C8 (157 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 40099490 len 00006B70 (26 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;33mW (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (572) main_task: Started on CPU0[0m
+[0;32mI (582) main_task: Calling app_main()[0m
+[0;32mI (622) wifi:wifi driver task: 3ffc08f0, prio:23, stack:6656, core=0[0m
+[0;32mI (642) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (642) wifi:wifi certification version: v7.0[0m
+[0;32mI (642) wifi:config NVS flash: enabled[0m
+[0;32mI (642) wifi:config nano formatting: disabled[0m
+[0;32mI (642) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (652) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (652) wifi:Init management short buffer num: 32[0m
+[0;32mI (652) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (662) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (662) wifi:Init static rx buffer num: 10[0m
+[0;32mI (672) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (672) wifi_init: rx ba win: 6[0m
+[0;32mI (672) wifi_init: accept mbox: 6[0m
+[0;32mI (682) wifi_init: tcpip mbox: 32[0m
+[0;32mI (682) wifi_init: udp mbox: 6[0m
+[0;32mI (682) wifi_init: tcp mbox: 6[0m
+[0;32mI (682) wifi_init: tcp tx win: 5760[0m
+[0;32mI (692) wifi_init: tcp rx win: 5760[0m
+[0;32mI (692) wifi_init: tcp mss: 1440[0m
+[0;32mI (692) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (702) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (702) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (712) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (792) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (792) wifi:enable tsf[0m
+[0;32mI (812) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (812) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (822) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (832) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (922) LANDSLIDE_RECEIVER: 🔧 GPIO2 initial state after config: LOW (should be HIGH with pull-up)[0m
+[0;32mI (922) LANDSLIDE_RECEIVER: Alarm GPIO initialized - Relay: 25, Button: 2[0m
+[0;32mI (922) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (922) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (1202) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1202) wifi:security: WPA2-PSK, phy: bgn, rssi: -66[0m
+[0;32mI (1212) wifi:pm start, type: 1[0m
+
+[0;32mI (1212) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1232) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1272) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3162) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3932) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4932) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5282) main_task: Returned from app_main()[0m
+[0;32mI (5382) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (5382) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS START[0m
+[0;32mI (5512) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (5882) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7582) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (8382) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting retransmission[0m
+[0;32mI (8382) LANDSLIDE_RECEIVER: 📡 Retransmit request sent: RETX_REQ[0m
+[0;32mI (9072) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (9782) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (11982) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (14182) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (16382) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (18582) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (20782) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (22982) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (25182) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (27382) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (29582) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (31782) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (33982) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (36182) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (38382) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (40582) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (42782) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (44982) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (47182) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (49382) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (51582) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (53782) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (55982) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (58182) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (60382) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (62582) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (64782) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (66982) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (69182) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (71382) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (73482) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (75512) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (13) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.0[0m
+[0;32mI (17) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (35) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (48) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (61) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31838h (202808) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00041860 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00041888 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=000457f8 vaddr=40080000 size=0a820h ( 43040) load[0m
+[0;32mI (169) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a7484h (685188) map[0m
+[0;32mI (403) esp_image: segment 5: paddr=000f74ac vaddr=4008a820 size=0ec70h ( 60528) load[0m
+[0;32mI (439) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (439) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (458) cpu_start: Pro cpu start user code[0m
+[0;32mI (458) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (458) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     landslide_receiver[0m
+[0;32mI (463) app_init: App version:      v5.5-dirty[0m
+[0;32mI (467) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (472) app_init: ELF file SHA256:  c11182dd5...[0m
+[0;32mI (477) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (481) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (485) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (489) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (493) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFB8838 len 000277C8 (157 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 40099490 len 00006B70 (26 KiB): IRAM[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (529) spi_flash: flash io: dio[0m
+[0;33mW (532) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (544) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (555) main_task: Started on CPU0[0m
+[0;32mI (565) main_task: Calling app_main()[0m
+[0;32mI (605) wifi:wifi driver task: 3ffc08f0, prio:23, stack:6656, core=0[0m
+[0;32mI (625) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (625) wifi:wifi certification version: v7.0[0m
+[0;32mI (625) wifi:config NVS flash: enabled[0m
+[0;32mI (625) wifi:config nano formatting: disabled[0m
+[0;32mI (625) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (635) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (635) wifi:Init management short buffer num: 32[0m
+[0;32mI (635) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (645) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (645) wifi:Init static rx buffer num: 10[0m
+[0;32mI (655) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (655) wifi_init: rx ba win: 6[0m
+[0;32mI (655) wifi_init: accept mbox: 6[0m
+[0;32mI (665) wifi_init: tcpip mbox: 32[0m
+[0;32mI (665) wifi_init: udp mbox: 6[0m
+[0;32mI (665) wifi_init: tcp mbox: 6[0m
+[0;32mI (665) wifi_init: tcp tx win: 5760[0m
+[0;32mI (675) wifi_init: tcp rx win: 5760[0m
+[0;32mI (675) wifi_init: tcp mss: 1440[0m
+[0;32mI (675) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (685) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (685) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (695) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (775) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (795) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (795) wifi:enable tsf[0m
+[0;32mI (815) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (815) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (825) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (835) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (925) LANDSLIDE_RECEIVER: 🔧 GPIO2 initial state after config: LOW (should be HIGH with pull-up)[0m
+[0;32mI (925) LANDSLIDE_RECEIVER: Alarm GPIO initialized - Relay: 25, Button: 2[0m
+[0;32mI (925) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (925) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (1235) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1235) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (1245) wifi:pm start, type: 1[0m
+
+[0;32mI (1245) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1245) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1265) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2275) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3935) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4935) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5285) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (5285) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS START[0m
+[0;32mI (5285) main_task: Returned from app_main()[0m
+[0;32mI (5555) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (5955) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7485) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (8285) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting retransmission[0m
+[0;32mI (8285) LANDSLIDE_RECEIVER: 📡 Retransmit request sent: RETX_REQ[0m
+[0;32mI (9225) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (9535) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (11555) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (13755) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (15955) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (18085) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (20285) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (22485) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (24685) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (26885) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (29085) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (31285) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (33485) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (35685) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (37885) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (40085) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (40645) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (40645) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (40645) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (40655) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (41355) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (41355) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (41355) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (41905) LANDSLIDE_RECEIVER: RECEIVED: 3:0.3[0m
+[0;32mI (41905) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 0.3[0m
+[0;32mI (41905) LANDSLIDE_RECEIVER: Tilt packet received: 0.3[0m
+[0;32mI (42115) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (42615) LANDSLIDE_RECEIVER: RECEIVED: 4:73.9%[0m
+[0;32mI (42615) LANDSLIDE_RECEIVER: Packet ID: 4, Data: 73.9%[0m
+[0;32mI (42615) LANDSLIDE_RECEIVER: GPIO26 packet received: 73.9%[0m
+[0;32mI (42615) LANDSLIDE_RECEIVER: === ALL 4 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (42625) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=0.3°, Level=0-AN TOAN[0m
+[0;32mI (42625) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (42635) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (42645) TELEGRAM: Alert sent: Level 0-AN TOAN, Alarm: OFF[0m
+[0;32mI (43345) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (44245) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (46445) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (48645) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (50845) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (53045) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (55245) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (57445) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (59645) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (61845) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (64045) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (66245) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (68445) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (70645) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (72845) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (75045) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (77245) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (79445) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (81645) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (83845) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (86045) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (88245) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (90445) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (92645) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (94845) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (97045) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (99245) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (101445) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (103645) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (105845) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (108045) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (110245) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (112445) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m
+[0;32mI (114645) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO2 = LOW, Alarm: OFF[0m

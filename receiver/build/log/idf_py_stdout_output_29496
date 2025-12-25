@@ -1,0 +1,220 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com8'
+j
+[0;32mI (34) boot.esp32: S�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b2b8h ( 45752) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b2e0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001b308 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d6f8 vaddr=40080000 size=02920h ( 10528) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16b98h ( 93080) map[0m
+[0;32mI (155) esp_image: segment 5: paddr=00036bc0 vaddr=40082920 size=0b730h ( 46896) load[0m
+[0;32mI (180) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (180) boot: Disabling RNG early entropy source...[0m
+[0;32mI (191) cpu_start: Multicore app[0m
+[0;32mI (199) cpu_start: Pro cpu start user code[0m
+[0;32mI (199) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (199) app_init: Application information:[0m
+[0;32mI (199) app_init: Project name:     landslide_receiver[0m
+[0;32mI (204) app_init: App version:      v5.5-dirty[0m
+[0;32mI (208) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (213) app_init: ELF file SHA256:  762feec16...[0m
+[0;32mI (217) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (222) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (225) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (229) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (240) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFB2CB8 len 0002D348 (180 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (255) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (261) heap_init: At 4008E050 len 00011FB0 (71 KiB): IRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (273) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (286) main_task: Started on CPU0[0m
+[0;32mI (296) main_task: Calling app_main()[0m
+[0;32mI (296) LORA_RECEIVER: ESP32 LoRa Receiver Starting...[0m
+[0;32mI (296) LORA_RECEIVER: GPIO initialized: M0=4, M1=5, AUX=15[0m
+[0;32mI (296) LORA_RECEIVER: UART initialized: Baud=9600, TX=17, RX=16[0m
+[0;32mI (406) LORA_RECEIVER: LoRa set to Normal mode[0m
+[0;32mI (406) LORA_RECEIVER: LoRa Receiver ready![0m
+[0;32mI (406) LORA_RECEIVER: Listening for data...[0m
+[0;32mI (406) main_task: Returned from app_main()[0m
+[0;32mI (4606) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.0 deg[0m
+[0;32mI (9706) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.0 deg[0m
+[0;32mI (15646) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:56.5 deg[0m
+[0;32mI (18196) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:0.0 deg[0m
+[0;32mI (24896) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.3 deg[0m
+[0;32mI (29996) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.3 deg[0m
+[0;32mI (34976) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.2 deg[0m
+[0;32mI (40076) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:59.2 deg[0m
+[0;32mI (55176) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:57.6 deg[0m
+[0;32mI (70136) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:59.0 deg[0m
+[0;32mI (75236) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.1 deg[0m
+[0;32mI (85336) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.7 deg[0m
+[0;32mI (90296) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.8 deg[0m
+[0;32mI (95396) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.6 deg[0m
+[0;32mI (100376) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.4 deg[0m
+[0;32mI (105476) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.3 deg[0m
+[0;32mI (110456) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.7 deg[0m
+[0;32mI (115556) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.5 deg[0m
+[0;32mI (125656) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.5 deg[0m
+[0;32mI (130616) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.0 deg[0m
+[0;32mI (135716) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.9 deg[0m
+[0;32mI (145816) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.6 deg[0m
+[0;32mI (150776) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.4 deg[0m
+[0;32mI (155876) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.4 deg[0m
+[0;32mI (160856) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.2 deg[0m
+[0;32mI (165956) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.2 deg[0m
+[0;32mI (170936) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.0 deg[0m
+[0;32mI (176036) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.4 deg[0m
+[0;32mI (181016) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.3 deg[0m
+[0;32mI (191116) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.4 deg[0m
+[0;32mI (196216) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.5 deg[0m
+[0;32mI (201176) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.6 deg[0m
+[0;32mI (206276) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.5 deg[0m
+[0;32mI (211256) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.5 deg[0m
+[0;32mI (216356) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.3 deg[0m
+[0;32mI (221336) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:54.4 deg[0m
+[0;32mI (226436) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.8 deg[0m
+[0;32mI (231416) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.6 deg[0m
+[0;32mI (236516) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.4 deg[0m
+[0;32mI (241496) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.8 deg[0m
+[0;32mI (246596) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:59.1 deg[0m
+[0;32mI (251576) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.6 deg[0m
+[0;32mI (256676) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.8 deg[0m
+[0;32mI (261656) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.8 deg[0m
+[0;32mI (266756) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.5 deg[0m
+[0;32mI (271736) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:59.0 deg[0m
+[0;32mI (276836) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.5 deg[0m
+[0;32mI (281816) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.4 deg[0m
+[0;32mI (286916) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.0 deg[0m
+[0;32mI (291896) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:59.0 deg[0m
+[0;32mI (296996) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.6 deg[0m
+[0;32mI (301976) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.4 deg[0m
+[0;32mI (307076) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:59.2 deg[0m
+ v3.0
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b2b8h ( 45752) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b2e0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001b308 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d6f8 vaddr=40080000 size=02920h ( 10528) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16b98h ( 93080) map[0m
+[0;32mI (155) esp_image: segment 5: paddr=00036bc0 vaddr=40082920 size=0b730h ( 46896) load[0m
+[0;32mI (180) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (180) boot: Disabling RNG early entropy source...[0m
+[0;32mI (191) cpu_start: Multicore app[0m
+[0;32mI (199) cpu_start: Pro cpu start user code[0m
+[0;32mI (199) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (199) app_init: Application information:[0m
+[0;32mI (199) app_init: Project name:     landslide_receiver[0m
+[0;32mI (204) app_init: App version:      v5.5-dirty[0m
+[0;32mI (208) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (213) app_init: ELF file SHA256:  762feec16...[0m
+[0;32mI (217) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (222) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (225) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (229) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (240) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFB2CB8 len 0002D348 (180 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (255) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (261) heap_init: At 4008E050 len 00011FB0 (71 KiB): IRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (273) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (286) main_task: Started on CPU0[0m
+[0;32mI (296) main_task: Calling app_main()[0m
+[0;32mI (296) LORA_RECEIVER: ESP32 LoRa Receiver Starting...[0m
+[0;32mI (296) LORA_RECEIVER: GPIO initialized: M0=4, M1=5, AUX=15[0m
+[0;32mI (296) LORA_RECEIVER: UART initialized: Baud=9600, TX=17, RX=16[0m
+[0;32mI (406) LORA_RECEIVER: LoRa set to Normal mode[0m
+[0;32mI (406) LORA_RECEIVER: LoRa Receiver ready![0m
+[0;32mI (406) LORA_RECEIVER: Listening for data...[0m
+[0;32mI (406) main_task: Returned from app_main()[0m
+[0;32mI (2806) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:58.9 deg[0m
+[0;32mI (7776) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:0.5 deg[0m
+[0;32mI (12876) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:7.0 deg[0m
+[0;32mI (17856) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:48.1 deg[0m
+[0;32mI (22956) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:49.2 deg[0m
+[0;32mI (27936) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:48.3 deg[0m
+[0;32mI (33036) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:49.1 deg[0m
+[0;32mI (38016) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:49.4 deg[0m
+[0;32mI (43116) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:48.9 deg[0m
+[0;32mI (48096) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:49.2 deg[0m
+[0;32mI (53196) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:49.4 deg[0m
+[0;32mI (58176) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:49.3 deg[0m
+[0;32mI (63276) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:49.5 deg[0m
+[0;32mI (68256) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:48.8 deg[0m
+[0;32mI (73356) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:49.0 deg[0m
+[0;32mI (88456) LORA_RECEIVER: Data: Rain:0.0% Moisture:100.0% Tilt:53.8 deg[0m
+[0;32mI (88756) LORA_RECEIVER: Data: ALERT! Rain:0.0% Moisture:100.0% Tilt:53.8 deg[0m
+[0;32mI (93526) LORA_RECEIVER: Data: Rain:0.0% Moisture:100.0% Tilt:55.2 deg[0m
+[0;32mI (93826) LORA_RECEIVER: Data: ALERT! Rain:0.0% Moisture:100.0% Tilt:55.2 deg[0m
+[0;32mI (98616) LORA_RECEIVER: Data: Rain:0.0% Moisture:100.0% Tilt:56.7 deg[0m
+[0;32mI (98916) LORA_RECEIVER: Data: ALERT! Rain:0.0% Moisture:100.0% Tilt:56.7 deg[0m
+[0;32mI (103706) LORA_RECEIVER: Data: Rain:0.0% Moisture:100.0% Tilt:56.7 deg[0m
+[0;32mI (104006) LORA_RECEIVER: Data: ALERT! Rain:0.0% Moisture:100.0% Tilt:56.7 deg[0m
+[0;32mI (113906) LORA_RECEIVER: Data: Rain:0.0% Moisture:100.0% Tilt:57.5 deg[0m
+[0;32mI (114206) LORA_RECEIVER: Data: ALERT! Rain:0.0% Moisture:100.0% Tilt:57.5 deg[0m
+[0;32mI (119106) LORA_RECEIVER: Data: Rain:0.0% Moisture:100.0% Tilt:60.8 deg[0m
+[0;32mI (119226) LORA_RECEIVER: Data: ALERT! Rain:0.0% Moisture:100.0% Tilt:60.8 deg[0m
+[0;32mI (123996) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:63.9 deg[0m
+[0;32mI (129096) LORA_RECEIVER: Data: Rain:0.0% Moisture:4.7% Tilt:65.0 deg[0m
+[0;32mI (134076) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:64.6 deg[0m
+[0;32mI (139176) LORA_RECEIVER: Data: Rain:0.0% Moisture:0.1% Tilt:64.9 deg[0m
+[0;32mI (144276) LORA_RECEIVER: Data: Rain:78.3% Moisture:0.1% Tilt:65.1 deg[0m
+[0;32mI (144476) LORA_RECEIVER: Data: ALERT! Rain:78.3% Moisture:0.1% Tilt:65.1 deg[0m
+[0;32mI (149376) LORA_RECEIVER: Data: Rain:88.7% Moisture:0.1% Tilt:64.9 deg[0m
+[0;32mI (149566) LORA_RECEIVER: Data: ALERT! Rain:88.7% Moisture:0.1% Tilt:64.9 deg[0m
+[0;32mI (154466) LORA_RECEIVER: Data: Rain:92.3% Moisture:0.1% Tilt:65.7 deg[0m
+[0;32mI (154656) LORA_RECEIVER: Data: ALERT! Rain:92.3% Moisture:0.1% Tilt:65.7 deg[0m
+[0;32mI (159556) LORA_RECEIVER: Data: Rain:93.5% Moisture:0.1% Tilt:66.0 deg[0m
+[0;32mI (159746) LORA_RECEIVER: Data: ALERT! Rain:93.5% Moisture:0.1% Tilt:66.0 deg[0m
+[0;32mI (164516) LORA_RECEIVER: Data: Rain:26.6% Moisture:0.1% Tilt:65.8 deg[0m
+[0;32mI (169616) LORA_RECEIVER: Data: Rain:32.8% Moisture:0.1% Tilt:66.6 deg[0m
+[0;32mI (174716) LORA_RECEIVER: Data: Rain:70.4% Moisture:0.1% Tilt:65.5 deg[0m
+[0;32mI (174916) LORA_RECEIVER: Data: ALERT! Rain:70.4% Moisture:0.1% Tilt:65.5 deg[0m
+[0;32mI (179816) LORA_RECEIVER: Data: Rain:81.5% Moisture:0.1% Tilt:65.8 deg[0m
+[0;32mI (180006) LORA_RECEIVER: Data: ALERT! Rain:81.5% Moisture:0.1% Tilt:65.8 deg[0m
+[0;32mI (184776) LORA_RECEIVER: Data: Rain:28.4% Moisture:0.1% Tilt:65.4 deg[0m
+[0;32mI (189876) LORA_RECEIVER: Data: Rain:26.6% Moisture:0.1% Tilt:65.2 deg[0m
+[0;32mI (194856) LORA_RECEIVER: Data: Rain:27.3% Moisture:0.1% Tilt:65.6 deg[0m
+[0;32mI (199956) LORA_RECEIVER: Data: Rain:27.3% Moisture:0.1% Tilt:66.6 deg[0m
+[0;32mI (204936) LORA_RECEIVER: Data: Rain:26.8% Moisture:0.1% Tilt:66.2 deg[0m
+[0;32mI (210036) LORA_RECEIVER: Data: Rain:26.4% Moisture:0.1% Tilt:65.3 deg[0m
+[0;32mI (215016) LORA_RECEIVER: Data: Rain:26.1% Moisture:0.1% Tilt:54.2 deg[0m
+[0;32mI (220116) LORA_RECEIVER: Data: Rain:25.7% Moisture:0.1% Tilt:53.9 deg[0m

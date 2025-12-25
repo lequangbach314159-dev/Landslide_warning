@@ -1,0 +1,114 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com8'
+\&&'�A%�Speed      :ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31584h (202116) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=000415ac vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=000415d4 vaddr=3ffb0000 size=03f58h ( 16216) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00045534 vaddr=40080000 size=0aae4h ( 43748) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=aabe4h (699364) map[0m
+[0;32mI (425) esp_image: segment 5: paddr=000fac0c vaddr=4008aae4 size=0e98ch ( 59788) load[0m
+[0;32mI (461) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (461) boot: Disabling RNG early entropy source...[0m
+[0;32mI (471) cpu_start: Multicore app[0m
+[0;32mI (480) cpu_start: Pro cpu start user code[0m
+[0;32mI (480) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (480) app_init: Application information:[0m
+[0;32mI (480) app_init: Project name:     landslide_receiver[0m
+[0;32mI (485) app_init: App version:      v5.5-dirty[0m
+[0;32mI (489) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (494) app_init: ELF file SHA256:  255bc1d72...[0m
+[0;32mI (498) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (506) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (510) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (514) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (521) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8758 len 000278A8 (158 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (542) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (548) spi_flash: detected chip: generic[0m
+[0;32mI (551) spi_flash: flash io: dio[0m
+[0;33mW (553) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (566) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (576) main_task: Started on CPU0[0m
+[0;32mI (586) main_task: Calling app_main()[0m
+[0;32mI (626) wifi:wifi driver task: 3ffc078c, prio:23, stack:6656, core=0[0m
+[0;32mI (646) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (646) wifi:wifi certification version: v7.0[0m
+[0;32mI (646) wifi:config NVS flash: enabled[0m
+[0;32mI (646) wifi:config nano formatting: disabled[0m
+[0;32mI (646) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (656) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (656) wifi:Init management short buffer num: 32[0m
+[0;32mI (656) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (666) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (666) wifi:Init static rx buffer num: 10[0m
+[0;32mI (676) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (676) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: accept mbox: 6[0m
+[0;32mI (686) wifi_init: tcpip mbox: 32[0m
+[0;32mI (686) wifi_init: udp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5760[0m
+[0;32mI (696) wifi_init: tcp rx win: 5760[0m
+[0;32mI (696) wifi_init: tcp mss: 1440[0m
+[0;32mI (696) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (706) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (706) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (716) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (806) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (806) wifi:enable tsf[0m
+[1;31mE (826) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (846) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (856) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (866) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (876) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (916) main_task: Returned from app_main()[0m
+[0;32mI (1246) wifi:connected with nhà đầm trấu, aid = 10, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1256) wifi:security: WPA2-PSK, phy: bgn, rssi: -61[0m
+[0;32mI (1256) wifi:pm start, type: 1[0m
+
+[0;32mI (1256) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1266) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1286) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2696) esp_netif_handlers: sta ip: 192.168.71.104, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (12026) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;33mW (22026) esp-tls: Failed to open new connection in specified timeout[0m
+[1;31mE (22026) transport_base: Failed to open a new connection[0m
+[1;31mE (22026) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (22026) TELEGRAM: Telegram alert failed: ESP_ERR_HTTP_CONNECT[0m
+[0;33mW (22036) TELEGRAM: HTTP status (if any): 0[0m
+[0;32mI (65586) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:39.8[0m
+[0;32mI (66776) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (66776) TELEGRAM: Debug - LCD_line1_buffer: 'R:0.0 S:0.1 T:39' (len=16)[0m
+[0;32mI (66776) TELEGRAM: Debug - sscanf returned 1, values: R=0 S=0 T=0[0m
+[0;32mI (67816) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (245886) LANDSLIDE_RECEIVER: RECEIVED: R:0.0 S:0.1 T:40.0[0m
+[0;32mI (247046) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (247046) TELEGRAM: Debug - LCD_line1_buffer: 'R:0.0 S:0.1 T:40' (len=16)[0m
+[0;32mI (247046) TELEGRAM: Debug - sscanf returned 1, values: R=0 S=0 T=0[0m
+[0;32mI (247736) esp-x509-crt-bundle: Certificate validated[0m

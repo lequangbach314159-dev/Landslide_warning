@@ -1,0 +1,1717 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\landslide_transmitter.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2e4h ( 49892) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c30c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c334 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e754 vaddr=40080000 size=018c4h (  6340) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1dac8h (121544) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003daf0 vaddr=400818c4 size=0cf8ch ( 53132) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  62de4e1c0...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (240) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (244) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (6190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (11560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (16930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (22300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (27670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (33040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.6 deg Level:0-AN TOÀN[0m
+[0;32mI (38410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (43770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.6 deg Level:0-AN TOÀN[0m
+[0;32mI (49140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (54520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (59890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (65260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (70620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (76000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.6 deg Level:0-AN TOÀN[0m
+[0;32mI (81370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (86740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.3 deg Level:0-AN TOÀN[0m
+[0;32mI (92110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (97470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (102850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (108220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (113590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (118950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (124330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (129700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (135060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (140440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (145810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (151170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (156550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (161920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (167290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (172650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (178030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (183400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (188770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (194140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (199510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (204880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (210250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (215610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (220990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (226360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (231720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (237100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (242460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (247840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (253210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (258570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (263940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (269310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (274690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.9 deg Level:0-AN TOÀN[0m
+[0;32mI (280060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (285430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (290800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������70) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN
+[0;32mI (301540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.8 deg Level:0-AN TOÀN[0m
+[0;32mI (306910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.5 deg Level:0-AN TOÀN[0m
+[0;32mI (312280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:66.2 deg Level:0-AN TOÀN[0m
+[0;32mI (317650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (323020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.6 deg Level:0-AN TOÀN[0m
+[0;32mI (328390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (333760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.8 deg Level:0-AN TOÀN[0m
+[0;32mI (339130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.0 deg Level:0-AN TOÀN[0m
+[0;32mI (344500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.9 deg Level:0-AN TOÀN[0m
+[0;32mI (349860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.9 deg Level:0-AN TOÀN[0m
+[0;32mI (355240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (360610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (365980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (371350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (376710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (382090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (387450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (392830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (398200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.9 deg Level:0-AN TOÀN[0m
+[0;32mI (403570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (408940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (414310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.9 deg Level:0-AN TOÀN[0m
+[0;32mI (419680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (425050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (430410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (435790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (441150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (446530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.6 deg Level:0-AN TOÀN[0m
+[0;32mI (451900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (457270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (462640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (468000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (473380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (478740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (484120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (489490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (494860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (500230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.1 deg Level:0-AN TOÀN[0m
+[0;32mI (505600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (510970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (516340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (521710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (527080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (532450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (537810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (543190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (548560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (553930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (559300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (564670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (570040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (575410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (580780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (586150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (591520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (596890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.6 deg Level:0-AN TOÀN[0m
+[0;32mI (602250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (607620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (613000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (618370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (623740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (629110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (634480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.9 deg Level:0-AN TOÀN[0m
+[0;32mI (639850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (645220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (650590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.9 deg Level:0-AN TOÀN[0m
+[0;32mI (655960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (661330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (666690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (672070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.9 deg Level:0-AN TOÀN[0m
+[0;32mI (677440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (682810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (688180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.7 deg Level:0-AN TOÀN[0m
+[0;32mI (693550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (698910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (704290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (709660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (715020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (720400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (725770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (731140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.5 deg Level:0-AN TOÀN[0m
+[0;32mI (736510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (741880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.9 deg Level:0-AN TOÀN[0m
+[0;32mI (747250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.8 deg Level:0-AN TOÀN[0m
+[0;32mI (752620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.2 deg Level:0-AN TOÀN[0m
+[0;32mI (757990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (763350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (768730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (774100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (779460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (784840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.7 deg Level:0-AN TOÀN[0m
+[0;32mI (790210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (795580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (800950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (806320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (811680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (817060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (822430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (827800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (833170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.0 deg Level:0-AN TOÀN[0m
+[0;32mI (838540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (843910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.8 deg Level:0-AN TOÀN[0m
+[0;32mI (849280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:67.9 deg Level:0-AN TOÀN[0m
+[0;32mI (854650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (860020) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (865390) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:0-AN TOÀN[0m
+[0;32mI (870760) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (876130) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.9 deg Level:0-AN TOÀN[0m
+[0;32mI (881500) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:0-AN TOÀN[0m
+[0;32mI (886870) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (892240) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:0-AN TOÀN[0m
+[0;32mI (897610) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:0-AN TOÀN[0m
+[0;32mI (902980) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (908350) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.8 deg Level:0-AN TOÀN[0m
+[0;32mI (913720) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.3 deg Level:1-THEO DÕI[0m
+[0;32mI (913720) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (919090) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.6 deg Level:1-THEO DÕI[0m
+[0;32mI (919090) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (924460) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:1-THEO DÕI[0m
+[0;32mI (924460) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (929830) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:1-THEO DÕI[0m
+[0;32mI (929830) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (935200) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:1-THEO DÕI[0m
+[0;32mI (935200) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (940570) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:1-THEO DÕI[0m
+[0;32mI (940570) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (945940) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:1-THEO DÕI[0m
+[0;32mI (945940) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (951330) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (951330) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (956720) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (956720) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (962110) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (962110) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (967500) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (967500) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (972890) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (972890) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (978280) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (978280) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (983670) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (983670) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (989060) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (989060) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (994450) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (994450) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (999840) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (999840) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+����������������������������������������������������������������005230) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC
+[0;33mW (1005230) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1010620) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1010620) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1016010) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1016010) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1021400) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1021400) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1026790) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1026790) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1032180) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1032180) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1037570) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1037570) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1042960) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1042960) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1048350) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1048350) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1053740) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1053740) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1059130) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1059130) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1064520) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1064520) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1069910) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1069910) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1075300) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.9 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1075300) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1080690) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1080690) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1086080) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1086080) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1091470) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1091470) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+���������������������������������������������������������������� (1096860) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC
+[0;33mW (1096860) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1102250) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1102250) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1107640) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1107640) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1113030) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1113030) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1118420) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1118420) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1123810) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1123810) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1129200) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1129200) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1134590) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1134590) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+���������������������������������������������������������������� (1139980) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC
+[0;33mW (1139980) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1145370) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1145370) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1150760) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1150760) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1156150) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.9 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1156150) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1161540) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1161540) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1166930) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1166930) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1172320) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1172320) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1177710) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1177710) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1183100) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1183100) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1188490) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1188490) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1193880) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1193880) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1199270) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1199270) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1204660) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1204660) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1210050) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1210050) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1215440) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1215440) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1220830) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1220830) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1226220) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1226220) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1231610) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1231610) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1237000) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1237000) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1242390) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1242390) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1247780) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1247780) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1253170) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1253170) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1258560) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1258560) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1263950) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1263950) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1269340) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1269340) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1274730) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1274730) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1280120) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1280120) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1285510) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1285510) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1290900) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.6 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1290900) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1296290) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1296290) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1301680) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1301680) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1307070) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1307070) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1312460) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1312460) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1317850) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1317850) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1323240) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1323240) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1328630) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1328630) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1334020) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.7 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1334020) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1339410) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1339410) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1344800) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:70.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1344800) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1350190) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1350190) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1355580) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1355580) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1360970) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1360970) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1366360) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1366360) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1371750) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.5 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1371750) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1377140) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1377140) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1382530) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1382530) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1387920) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1387920) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1393310) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1393310) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1398700) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.2 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1398700) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1404090) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:64.8 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1404090) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1409480) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1409480) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1414870) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.9 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1414870) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1420260) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.8 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1420260) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1425650) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.9 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1425650) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1431040) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1431040) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1436430) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1436430) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1441820) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1441820) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1447210) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.6 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1447210) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1452600) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1452600) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1457990) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1457990) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1463380) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1463380) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1468770) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1468770) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1474160) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1474160) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1479550) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1479550) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1484940) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1484940) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1490000) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1490000) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+����������������������������������������������������������������1495390) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.0 deg Level:2-CẢNH GIÁC
+[0;33mW (1495390) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1500780) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:67.8 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1500780) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1506170) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.1 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1506170) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1511560) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:68.7 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1511560) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1516950) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:71.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1516950) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1522340) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:71.4 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1522340) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1527730) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:72.7 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1527730) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1533120) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:71.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1533120) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1538510) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:72.3 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1538510) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1543900) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:70.7 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1543900) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1549290) LORA_SENDER: SENT: Rain:0.0% Soil:100.0% Tilt:70.9 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1549290) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1554660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1554660) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1560030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.9 deg Level:2-CẢNH GIÁC[0m
+[0;33mW (1560030) LORA_SENDER: CANH BAO CAP 2 - CANH GIAC: Can theo doi chat che![0m
+[0;32mI (1565400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:1-THEO DÕI[0m
+[0;32mI (1565400) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (1570770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:1-THEO DÕI[0m
+[0;32mI (1570770) LORA_SENDER: CANH BAO CAP 1 - THEO DOI: Dieu kien bat dau bat loi![0m
+[0;32mI (1576140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (1581510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1586880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1592250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.0 deg Level:0-AN TOÀN[0m
+[0;32mI (1597620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1602990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (1608360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1613730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1619100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1624470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (1629840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (1635210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.0 deg Level:0-AN TOÀN[0m
+[0;32mI (1640580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1645950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (1651320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (1656690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.8 deg Level:0-AN TOÀN[0m
+[0;32mI (1662060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (1667430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.8 deg Level:0-AN TOÀN[0m
+[0;32mI (1672800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (1678170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.9 deg Level:0-AN TOÀN[0m
+[0;32mI (1683540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (1688910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (1694280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.9 deg Level:0-AN TOÀN[0m
+[0;32mI (1699650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1705020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (1710390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1715760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1721130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1726500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1731870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1737240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1742610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:71.1 deg Level:0-AN TOÀN[0m
+[0;32mI (1747980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1753350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1758720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1764090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������1769460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN
+[0;32mI (1774830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (1780200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1785570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+���������������������������������������������������������������� (1790940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN
+[0;32mI (1796310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (1801680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (1807050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1812420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.2 deg Level:0-AN TOÀN[0m
+[0;32mI (1817790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (1823160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1828530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1833900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.8 deg Level:0-AN TOÀN[0m
+[0;32mI (1839270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1844640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1850010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1855380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1860750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1866120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (1871490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (1876860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1882230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (1887600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1892970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (1898340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:71.0 deg Level:0-AN TOÀN[0m
+[0;32mI (1903710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1909080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������(1914450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN
+[0;32mI (1919820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1925190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (1930560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.8 deg Level:0-AN TOÀN[0m
+[0;32mI (1935930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1941300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1946670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (1952040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (1957410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (1962780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (1968150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1973520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (1978890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (1984260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.1 deg Level:0-AN TOÀN[0m
+[0;32mI (1989630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (1995000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2000370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2005740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2011110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2016480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2021850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2027220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2032590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2037960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2043330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2048700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2054070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2059440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2064810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2070180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2075550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2080920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2086290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2091660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2097030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2102400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2107770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2113140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2118510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2123880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2129250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2134620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2139990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2145360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2150730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2156100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2161470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2166840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2172210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2177580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2182950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2188320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2193690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2199060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2204430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2209800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2215170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2220540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2225910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2231280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2236650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2242020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2247390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2252760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:65.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2258130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2263500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2268870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2274240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2279610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2284980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2290350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2295720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2301090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2306460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2311830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2317200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:69.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2322570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2327940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2333310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2338680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2344050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2349420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2354790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2360160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2365530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2370900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2376270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2381640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2387010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������2392380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN
+[0;32mI (2397750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2403120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2408490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2413860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2419230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2424600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2429970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2435340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2440710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2446080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2451450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2456820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2462190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2467560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2472930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2478300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:71.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2483670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2489040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2494410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2499780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2505150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2510520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2515890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2521260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2526630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2532000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2537370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:71.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2542740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2548110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2553480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2558850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2564220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:64.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2569590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:48.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2574960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2580330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2585700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2591070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2596440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2601810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2607180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2612550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2617920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2623290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2628660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2634030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2639400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2644770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2650140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2655510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2660880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2666250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2671620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2676990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2682360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2687730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2693100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2698470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2703840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2709210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2714580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2719950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2725320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2730690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2736060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2741430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2746800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2752170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2757540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2762910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2768280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2773650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2779020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2784390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2789760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2795130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (2800500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2805870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2811240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2816610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2821980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2827350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2832720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2838090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2843460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2848830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2854200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2859570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2864940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2870310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2875680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (2881050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2886420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2891790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (2897160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2902530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:68.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2907900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2913270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2918640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2924010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2929380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2934750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (2940120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2945490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2950860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (2956230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (2961600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2966970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (2972340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2977710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2983080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (2988450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (2993820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (2999190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3004560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3009930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3015300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3020670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3026040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3031410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3036780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3042150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3047520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3052890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3058260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3063630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3069000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3074370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3079740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3085110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3090480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3095850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3101220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3106590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3111960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3117330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3122700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3128070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3133440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3138810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3144180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3149550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3154920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3160290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3165660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3171030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3176400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3181770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3187140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3192510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3197880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3203250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3208620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3213990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (3219360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3224730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3230100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3235470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3240840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3246210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3251580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3256950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3262320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3267690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3273060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3278430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3283800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3289170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3294540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (3299910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3305280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3310650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3316020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3321390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3326760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3332130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3337500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3342870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3348240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3353610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3358980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3364350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3369720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3375090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3380460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3385830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3391200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3396570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3401940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3407310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3412680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3418050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3423420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3428790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3434160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3439530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3444900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3450270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3455640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3461010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3466380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3471750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3477120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3482490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3487860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3493230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3498600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3503970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3509340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3514710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3520080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3525450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3530820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3536190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3541560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3546930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3552300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3557670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3563040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3568410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3573780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3579150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3584520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3589890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3595260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (3600630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3606000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3611370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (3616740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3622110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3627480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3632850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3638220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (3643590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3648960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3654330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3659700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������3665070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN
+[0;32mI (3670440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3675810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3681180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3686550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3691920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3697290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3702660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3708030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (3713400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3718770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3724140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3729510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3734880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3740250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3745620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3750990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3756360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3761730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3767100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3772470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3777840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3783210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������3788580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.2 deg Level:0-AN TOÀN
+[0;32mI (3793950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (3799320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3804690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3810060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3815430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������3820800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN
+����������������������������������������������������������������826170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN
+[0;32mI (3831540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3836910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3842280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3847650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3853020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3858390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3863760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (3869130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3874500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3879870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3885240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3890610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (3895980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3901350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (3906720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (3912090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3917460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3922830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (3928200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3933570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (3938940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3944310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3949680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3955050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3960420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (3965790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (3971160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3976530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (3981900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (3987270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (3992640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (3998010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4003380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4008750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4014120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4019490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4024860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4030230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4035600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4040970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4046340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4051710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4057080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4062450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4067820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4073190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4078560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4083930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4089300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4094670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4100040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4105410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4110780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4116150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4121520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4126890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4132260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4137630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4143000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4148370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4153740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4159110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4164480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4169850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4175220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4180590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4185960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4191330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4196700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4202070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4207440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4212810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4218180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4223550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4228920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+���������������������������������������������������������������� (4234290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN
+[0;32mI (4239660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4245030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4250400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4255770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4261140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4266510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4271880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4277250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4282620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4287990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4293360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4298730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4304100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4309470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4314840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4320210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4325580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4330950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4336320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4341690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4347060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4352430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4357800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4363170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4368540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4373910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4379280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4384650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4390020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (4395390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4400760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4406130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4411500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4416870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4422240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4427610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4432980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4438350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4443720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4449090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4454460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4459830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4465200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4470570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4475940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4481310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4486680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������(4492050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN
+[0;32mI (4497420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4502790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4508160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4513530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (4518900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4524270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4529640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (4535010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4540380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4545750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4551120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (4556490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4561860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (4567230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������(4572600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN
+[0;32mI (4577970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (4583340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4588710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4594080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4599450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4604820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (4610190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4615560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4620930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4626300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (4631670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4637040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4642410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4647780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4653150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4658520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4663890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4669260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4674630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4680000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4685370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4690740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4696110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4701480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4706850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4712220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4717590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (4722960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4728330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4733700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4739070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4744440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4749810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4755180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4760550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4765920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4771290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4776660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4782030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4787400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4792770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4798140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4803510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4808880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4814250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4819620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4824990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4830360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4835730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4841100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4846470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4851840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4857210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:78.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4862580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4867950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4873320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4878690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4884060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4889430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4894800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (4900170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4905540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (4910910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4916280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (4921650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (4927020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (4932390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4937760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4943130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (4948500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4953870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4959240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4964610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (4969980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4975350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (4980720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (4986090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (4991460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (4996830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5002200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5007570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5012940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5018310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5023680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (5029050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5034420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5039790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5045160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5050530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5055900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5061270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5066640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5072010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5077380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5082750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5088120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (5093490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5098860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5104230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5109600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5114970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5120340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5125710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5131080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (5136450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5141820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5147190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5152560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (5157930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5163300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5168670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5174040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5179410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5184780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5190150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5195520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (5200890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5206260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5211630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5217000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5222370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5227740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5233110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5238480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5243850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5249220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5254590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5259960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5265330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5270700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5276070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5281440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5286810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5292180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5297550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5302920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5308290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (5313660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5319030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (5324400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5329770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5335140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5340510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5345880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5351250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5356620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5361990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5367360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5372730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5378100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5383470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5388840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5394210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5399580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5404950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5410320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5415690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5421060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5426430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5431800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5437170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5442540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5447910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5453280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5458650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5464020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5469390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5474760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5480130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5485500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5490870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5496240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5501610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5506980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5512350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5517720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5523090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5528460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (5533830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5539200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5544570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (5549940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5555310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5560680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5566050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5571420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5576790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5582160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5587530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5592900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5598270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5603640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5609010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5614380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5619750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5625120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5630490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5635860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5641230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5646600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5651970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (5657340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5662710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5668080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5673450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (5678820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (5684190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5689560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5694930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5700300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (5705670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5711040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5716410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5721780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5727150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5732520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5737890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5743260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5748630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (5754000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (5759370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5764740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5770110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5775480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5780850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (5786220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5791590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5796960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5802330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5807700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5813070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5818440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5823810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5829180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5834550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5839920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5845290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5850660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5856030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5861400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5866770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5872140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5877510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5882880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5888250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5893620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5898990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (5904360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5909730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5915100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5920470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5925840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5931210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (5936580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (5941950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5947320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (5952690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5958060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (5963430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (5968800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5974170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (5979540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5984910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (5990280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (5995650) LORA_SENDER: SENT: Rain:0.0% Soil:2.9% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6001020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6006390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6011760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6017130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6022500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6027870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6033240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6038610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6043980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6049350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:71.2 deg Level:0-AN TOÀN[0m
+[0;32mI (6054720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6060090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6065460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6070830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6076200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6081570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (6086940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6092310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6097680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6103050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6108420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6113790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6119160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6124530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6129900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6135270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6140640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6146010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (6151380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (6156750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6162120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6167490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6172860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6178230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6183600) LORA_SENDER: SENT: Rain:0.0% Soil:3.7% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6188970) LORA_SENDER: SENT: Rain:0.0% Soil:0.4% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (6194340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6199710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6205080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (6210450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6215820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+���������������������������������������������������������������� (6221190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN
+[0;32mI (6226560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6231930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6237300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6242670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (6248040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6253410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6258780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6264150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (6269520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6274890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6280260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6285630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6291000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6296370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6301740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6307110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6312480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.0 deg Level:0-AN TOÀN[0m
+[0;32mI (6317850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6323220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6328590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6333960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6339330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6344700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6350070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6355440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6360810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6366180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6371550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6376920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6382290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6387660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6393030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6398400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6403770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6409140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6414510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6419880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (6425250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6430620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6435990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6441360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6446730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6452100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6457470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6462840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6468210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6473580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6478950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6484320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (6489690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6495060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6500430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6505800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6511170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6516540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6521910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6527280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6532650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6538020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (6543390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6548760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6554130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6559500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6564870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6570240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6575610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6580980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6586350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6591720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6597090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6602460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6607830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6613200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6618570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6623940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6629310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6634680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6640050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6645420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (6650790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6656160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6661530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6666900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6672270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6677640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������(6683010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN
+[0;32mI (6688380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (6693750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6699120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6704490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6709860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6715230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6720600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6725970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6731340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6736710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6742080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6747450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6752820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6758190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6763560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6768930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6774300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6779670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6785040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6790410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6795780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6801150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6806520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6811890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6817260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6822630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6828000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6833370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6838740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6844110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6849480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6854850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6860220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6865590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6870960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6876330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (6881700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6887070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6892440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6897810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6903180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6908550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6913920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (6919290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6924660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (6930030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6935400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6940770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (6946140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6951510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6956880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6962250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6967620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (6972990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6978360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (6983730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (6989100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (6994470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (6999840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������7005210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN
+[0;32mI (7010580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7015950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7021320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7026690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7032060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7037430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7042800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7048170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7053540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7058910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7064280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7069650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7075020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7080390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7085760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7091130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7096500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7101870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7107240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7112610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7117980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7123350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7128720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7134090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7139460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7144830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7150200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7155570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7160940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7166310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7171680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7177050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7182420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7187790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7193160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7198530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7203900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7209270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7214640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7220010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7225380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7230750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7236120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7241490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7246860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7252230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7257600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7262970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7268340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7273710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7279080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (7284450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7289820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7295190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7300560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7305930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (7311300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7316670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7322040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7327410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7332780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:70.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7338150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7343520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7348890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7354260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7359630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (7365000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7370370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (7375740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7381110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7386480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7391850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7397220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7402590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7407960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7413330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7418700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7424070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7429440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7434810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7440180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (7445550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7450920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7456290) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7461660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7467030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7472400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+���������������������������������������������������������������� (7477770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN
+[0;32mI (7483140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7488510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7493880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7499250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7504620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7509990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7515360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7520730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (7526100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (7531470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7536840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7542210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7547580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7552950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7558320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7563690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7569060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7574430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7579800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7585170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7590540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7595910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7601280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7606650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7612020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7617390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7622760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7628130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7633500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7638870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7644240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (7649610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7654980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7660350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7665720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7671090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7676460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.8 deg Level:0-AN TOÀN[0m
+[0;32mI (7681830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7687200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (7692570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7697940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7703310) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7708680) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7714050) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7719420) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7724790) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.0 deg Level:0-AN TOÀN[0m
+[0;32mI (7730160) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7735530) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7740900) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7746270) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7751640) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7757010) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7762380) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (7767750) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7773120) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7778490) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7783860) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7789230) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7794600) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7799970) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7805340) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.7 deg Level:0-AN TOÀN[0m
+[0;32mI (7810710) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7816080) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7821450) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7826820) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7832190) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7837560) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:72.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7842930) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7848300) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7853670) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7859040) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7864410) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7869780) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7875150) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7880520) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7885890) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7891260) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7896630) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7902000) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7907370) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:73.9 deg Level:0-AN TOÀN[0m
+[0;32mI (7912740) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7918110) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������(7923480) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN
+[0;32mI (7928850) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7934220) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.0 deg Level:0-AN TOÀN[0m
+[0;32mI (7939590) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7944960) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7950330) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7955700) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.3 deg Level:0-AN TOÀN[0m
+[0;32mI (7961070) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7966440) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7971810) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.5 deg Level:0-AN TOÀN[0m
+[0;32mI (7977180) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.6 deg Level:0-AN TOÀN[0m
+[0;32mI (7982550) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.1 deg Level:0-AN TOÀN[0m
+[0;32mI (7987920) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:74.4 deg Level:0-AN TOÀN[0m
+[0;32mI (7993290) LORA_SENDER: SENT: Rain:0.0% Soil:1.5% Tilt:77.2 deg Level:0-AN TOÀN[0m
+[0;32mI (7998660) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.4 deg Level:0-AN TOÀN[0m
+[0;32mI (8004030) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.4 deg Level:0-AN TOÀN[0m
+����������������������������������������������������������������9400) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.2 deg Level:0-AN TOÀN
+[0;32mI (8014770) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.1 deg Level:0-AN TOÀN[0m
+[0;32mI (8020140) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8025510) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.9 deg Level:0-AN TOÀN[0m
+[0;32mI (8030880) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.1 deg Level:0-AN TOÀN[0m
+[0;32mI (8036250) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.9 deg Level:0-AN TOÀN[0m
+[0;32mI (8041620) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.0 deg Level:0-AN TOÀN[0m
+[0;32mI (8046990) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.8 deg Level:0-AN TOÀN[0m
+[0;32mI (8052360) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8057730) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8063100) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.8 deg Level:0-AN TOÀN[0m
+[0;32mI (8068470) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8073840) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.0 deg Level:0-AN TOÀN[0m
+[0;32mI (8079210) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.0 deg Level:0-AN TOÀN[0m
+[0;32mI (8084580) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.0 deg Level:0-AN TOÀN[0m
+[0;32mI (8089950) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.6 deg Level:0-AN TOÀN[0m
+[0;32mI (8095320) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8100690) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8106060) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8111430) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8116800) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.5 deg Level:0-AN TOÀN[0m
+[0;32mI (8122170) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.6 deg Level:0-AN TOÀN[0m
+[0;32mI (8127540) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.5 deg Level:0-AN TOÀN[0m
+[0;32mI (8132910) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.5 deg Level:0-AN TOÀN[0m
+[0;32mI (8138280) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.8 deg Level:0-AN TOÀN[0m
+[0;32mI (8143650) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.5 deg Level:0-AN TOÀN[0m
+[0;32mI (8149020) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.3 deg Level:0-AN TOÀN[0m
+[0;32mI (8154390) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.4 deg Level:0-AN TOÀN[0m
+[0;32mI (8159760) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8165130) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8170500) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8175870) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.5 deg Level:0-AN TOÀN[0m
+[0;32mI (8181240) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.2 deg Level:0-AN TOÀN[0m
+[0;32mI (8186610) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.9 deg Level:0-AN TOÀN[0m
+[0;32mI (8191980) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:75.3 deg Level:0-AN TOÀN[0m
+[0;32mI (8197350) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.5 deg Level:0-AN TOÀN[0m
+[0;32mI (8202720) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.4 deg Level:0-AN TOÀN[0m
+[0;32mI (8208090) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.6 deg Level:0-AN TOÀN[0m
+[0;32mI (8213460) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8218830) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.2 deg Level:0-AN TOÀN[0m
+[0;32mI (8224200) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.0 deg Level:0-AN TOÀN[0m
+[0;32mI (8229570) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:76.7 deg Level:0-AN TOÀN[0m
+[0;32mI (8234940) LORA_SENDER: SENT: Rain:0.0% Soil:0.1% Tilt:77.0 deg Level:0-AN TOÀN[0m

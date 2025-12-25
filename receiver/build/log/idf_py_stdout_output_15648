@@ -1,0 +1,552 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com9'
+32: SPI Speed      : 4ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=315a8h (202152) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=000415d0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=000415f8 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00045568 vaddr=40080000 size=0aab0h ( 43696) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a6f44h (683844) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f6f6c vaddr=4008aab0 size=0e9c0h ( 59840) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (466) cpu_start: Multicore app[0m
+[0;32mI (474) cpu_start: Pro cpu start user code[0m
+[0;32mI (474) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     landslide_receiver[0m
+[0;32mI (479) app_init: App version:      v5.5-dirty[0m
+[0;32mI (484) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (489) app_init: ELF file SHA256:  a4434bd38...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB87E8 len 00027818 (158 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (560) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (571) main_task: Started on CPU0[0m
+[0;32mI (581) main_task: Calling app_main()[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc081c, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (671) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (681) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (691) wifi_init: tcp rx win: 5760[0m
+[0;32mI (691) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (711) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (791) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (801) wifi:enable tsf[0m
+[0;32mI (821) LANDSLIDE_RECEIVER: Alarm GPIO initialized - Relay: 2, Button: 0[0m
+[0;32mI (821) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (821) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (881) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (881) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (891) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (901) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1291) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1291) wifi:security: WPA2-PSK, phy: bgn, rssi: -64[0m
+[0;32mI (1301) wifi:pm start, type: 1[0m
+
+[0;32mI (1301) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1311) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1391) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2361) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3821) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4821) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5171) main_task: Returned from app_main()[0m
+[0;32mI (5491) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (5911) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (68021) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (68021) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (68021) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (68021) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (69321) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (69321) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (69321) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (69321) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (70021) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (70021) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (70021) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (70561) LANDSLIDE_RECEIVER: RECEIVED: 3:7.7[0m
+[0;32mI (70561) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.7[0m
+[0;32mI (70561) LANDSLIDE_RECEIVER: Tilt packet received: 7.7[0m
+[0;32mI (70561) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (70571) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=7.7°, Level=0-AN TOAN[0m
+[0;32mI (70571) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (70581) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (70591) TELEGRAM: Alert sent: Level 0-AN TOAN, Alarm: OFF[0m
+[0;32mI (71241) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (170991) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (170991) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (170991) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (170991) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (171691) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (171691) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (171691) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (172271) LANDSLIDE_RECEIVER: RECEIVED: 3:18.6[0m
+[0;32mI (172271) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 18.6[0m
+[0;32mI (172271) LANDSLIDE_RECEIVER: Tilt packet received: 18.6[0m
+[0;32mI (172281) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (172281) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=18.6°, Level=0-AN TOAN[0m
+[0;32mI (172291) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (172301) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (228241) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (228241) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (228241) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (228251) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (228951) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (228951) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (228951) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (229651) LANDSLIDE_RECEIVER: RECEIVED: 3:18.8[0m
+[0;32mI (229651) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 18.8[0m
+[0;32mI (229651) LANDSLIDE_RECEIVER: Tilt packet received: 18.8[0m
+[0;32mI (229651) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (229661) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=18.8°, Level=0-AN TOAN[0m
+[0;32mI (229661) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (229671) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (243181) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (243181) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (243181) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (243181) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (243891) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (243891) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (243891) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (244481) LANDSLIDE_RECEIVER: RECEIVED: 3:15.0[0m
+[0;32mI (244481) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 15.0[0m
+[0;32mI (244481) LANDSLIDE_RECEIVER: Tilt packet received: 15.0[0m
+[0;32mI (244481) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (244491) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=15.0°, Level=0-AN TOAN[0m
+[0;32mI (244501) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (244511) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (334671) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (334681) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (334681) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (334681) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (335381) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (335381) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (335381) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (336081) LANDSLIDE_RECEIVER: RECEIVED: 3:16.6[0m
+[0;32mI (336081) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 16.6[0m
+[0;32mI (336081) LANDSLIDE_RECEIVER: Tilt packet received: 16.6[0m
+[0;32mI (336081) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (336091) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=16.6°, Level=0-AN TOAN[0m
+[0;32mI (336091) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (336101) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (345421) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (345421) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (345421) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (345431) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (346131) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (346131) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (346131) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (346731) LANDSLIDE_RECEIVER: RECEIVED: 3:17.2[0m
+[0;32mI (346731) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 17.2[0m
+[0;32mI (346731) LANDSLIDE_RECEIVER: Tilt packet received: 17.2[0m
+[0;32mI (346731) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (346741) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=17.2°, Level=0-AN TOAN[0m
+[0;32mI (346741) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (346751) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (348931) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (348931) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (348931) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (348931) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (349641) LANDSLIDE_RECEIVER: RECEIVED: 2:53%[0m
+[0;32mI (349641) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 53%[0m
+[0;32mI (349641) LANDSLIDE_RECEIVER: Soil packet received: 53%[0m
+[0;32mI (350211) LANDSLIDE_RECEIVER: RECEIVED: 3:17.8[0m
+[0;32mI (350211) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 17.8[0m
+[0;32mI (350211) LANDSLIDE_RECEIVER: Tilt packet received: 17.8[0m
+[0;32mI (350211) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (350221) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=53.0%, Tilt=17.8°, Level=0-AN TOAN[0m
+[0;32mI (350231) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (350241) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (529171) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (529171) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (529171) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (529181) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (529881) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (529881) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (529881) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;33mW (539281) LANDSLIDE_RECEIVER: PACKET TIMEOUT - Missing packets: 3 [0m
+[0;32mI (623261) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (623261) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (623261) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (623271) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (623971) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (623971) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (623971) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (624671) LANDSLIDE_RECEIVER: RECEIVED: 3:17.7[0m
+[0;32mI (624671) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 17.7[0m
+[0;32mI (624671) LANDSLIDE_RECEIVER: Tilt packet received: 17.7[0m
+[0;32mI (624671) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (624681) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=17.7°, Level=0-AN TOAN[0m
+[0;32mI (624681) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (624691) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (648021) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (648021) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (648021) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (648031) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (648731) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (648731) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (648731) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (649431) LANDSLIDE_RECEIVER: RECEIVED: 3:17.8[0m
+[0;32mI (649431) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 17.8[0m
+[0;32mI (649431) LANDSLIDE_RECEIVER: Tilt packet received: 17.8[0m
+[0;32mI (649431) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (649441) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=17.8°, Level=0-AN TOAN[0m
+[0;32mI (649441) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (649451) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (815161) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (815161) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (815161) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (815161) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (815861) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (815861) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (815861) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (816411) LANDSLIDE_RECEIVER: RECEIVED: 3:17.9[0m
+[0;32mI (816411) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 17.9[0m
+[0;32mI (816411) LANDSLIDE_RECEIVER: Tilt packet received: 17.9[0m
+[0;32mI (816411) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (816421) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=17.9°, Level=0-AN TOAN[0m
+[0;32mI (816431) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (816431) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (995741) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (995741) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (995741) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (995741) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (996441) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (996441) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (996441) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (997021) LANDSLIDE_RECEIVER: RECEIVED: 3:18.3[0m
+[0;32mI (997021) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 18.3[0m
+[0;32mI (997021) LANDSLIDE_RECEIVER: Tilt packet received: 18.3[0m
+[0;32mI (997031) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (997031) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=18.3°, Level=0-AN TOAN[0m
+[0;32mI (997041) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (997051) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (1176351) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (1176351) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (1176351) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (1176351) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (1177051) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (1177051) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (1177051) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (1177621) LANDSLIDE_RECEIVER: RECEIVED: 3:17.9[0m
+[0;32mI (1177621) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 17.9[0m
+[0;32mI (1177621) LANDSLIDE_RECEIVER: Tilt packet received: 17.9[0m
+[0;32mI (1177621) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (1177631) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=17.9°, Level=0-AN TOAN[0m
+[0;32mI (1177641) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (1177651) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (1356991) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (1356991) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (1356991) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (1356991) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (1357701) LANDSLIDE_RECEIVER: RECEIVED: 2:100%[0m
+[0;32mI (1357701) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 100%[0m
+[0;32mI (1357701) LANDSLIDE_RECEIVER: Soil packet received: 100%[0m
+[0;32mI (1358291) LANDSLIDE_RECEIVER: RECEIVED: 3:23.0[0m
+[0;32mI (1358291) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 23.0[0m
+[0;32mI (1358291) LANDSLIDE_RECEIVER: Tilt packet received: 23.0[0m
+[0;32mI (1358301) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (1358301) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=100.0%, Tilt=23.0°, Level=0-AN TOAN[0m
+[0;32mI (1358311) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (1358321) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (1537631) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (1537631) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (1537631) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (1537631) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (1538161) LANDSLIDE_RECEIVER: RECEIVED: 2:17%[0m
+[0;32mI (1538161) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 17%[0m
+[0;32mI (1538161) LANDSLIDE_RECEIVER: Soil packet received: 17%[0m
+[0;32mI (1538871) LANDSLIDE_RECEIVER: RECEIVED: 3:17.5[0m
+[0;32mI (1538871) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 17.5[0m
+[0;32mI (1538871) LANDSLIDE_RECEIVER: Tilt packet received: 17.5[0m
+[0;32mI (1538871) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (1538881) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=17.0%, Tilt=17.5°, Level=0-AN TOAN[0m
+[0;32mI (1538881) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (1538891) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (1718001) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (1718001) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (1718001) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (1718001) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (1718701) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (1718701) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (1718701) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (1719281) LANDSLIDE_RECEIVER: RECEIVED: 3:17.3[0m
+[0;32mI (1719281) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 17.3[0m
+[0;32mI (1719281) LANDSLIDE_RECEIVER: Tilt packet received: 17.3[0m
+[0;32mI (1719281) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (1719291) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=17.3°, Level=0-AN TOAN[0m
+[0;32mI (1719301) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (1719301) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (1831681) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (1831681) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (1831681) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (1831691) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (1832391) LANDSLIDE_RECEIVER: RECEIVED: 2:64%[0m
+[0;32mI (1832391) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 64%[0m
+[0;32mI (1832391) LANDSLIDE_RECEIVER: Soil packet received: 64%[0m
+[0;32mI (1832971) LANDSLIDE_RECEIVER: RECEIVED: 3:19.9[0m
+[0;32mI (1832971) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 19.9[0m
+[0;32mI (1832971) LANDSLIDE_RECEIVER: Tilt packet received: 19.9[0m
+[0;32mI (1832971) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (1832981) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=64.0%, Tilt=19.9°, Level=0-AN TOAN[0m
+[0;32mI (1832991) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (1832991) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (1839101) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (1839101) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (1839101) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (1839101) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (1839801) LANDSLIDE_RECEIVER: RECEIVED: 2:89%[0m
+[0;32mI (1839801) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 89%[0m
+[0;32mI (1839801) LANDSLIDE_RECEIVER: Soil packet received: 89%[0m
+[0;32mI (1840371) LANDSLIDE_RECEIVER: RECEIVED: 3:71.0[0m
+[0;32mI (1840371) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 71.0[0m
+[0;32mI (1840371) LANDSLIDE_RECEIVER: Tilt packet received: 71.0[0m
+[0;32mI (1840371) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (1840381) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=89.0%, Tilt=71.0°, Level=0-AN TOAN[0m
+[0;32mI (1840391) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (1840401) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (1977301) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (1977301) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (1977301) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (1977301) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (1977881) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (1977881) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (1977881) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (1978591) LANDSLIDE_RECEIVER: RECEIVED: 3:33.3[0m
+[0;32mI (1978591) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 33.3[0m
+[0;32mI (1978591) LANDSLIDE_RECEIVER: Tilt packet received: 33.3[0m
+[0;32mI (1978591) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (1978601) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=33.3°, Level=0-AN TOAN[0m
+[0;32mI (1978601) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (1978611) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (2033721) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (2033721) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (2033721) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (2033721) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (2034301) LANDSLIDE_RECEIVER: RECEIVED: 2:87%[0m
+[0;32mI (2034301) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 87%[0m
+[0;32mI (2034301) LANDSLIDE_RECEIVER: Soil packet received: 87%[0m
+[0;32mI (2035001) LANDSLIDE_RECEIVER: RECEIVED: 3:32.7[0m
+[0;32mI (2035001) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 32.7[0m
+[0;32mI (2035001) LANDSLIDE_RECEIVER: Tilt packet received: 32.7[0m
+[0;32mI (2035001) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (2035011) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=87.0%, Tilt=32.7°, Level=0-AN TOAN[0m
+[0;32mI (2035011) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (2035021) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (2038331) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (2038331) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (2038331) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (2038331) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (2038861) LANDSLIDE_RECEIVER: RECEIVED: 2:90%[0m
+[0;32mI (2038861) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 90%[0m
+[0;32mI (2038861) LANDSLIDE_RECEIVER: Soil packet received: 90%[0m
+[0;32mI (2039561) LANDSLIDE_RECEIVER: RECEIVED: 3:33.3[0m
+[0;32mI (2039561) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 33.3[0m
+[0;32mI (2039561) LANDSLIDE_RECEIVER: Tilt packet received: 33.3[0m
+[0;32mI (2039561) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (2039571) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=90.0%, Tilt=33.3°, Level=0-AN TOAN[0m
+[0;32mI (2039571) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (2039581) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (2218491) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (2218491) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (2218491) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (2218491) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (2219191) LANDSLIDE_RECEIVER: RECEIVED: 2:11%[0m
+[0;32mI (2219191) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 11%[0m
+[0;32mI (2219191) LANDSLIDE_RECEIVER: Soil packet received: 11%[0m
+[0;32mI (2219761) LANDSLIDE_RECEIVER: RECEIVED: 3:33.0[0m
+[0;32mI (2219761) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 33.0[0m
+[0;32mI (2219761) LANDSLIDE_RECEIVER: Tilt packet received: 33.0[0m
+[0;32mI (2219761) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (2219771) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=11.0%, Tilt=33.0°, Level=0-AN TOAN[0m
+[0;32mI (2219781) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (2219781) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (2398891) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (2398891) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (2398891) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (2398891) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (2399431) LANDSLIDE_RECEIVER: RECEIVED: 2:2%[0m
+[0;32mI (2399431) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 2%[0m
+[0;32mI (2399431) LANDSLIDE_RECEIVER: Soil packet received: 2%[0m
+[0;32mI (2400141) LANDSLIDE_RECEIVER: RECEIVED: 3:33.1[0m
+[0;32mI (2400141) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 33.1[0m
+[0;32mI (2400141) LANDSLIDE_RECEIVER: Tilt packet received: 33.1[0m
+[0;32mI (2400141) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (2400151) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=2.0%, Tilt=33.1°, Level=0-AN TOAN[0m
+[0;32mI (2400151) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (2400161) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (2579311) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (2579321) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (2579321) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (2579321) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (2580021) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (2580021) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (2580021) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (2580601) LANDSLIDE_RECEIVER: RECEIVED: 3:33.1[0m
+[0;32mI (2580601) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 33.1[0m
+[0;32mI (2580601) LANDSLIDE_RECEIVER: Tilt packet received: 33.1[0m
+[0;32mI (2580601) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (2580611) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=33.1°, Level=0-AN TOAN[0m
+[0;32mI (2580621) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (2580621) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (2759591) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (2759591) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (2759591) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (2759591) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (2760301) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (2760301) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (2760301) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (2760871) LANDSLIDE_RECEIVER: RECEIVED: 3:33.0[0m
+[0;32mI (2760871) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 33.0[0m
+[0;32mI (2760871) LANDSLIDE_RECEIVER: Tilt packet received: 33.0[0m
+[0;32mI (2760881) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (2760881) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=33.0°, Level=0-AN TOAN[0m
+[0;32mI (2760891) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (2760901) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (6437531) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (6437531) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (6437531) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (6437531) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (6438241) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (6438241) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (6438241) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (6438791) LANDSLIDE_RECEIVER: RECEIVED: 3:7.5[0m
+[0;32mI (6438791) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 7.5[0m
+[0;32mI (6438791) LANDSLIDE_RECEIVER: Tilt packet received: 7.5[0m
+[0;32mI (6438791) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (6438801) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=7.5°, Level=0-AN TOAN[0m
+[0;32mI (6438811) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (6438821) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (6453121) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (6453121) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (6453121) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (6453121) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (6453661) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (6453661) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (6453661) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (6454361) LANDSLIDE_RECEIVER: RECEIVED: 3:2.8[0m
+[0;32mI (6454361) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 2.8[0m
+[0;32mI (6454361) LANDSLIDE_RECEIVER: Tilt packet received: 2.8[0m
+[0;32mI (6454361) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (6454371) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=2.8°, Level=0-AN TOAN[0m
+[0;32mI (6454371) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (6454381) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (6633291) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (6633291) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (6633291) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (6633291) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (6633991) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (6633991) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (6633991) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (6634541) LANDSLIDE_RECEIVER: RECEIVED: 3:2.1[0m
+[0;32mI (6634541) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 2.1[0m
+[0;32mI (6634541) LANDSLIDE_RECEIVER: Tilt packet received: 2.1[0m
+[0;32mI (6634541) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (6634551) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=2.1°, Level=0-AN TOAN[0m
+[0;32mI (6634561) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (6634571) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (6813951) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (6813951) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (6813951) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (6813951) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (6814661) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (6814661) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (6814661) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (6815211) LANDSLIDE_RECEIVER: RECEIVED: 3:1.6[0m
+[0;32mI (6815211) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 1.6[0m
+[0;32mI (6815211) LANDSLIDE_RECEIVER: Tilt packet received: 1.6[0m
+[0;32mI (6815211) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (6815221) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=1.6°, Level=0-AN TOAN[0m
+[0;32mI (6815231) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (6815241) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (6994341) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (6994341) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (6994341) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (6994341) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (6995041) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (6995041) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (6995041) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (6995591) LANDSLIDE_RECEIVER: RECEIVED: 3:1.7[0m
+[0;32mI (6995591) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 1.7[0m
+[0;32mI (6995591) LANDSLIDE_RECEIVER: Tilt packet received: 1.7[0m
+[0;32mI (6995591) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (6995601) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=1.7°, Level=0-AN TOAN[0m
+[0;32mI (6995611) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (6995621) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (7174791) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (7174791) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (7174791) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (7174791) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (7175501) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (7175501) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (7175501) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (7176051) LANDSLIDE_RECEIVER: RECEIVED: 3:2.1[0m
+[0;32mI (7176051) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 2.1[0m
+[0;32mI (7176051) LANDSLIDE_RECEIVER: Tilt packet received: 2.1[0m
+[0;32mI (7176051) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (7176061) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=2.1°, Level=0-AN TOAN[0m
+[0;32mI (7176071) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (7176071) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m
+[0;32mI (7355191) LANDSLIDE_RECEIVER: RECEIVED: 1:0%[0m
+[0;32mI (7355191) LANDSLIDE_RECEIVER: Packet ID: 1, Data: 0%[0m
+[0;32mI (7355191) LANDSLIDE_RECEIVER: Starting new packet sequence[0m
+[0;32mI (7355201) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (7355901) LANDSLIDE_RECEIVER: RECEIVED: 2:0%[0m
+[0;32mI (7355901) LANDSLIDE_RECEIVER: Packet ID: 2, Data: 0%[0m
+[0;32mI (7355901) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (7356481) LANDSLIDE_RECEIVER: RECEIVED: 3:13.4[0m
+[0;32mI (7356481) LANDSLIDE_RECEIVER: Packet ID: 3, Data: 13.4[0m
+[0;32mI (7356481) LANDSLIDE_RECEIVER: Tilt packet received: 13.4[0m
+[0;32mI (7356481) LANDSLIDE_RECEIVER: === ALL 3 PACKETS RECEIVED - UPDATING ===[0m
+[0;32mI (7356491) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=13.4°, Level=0-AN TOAN[0m
+[0;32mI (7356501) LANDSLIDE_RECEIVER: 🔍 ALARM DEBUG: Level=0, Active=NO, Acknowledged=NO[0m
+[0;32mI (7356501) LANDSLIDE_RECEIVER: 🔄 RESET ALARM STATE - Ready for next alert[0m

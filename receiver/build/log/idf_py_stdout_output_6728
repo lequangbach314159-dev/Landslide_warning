@@ -1,0 +1,564 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com9 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com9'
+������     : 40MH�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=314e8h (201960) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041510 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00041538 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=000454a8 vaddr=40080000 size=0ab70h ( 43888) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a6fe4h (684004) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f700c vaddr=4008ab70 size=0e900h ( 59648) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (466) cpu_start: Multicore app[0m
+[0;32mI (474) cpu_start: Pro cpu start user code[0m
+[0;32mI (474) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     landslide_receiver[0m
+[0;32mI (479) app_init: App version:      v5.5-dirty[0m
+[0;32mI (484) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (489) app_init: ELF file SHA256:  a09a0d65c...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB8838 len 000277C8 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (560) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (571) main_task: Started on CPU0[0m
+[0;32mI (581) main_task: Calling app_main()[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc086c, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (671) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (681) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (691) wifi_init: tcp rx win: 5760[0m
+[0;32mI (691) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (711) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (791) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (811) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (811) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (821) gpio: gpio_pullup_en(78): GPIO number error (input-only pad has no internal PU)[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (821) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (821) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (831) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1211) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1211) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (1211) wifi:pm start, type: 1[0m
+
+[0;32mI (1211) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1231) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1261) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3131) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3831) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4831) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5181) main_task: Returned from app_main()[0m
+[0;32mI (5281) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (5281) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (5471) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (5881) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7031) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (7431) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (7731) LANDSLIDE_RECEIVER: Soil packet received: 6%[0m
+[0;32mI (7731) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 2450ms[0m
+[0;32mI (8291) LANDSLIDE_RECEIVER: Tilt packet received: 0.3[0m
+[0;32mI (8991) LANDSLIDE_RECEIVER: GPIO26 packet received: 75.3%[0m
+[0;32mI (8991) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=6.0%, Tilt=0.3°, Level=0-AN TOAN[0m
+[0;32mI (9591) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (9671) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10391) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (11391) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 1000ms[0m
+[0;32mI (11791) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (13841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (15941) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (17641) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (18041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (20241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (20551) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 2910ms[0m
+[0;32mI (22251) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (22451) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (24351) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (25451) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (26451) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (27051) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (28451) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 6000ms[0m
+[0;32mI (28651) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (30851) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (33051) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (35251) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (36451) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (37451) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (39451) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (39651) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (41411) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (41851) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (44051) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (46251) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (48451) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (50451) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 14000ms[0m
+[0;32mI (50651) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (52851) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (55051) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (57251) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (58451) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (59451) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (61451) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (61651) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (62121) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (63261) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 4810ms[0m
+[0;32mI (63661) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (65861) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (68061) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (69661) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (70261) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (72461) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (72661) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (73371) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (73471) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 3810ms[0m
+[0;32mI (74471) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (76671) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (78871) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (80271) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (81071) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (83271) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (83271) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (84011) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (85471) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (87671) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (89871) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (92071) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (93671) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 13400ms[0m
+[0;32mI (94271) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (96471) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (98671) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (100871) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (103071) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (105271) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=314e8h (201960) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041510 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00041538 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=000454a8 vaddr=40080000 size=0ab70h ( 43888) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a6fe4h (684004) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f700c vaddr=4008ab70 size=0e900h ( 59648) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (466) cpu_start: Multicore app[0m
+[0;32mI (474) cpu_start: Pro cpu start user code[0m
+[0;32mI (474) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     landslide_receiver[0m
+[0;32mI (479) app_init: App version:      v5.5-dirty[0m
+[0;32mI (484) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (489) app_init: ELF file SHA256:  a09a0d65c...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB8838 len 000277C8 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (560) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (571) main_task: Started on CPU0[0m
+[0;32mI (581) main_task: Calling app_main()[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc086c, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (671) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (681) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (691) wifi_init: tcp rx win: 5760[0m
+[0;32mI (691) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (711) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (791) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (811) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (811) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (821) gpio: gpio_pullup_en(78): GPIO number error (input-only pad has no internal PU)[0m
+[0;32mI (821) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (831) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (831) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1211) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1211) wifi:security: WPA2-PSK, phy: bgn, rssi: -66[0m
+[0;32mI (1211) wifi:pm start, type: 1[0m
+
+[0;32mI (1211) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1221) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1231) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2241) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3841) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4841) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5191) main_task: Returned from app_main()[0m
+[0;32mI (5291) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (5531) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (5941) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7491) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (8691) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (9691) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (11091) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 2400ms[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=314e8h (201960) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041510 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00041538 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=000454a8 vaddr=40080000 size=0ab70h ( 43888) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a6fe4h (684004) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f700c vaddr=4008ab70 size=0e900h ( 59648) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (466) cpu_start: Multicore app[0m
+[0;32mI (474) cpu_start: Pro cpu start user code[0m
+[0;32mI (474) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     landslide_receiver[0m
+[0;32mI (479) app_init: App version:      v5.5-dirty[0m
+[0;32mI (484) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (489) app_init: ELF file SHA256:  a09a0d65c...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB8838 len 000277C8 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (560) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (571) main_task: Started on CPU0[0m
+[0;32mI (581) main_task: Calling app_main()[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc086c, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (671) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (681) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (691) wifi_init: tcp rx win: 5760[0m
+[0;32mI (691) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (711) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (791) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (811) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (821) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (821) gpio: gpio_pullup_en(78): GPIO number error (input-only pad has no internal PU)[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (831) LANDSLIDE_RECEIVER: 🔧 TESTING RELAY HARDWARE...[0m
+[0;32mI (831) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (841) LANDSLIDE_RECEIVER: 🔊 Relay ON - Còi should be ringing now![0m
+[0;32mI (1211) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1211) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (1211) wifi:pm start, type: 1[0m
+
+[0;32mI (1211) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1231) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1291) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2241) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3841) LANDSLIDE_RECEIVER: 🔇 Relay OFF - Còi should be silent now![0m
+[1;31mE (4841) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (5191) main_task: Returned from app_main()[0m
+[0;32mI (5291) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (5291) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (5491) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (5901) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6891) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 1600ms[0m
+[0;32mI (7491) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (9691) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (11891) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (14091) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (16291) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (18491) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (20691) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (22891) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (25091) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (26891) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (27091) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 200ms[0m
+[0;32mI (27291) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (29491) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (31691) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (33891) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (36091) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (38291) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (39091) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (39691) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 600ms[0m
+[0;32mI (40491) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (42091) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (42691) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (42691) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 600ms[0m
+[0;32mI (43491) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (43691) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 200ms[0m
+[0;32mI (44891) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (47091) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (49291) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (51491) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (51941) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (52041) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 100ms[0m
+[0;32mI (53541) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (53541) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (53641) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 100ms[0m
+[0;32mI (54341) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (55641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (57441) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (57841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (59151) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (60041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (62241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (64441) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (66641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (68841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (71041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (73241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (75441) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (75841) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 21500ms[0m
+[0;32mI (77641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (79841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (82041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (84241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (85841) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (86441) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (88641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (88841) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (89571) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (90841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (93041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (93641) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 7800ms[0m
+[0;32mI (95241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (97441) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (99241) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (99641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (101841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (102241) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (102881) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (104041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (104441) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 5200ms[0m
+[0;32mI (106241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (108441) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (109041) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (110641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (112041) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (112701) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (112841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (113441) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 4400ms[0m
+[0;32mI (115041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (117241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (117241) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (119441) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (120241) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (120901) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (121641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (122241) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 5000ms[0m
+[0;32mI (122441) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (122641) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 200ms[0m
+[0;32mI (123841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (126041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (126641) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (128241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (129641) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (130321) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (130441) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (132641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (132641) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 6000ms[0m
+[0;32mI (134841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (137041) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (138241) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (139241) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (141241) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (141441) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (141891) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (143641) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (145841) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (146441) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 8200ms[0m
+[0;32mI (146641) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (146841) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 200ms[0m
+[0;32mI (147711) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (147911) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (150111) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (150711) LANDSLIDE_RECEIVER: 🔄 LONG PRESS DETECTED - Requesting data retransmission[0m
+[0;32mI (151711) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (152311) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (154511) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (156711) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (158911) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (161111) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (163311) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (165511) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (167711) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (168511) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 20800ms[0m
+[0;32mI (169911) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (172111) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (174311) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (176511) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (178711) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (180851) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (180851) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (180851) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (181051) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 200ms[0m
+[0;32mI (181551) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (182111) LANDSLIDE_RECEIVER: Tilt packet received: 0.2[0m
+[0;32mI (182111) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (182311) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 200ms[0m
+[0;32mI (182811) LANDSLIDE_RECEIVER: GPIO26 packet received: 74.3%[0m
+[0;32mI (182811) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=0.2°, Level=0-AN TOAN[0m
+[0;32mI (183011) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (183461) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (185211) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (187411) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (189611) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (191811) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (194011) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (196211) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (198411) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (200611) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (202811) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (205011) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (207211) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (209411) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (211611) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = LOW, Alarm: OFF[0m
+[0;32mI (213811) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (216011) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (218211) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (220411) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (222611) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (224811) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (227011) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (229211) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (230811) LANDSLIDE_RECEIVER: 🔘 BUTTON PRESS STARTED[0m
+[0;32mI (231011) LANDSLIDE_RECEIVER: 🔘 BUTTON RELEASED after 200ms[0m
+[0;32mI (231411) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (233611) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (235811) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (238011) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m
+[0;32mI (240211) LANDSLIDE_RECEIVER: 🔘 BUTTON DEBUG: GPIO34 = HIGH, Alarm: OFF[0m

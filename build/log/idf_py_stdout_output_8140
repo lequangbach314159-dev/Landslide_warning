@@ -1,0 +1,6 @@
+Command: ninja all
+[1/3] Generating project_elf_src_esp32.c
+[2/3] Building C object CMakeFiles/landslide_warning.elf.dir/project_elf_src_esp32.c.obj
+[3/3] Linking C executable landslide_warning.elf
+C:/PROJECT_ESP32/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld.exe: warning: orphan section `.xtensa.info' from `CMakeFiles/landslide_warning.elf.dir/project_elf_src_esp32.c.obj' being placed in section `.xtensa.info'
+C:/PROJECT_ESP32/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld.exe: warning: cannot find entry symbol _start; not setting start address

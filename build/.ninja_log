@@ -1,0 +1,5 @@
+# ninja log v6
+5	48	7836213992278867	project_elf_src_esp32.c	2159081b851b0568
+5	48	7836213992278867	C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/project_elf_src_esp32.c	2159081b851b0568
+48	64	7836213992338946	CMakeFiles/landslide_warning.elf.dir/project_elf_src_esp32.c.obj	d33c2f458732222b
+65	126	7836213992501135	landslide_warning.elf	a127336772392262

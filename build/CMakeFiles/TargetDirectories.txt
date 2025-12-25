@@ -1,0 +1,14 @@
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/menuconfig.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/confserver.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/save-defconfig.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/_project_elf_src.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/landslide_warning.elf.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/size.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/size-files.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/size-components.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/uf2.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/uf2-app.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/edit_cache.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/CMakeFiles/rebuild_cache.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/esp-idf/CMakeFiles/edit_cache.dir
+C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/examples/get-started/landslide_warning/build/esp-idf/CMakeFiles/rebuild_cache.dir

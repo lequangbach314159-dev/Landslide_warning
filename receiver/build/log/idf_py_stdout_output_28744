@@ -1,0 +1,242 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+�2: SPI Speed      �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31288h (201352) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=000412b0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=000412d8 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00045248 vaddr=40080000 size=0add0h ( 44496) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a6e48h (683592) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f6e70 vaddr=4008add0 size=0e6a0h ( 59040) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (466) cpu_start: Multicore app[0m
+[0;32mI (474) cpu_start: Pro cpu start user code[0m
+[0;32mI (474) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (474) app_init: Project name:     landslide_receiver[0m
+[0;32mI (479) app_init: App version:      v5.5-dirty[0m
+[0;32mI (483) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (488) app_init: ELF file SHA256:  0594f47ad...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB8830 len 000277D0 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (560) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (571) main_task: Started on CPU0[0m
+[0;32mI (581) main_task: Calling app_main()[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc08e8, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (671) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (681) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (691) wifi_init: tcp rx win: 5760[0m
+[0;32mI (691) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (711) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (791) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (811) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (811) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (821) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (831) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1171) main_task: Returned from app_main()[0m
+[0;32mI (1201) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1201) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (1211) wifi:pm start, type: 1[0m
+
+[0;32mI (1211) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1231) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1231) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2241) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3481) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (3901) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8371) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (9561) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (10261) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (10821) LANDSLIDE_RECEIVER: Tilt packet received: 6.9[0m
+[0;32mI (11521) LANDSLIDE_RECEIVER: GPIO26 packet received: 71.4%[0m
+[0;32mI (11521) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.9°, Level=0-AN TOAN[0m
+[0;32mI (12201) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (81671) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (82371) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (82931) LANDSLIDE_RECEIVER: Tilt packet received: 7.3[0m
+[0;32mI (83631) LANDSLIDE_RECEIVER: GPIO26 packet received: 66.2%[0m
+[0;32mI (83631) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=7.3°, Level=0-AN TOAN[0m
+[0;32mI (153731) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (154431) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (154991) LANDSLIDE_RECEIVER: Tilt packet received: 6.7[0m
+[0;32mI (155691) LANDSLIDE_RECEIVER: GPIO26 packet received: 70.7%[0m
+[0;32mI (155691) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=6.7°, Level=0-AN TOAN[0m
+[0;32mI (225791) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (226381) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (227091) LANDSLIDE_RECEIVER: Tilt packet received: 7.4[0m
+[0;32mI (227671) LANDSLIDE_RECEIVER: GPIO26 packet received: 71.0%[0m
+[0;32mI (227671) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=7.4°, Level=0-AN TOAN[0m
+[0;32mI (248971) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (249671) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (250201) LANDSLIDE_RECEIVER: Tilt packet received: 5.7[0m
+[0;32mI (250901) LANDSLIDE_RECEIVER: GPIO26 packet received: 71.1%[0m
+[0;32mI (250901) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=5.7°, Level=0-AN TOAN[0m
+[0;32mI (265241) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (265941) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (266501) LANDSLIDE_RECEIVER: Tilt packet received: 5.6[0m
+[0;32mI (267201) LANDSLIDE_RECEIVER: GPIO26 packet received: 67.1%[0m
+[0;32mI (267201) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=5.6°, Level=0-AN TOAN[0m
+[0;32mI (273971) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (274671) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (275231) LANDSLIDE_RECEIVER: Tilt packet received: 5.8[0m
+[0;32mI (275931) LANDSLIDE_RECEIVER: GPIO26 packet received: 67.1%[0m
+[0;32mI (275931) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=5.8°, Level=0-AN TOAN[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31288h (201352) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=000412b0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=000412d8 vaddr=3ffb0000 size=03f68h ( 16232) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00045248 vaddr=40080000 size=0add0h ( 44496) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a6e48h (683592) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f6e70 vaddr=4008add0 size=0e6a0h ( 59040) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (466) cpu_start: Multicore app[0m
+[0;32mI (474) cpu_start: Pro cpu start user code[0m
+[0;32mI (474) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (474) app_init: Project name:     landslide_receiver[0m
+[0;32mI (479) app_init: App version:      v5.5-dirty[0m
+[0;32mI (483) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (488) app_init: ELF file SHA256:  0594f47ad...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB8830 len 000277D0 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (530) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (560) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (571) main_task: Started on CPU0[0m
+[0;32mI (581) main_task: Calling app_main()[0m
+[0;32mI (621) wifi:wifi driver task: 3ffc08e8, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (641) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (651) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (671) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (681) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (691) wifi_init: tcp rx win: 5760[0m
+[0;32mI (691) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (711) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (791) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (811) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (811) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (821) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (831) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1171) main_task: Returned from app_main()[0m
+[0;32mI (1211) wifi:connected with nhà đầm trấu, aid = 4, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1211) wifi:security: WPA2-PSK, phy: bgn, rssi: -78[0m
+[0;32mI (1221) wifi:pm start, type: 1[0m
+
+[0;32mI (1221) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1221) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1241) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2251) esp_netif_handlers: sta ip: 192.168.71.105, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (4651) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (4771) LANDSLIDE_RECEIVER: Rain packet received: 0%[0m
+[0;32mI (5021) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (5301) LANDSLIDE_RECEIVER: Soil packet received: 0%[0m
+[0;32mI (6001) LANDSLIDE_RECEIVER: Tilt packet received: 5.9[0m
+[0;32mI (6591) LANDSLIDE_RECEIVER: GPIO26 packet received: 67.1%[0m
+[0;32mI (6591) LANDSLIDE_RECEIVER: ALGORITHM: Rain=0.0%, Soil=0.0%, Tilt=5.9°, Level=0-AN TOAN[0m
+[0;32mI (8401) esp-x509-crt-bundle: Certificate validated[0m

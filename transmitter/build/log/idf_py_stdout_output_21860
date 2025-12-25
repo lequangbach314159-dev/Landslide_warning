@@ -1,0 +1,68 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\landslide_transmitter.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+[0;32mI (13) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.1[0m
+[0;32mI (17) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (28) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (35) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (48) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (61) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ba20h ( 47648) map[0m
+[0;32mI (88) esp_image: segment 1: paddr=0001ba48 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (88) esp_image: segment 2: paddr=0001ba70 vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (95) esp_image: segment 3: paddr=0001de60 vaddr=40080000 size=021b8h (  8632) load[0m
+[0;32mI (102) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1b1b8h (111032) map[0m
+[0;32mI (144) esp_image: segment 5: paddr=0003b1e0 vaddr=400821b8 size=0be54h ( 48724) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (170) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (195) app_init: App version:      v5.5-dirty[0m
+[0;32mI (199) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (204) app_init: ELF file SHA256:  8d9c97ac5...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (230) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFB2CD8 len 0002D328 (180 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (251) heap_init: At 4008E00C len 00011FF4 (71 KiB): IRAM[0m
+[0;33mW (258) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (286) main_task: Started on CPU0[0m
+[0;32mI (296) main_task: Calling app_main()[0m
+[0;32mI (316) main_task: Returned from app_main()[0m
+[0;32mI (706) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":30}[0m
+[0;32mI (6096) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":5420}[0m
+[0;32mI (11486) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":10810}[0m
+[0;32mI (16876) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":16200}[0m
+[0;32mI (22266) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":21590}[0m
+[0;32mI (27656) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":26980}[0m
+[0;32mI (33046) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":32370}[0m
+[0;32mI (38436) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":37760}[0m
+[0;32mI (43826) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":43150}[0m
+[0;32mI (49216) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":48540}[0m
+[0;32mI (54606) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":53930}[0m
+[0;32mI (59996) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":59320}[0m
+[0;32mI (65386) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":64710}[0m
+[0;32mI (70776) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":70100}[0m
+[0;32mI (76166) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":75490}[0m
+[0;32mI (81556) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":80880}[0m
+[0;32mI (86946) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":86270}[0m
+[0;32mI (92336) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":91660}[0m
+[0;32mI (97726) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":97050}[0m
+[0;32mI (103116) LORA_SENDER: Đã GỬI: {"moisture":0.1,"rain":0.0,"rain_desc":"Không mưa","timestamp":102440}[0m

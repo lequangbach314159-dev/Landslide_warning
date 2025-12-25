@@ -1,0 +1,604 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\landslide_transmitter.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2c4h ( 49860) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c2ec vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c314 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e734 vaddr=40080000 size=018e4h (  6372) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1dac8h (121544) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003daf0 vaddr=400818e4 size=0cf6ch ( 53100) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  1f925fa87...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (239) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (490) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2c4h ( 49860) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c2ec vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c314 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e734 vaddr=40080000 size=018e4h (  6372) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1dac8h (121544) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003daf0 vaddr=400818e4 size=0cf6ch ( 53100) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  1f925fa87...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (240) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (243) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (490) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (5520) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.3 L:0-AN TOÀN[0m
+[0;32mI (10550) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.4 L:0-AN TOÀN[0m
+[0;32mI (15580) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.1 L:0-AN TOÀN[0m
+[0;32mI (20870) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (26160) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (31450) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.0 L:0-AN TOÀN[0m
+[0;32mI (36740) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (42030) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (47320) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (52610) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (57900) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (63190) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (68480) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (73770) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (79060) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (84350) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (89640) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (94930) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (100220) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (105510) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (110800) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (116090) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (121380) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (126670) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (131960) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (137250) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (142540) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (147830) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (153120) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (158410) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (163700) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (168990) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (174280) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (179570) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (184860) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.0 L:0-AN TOÀN[0m
+[0;32mI (189920) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (195030) LORA_SENDER: SENT: R:0.0% S:0.1% T:33.5 L:0-AN TOÀN[0m
+[0;32mI (200060) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (205090) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (210120) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (215150) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.1 L:0-AN TOÀN[0m
+[0;32mI (220180) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (225210) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (230240) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (235270) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.6 L:0-AN TOÀN[0m
+[0;32mI (240300) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (245330) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (250360) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (255390) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+���������������������������������������������������������������� (260420) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN
+[0;32mI (265450) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (270480) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (275510) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (280540) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (285570) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (290600) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (295630) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (300660) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (305690) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (310720) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (315750) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (320780) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (325810) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (330840) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (335870) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (340900) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (345930) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (350960) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (355990) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (361020) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (366050) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (371080) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (376110) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (381140) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (386170) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (391200) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (396230) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (401260) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (406290) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (411320) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (416350) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (421380) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (426410) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (431440) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (436470) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (441500) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (446530) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (451560) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (456590) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (461620) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (466650) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (471680) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (476710) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.6 L:0-AN TOÀN[0m
+[0;32mI (481740) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (486770) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (491800) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (496830) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (501860) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (506890) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (511920) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (516950) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (521980) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (527270) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (532560) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.8 L:0-AN TOÀN[0m
+[0;32mI (537590) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (542620) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (547910) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (553200) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (558490) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.8 L:0-AN TOÀN[0m
+[0;32mI (563780) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (569070) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.8 L:0-AN TOÀN[0m
+[0;32mI (574360) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.9 L:0-AN TOÀN[0m
+[0;32mI (579650) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (584940) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.8 L:0-AN TOÀN[0m
+[0;32mI (590230) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (595520) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (600810) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.9 L:0-AN TOÀN[0m
+[0;32mI (606100) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (611390) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (616680) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (621970) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.9 L:0-AN TOÀN[0m
+[0;32mI (627260) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.8 L:0-AN TOÀN[0m
+[0;32mI (632550) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (637840) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (643130) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (648420) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (653710) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (659000) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.9 L:0-AN TOÀN[0m
+[0;32mI (664150) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.8 L:0-AN TOÀN[0m
+[0;32mI (669180) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (674210) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (679240) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (684270) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (689300) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (694330) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.0 L:0-AN TOÀN[0m
+[0;32mI (699620) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (704910) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (710200) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (715490) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (720780) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (726070) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (731100) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (736130) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (741160) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (746190) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (751220) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (756250) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (761280) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (766310) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (771600) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (776890) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (782180) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (787470) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (792760) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (798050) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.2 L:0-AN TOÀN[0m
+[0;32mI (803340) LORA_SENDER: SENT: R:0.0% S:0.1% T:45.1 L:0-AN TOÀN[0m
+[0;32mI (808630) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.2 L:0-AN TOÀN[0m
+[0;32mI (813660) LORA_SENDER: SENT: R:0.0% S:0.1% T:45.7 L:0-AN TOÀN[0m
+[0;32mI (818690) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.0 L:0-AN TOÀN[0m
+[0;32mI (823720) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (828750) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.3 L:0-AN TOÀN[0m
+[0;32mI (833780) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.4 L:0-AN TOÀN[0m
+[0;32mI (838810) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.4 L:0-AN TOÀN[0m
+[0;32mI (843840) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.4 L:0-AN TOÀN[0m
+[0;32mI (848870) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.5 L:0-AN TOÀN[0m
+[0;32mI (854160) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (859450) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (864740) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (869810) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (874840) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (879870) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (884900) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (889930) LORA_SENDER: SENT: R:0.0% S:0.1% T:54.2 L:0-AN TOÀN[0m
+[0;32mI (894960) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (899990) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (905020) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (910050) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (915080) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (920110) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (925140) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (930170) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (935200) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+����������������������������������������������������������������(940230) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN
+[0;32mI (945260) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (950290) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (955320) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (960350) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (965380) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (970670) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.3 L:0-AN TOÀN[0m
+[0;32mI (975960) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.2 L:0-AN TOÀN[0m
+[0;32mI (981250) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (986540) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (991830) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (997120) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (1002410) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (1007700) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (1012990) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (1018280) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (1023570) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.2 L:0-AN TOÀN[0m
+[0;32mI (1028860) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.8 L:0-AN TOÀN[0m
+[0;32mI (1034150) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (1039440) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (1044730) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (1050020) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (1055310) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1060600) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (1065890) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1071180) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (1076470) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (1081760) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1087050) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.3 L:0-AN TOÀN[0m
+[0;32mI (1092340) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.3 L:0-AN TOÀN[0m
+[0;32mI (1097630) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.2 L:0-AN TOÀN[0m
+[0;32mI (1102920) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.3 L:0-AN TOÀN[0m
+[0;32mI (1108210) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.0 L:0-AN TOÀN[0m
+[0;32mI (1113500) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.2 L:0-AN TOÀN[0m
+[0;32mI (1118790) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.1 L:0-AN TOÀN[0m
+[0;32mI (1124080) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.2 L:0-AN TOÀN[0m
+[0;32mI (1129370) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (1134660) LORA_SENDER: SENT: R:0.0% S:0.1% T:49.3 L:0-AN TOÀN[0m
+[0;32mI (1139690) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1144720) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (1150010) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1155300) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (1160590) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (1165620) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (1170650) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (1175680) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1180710) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1185740) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.6 L:0-AN TOÀN[0m
+[0;32mI (1190770) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (1195800) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (1200830) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (1205860) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1210890) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (1215920) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (1220950) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (1225980) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1231010) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (1236040) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (1241070) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.2 L:0-AN TOÀN[0m
+[0;32mI (1246100) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.5 L:0-AN TOÀN[0m
+[0;32mI (1251130) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1256160) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.1 L:0-AN TOÀN[0m
+[0;32mI (1261190) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.9 L:0-AN TOÀN[0m
+[0;32mI (1266220) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (1271250) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1276280) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.7 L:0-AN TOÀN[0m
+[0;32mI (1281310) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.3 L:0-AN TOÀN[0m
+[0;32mI (1286600) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.9 L:0-AN TOÀN[0m
+[0;32mI (1291890) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.9 L:0-AN TOÀN[0m
+[0;32mI (1296920) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.9 L:0-AN TOÀN[0m
+[0;32mI (1302210) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1307240) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1312270) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1317300) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1322330) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (1327360) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1332390) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1337420) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1342450) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (1347480) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1352510) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (1357540) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1362570) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1367600) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1372630) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1377660) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.4 L:0-AN TOÀN[0m
+[0;32mI (1382690) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1387720) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1392750) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (1398040) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1403330) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1408620) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1413650) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1418680) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.8 L:0-AN TOÀN[0m
+[0;32mI (1423710) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1428740) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1433770) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1438800) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1443830) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1448860) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (1453890) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1458920) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1463950) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (1468980) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (1474010) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1479040) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1484070) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1489100) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1494130) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.8 L:0-AN TOÀN[0m
+[0;32mI (1499160) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1504190) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.6 L:0-AN TOÀN[0m
+[0;32mI (1509220) LORA_SENDER: SENT: R:0.0% S:0.1% T:52.4 L:0-AN TOÀN[0m
+[0;32mI (1514250) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1519280) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1524310) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1529340) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1534370) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1539400) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1544690) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1549980) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1555270) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (1560560) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1565850) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+����������������������������������������������������������������1571140) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN
+[0;32mI (1576430) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1581720) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1586770) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1592060) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (1597350) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1602640) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1607930) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (1613220) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1618510) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (1623800) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (1628830) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (1633860) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1638890) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (1643920) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (1648950) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1653980) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1659010) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1664040) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1669070) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1674100) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1679130) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1684160) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (1689190) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1694220) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (1699250) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1704280) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1709310) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+����������������������������������������������������������������714340) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN
+[0;32mI (1719370) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1724400) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1729430) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1734460) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1739490) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1744520) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1749550) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1754580) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (1759610) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1764640) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1769670) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1774700) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1779730) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1784760) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1789790) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1794820) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1799850) LORA_SENDER: SENT: R:0.0% S:0.1% T:48.0 L:0-AN TOÀN[0m
+[0;32mI (1804880) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1809910) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1814940) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1819970) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1825000) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1830030) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1835060) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1840090) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1845120) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1850150) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1855180) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1860210) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (1865500) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1870790) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1875820) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.1 L:0-AN TOÀN[0m
+[0;32mI (1881110) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1886400) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (1891690) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1896980) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1902270) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (1907560) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (1912850) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1918140) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1923430) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1928720) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1934010) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1939300) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1944590) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1949880) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (1955170) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (1960460) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1965490) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1970520) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (1975550) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (1980580) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (1985610) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (1990640) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (1995670) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.7 L:0-AN TOÀN[0m
+[0;32mI (2000960) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (2006250) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2011330) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (2016620) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (2021650) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2026680) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2031710) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2036740) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2042030) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2047320) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (2052610) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2057900) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2063190) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2068480) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2073770) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2079060) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (2084350) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2089640) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2094930) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2100220) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2105300) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.3 L:0-AN TOÀN[0m
+[0;32mI (2110330) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2115620) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2120910) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2126200) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2131490) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2136780) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (2141810) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2146840) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (2151870) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2156900) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.2 L:0-AN TOÀN[0m
+[0;32mI (2162190) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (2167220) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2172250) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2177280) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+����������������������������������������������������������������2182310) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN
+[0;32mI (2187600) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2192630) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2197660) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.3 L:0-AN TOÀN[0m
+[0;32mI (2202950) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2208240) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2213270) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2218300) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2223330) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2228360) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2233570) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (2238600) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.3 L:0-AN TOÀN[0m
+[0;32mI (2243630) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2248660) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2253690) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.0 L:0-AN TOÀN[0m
+[0;32mI (2258720) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (2263750) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.3 L:0-AN TOÀN[0m
+[0;32mI (2268780) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2273810) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2278840) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (2283870) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.2 L:0-AN TOÀN[0m
+[0;32mI (2288900) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.6 L:0-AN TOÀN[0m
+[0;32mI (2294190) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (2299480) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.4 L:0-AN TOÀN[0m
+[0;32mI (2304770) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.2 L:0-AN TOÀN[0m
+[0;32mI (2309800) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.3 L:0-AN TOÀN[0m
+[0;32mI (2314830) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.5 L:0-AN TOÀN[0m
+[0;32mI (2320120) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+[0;32mI (2325150) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2330180) LORA_SENDER: SENT: R:0.0% S:0.1% T:45.8 L:0-AN TOÀN[0m
+[0;32mI (2335210) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2340240) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2345270) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2350300) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (2355590) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.6 L:0-AN TOÀN[0m
+[0;32mI (2360880) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (2366020) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2371050) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2376080) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2381110) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2386140) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2391170) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (2396200) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.1 L:0-AN TOÀN[0m
+����������������������������������������������������������������(2401230) LORA_SENDER: SENT: R:0.0% S:0.1% T:45.7 L:0-AN TOÀN
+[0;32mI (2406260) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.7 L:0-AN TOÀN[0m
+[0;32mI (2411290) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.8 L:0-AN TOÀN[0m
+[0;32mI (2416320) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (2421350) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (2426380) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.6 L:0-AN TOÀN[0m
+[0;32mI (2431410) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.6 L:0-AN TOÀN[0m
+[0;32mI (2436440) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.6 L:0-AN TOÀN[0m
+[0;32mI (2441470) LORA_SENDER: SENT: R:0.0% S:0.1% T:47.0 L:0-AN TOÀN[0m
+[0;32mI (2446500) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m
+[0;32mI (2451530) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.2 L:0-AN TOÀN[0m
+[0;32mI (2456560) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2461590) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.0 L:0-AN TOÀN[0m
+[0;32mI (2466620) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.4 L:0-AN TOÀN[0m
+[0;32mI (2471650) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.9 L:0-AN TOÀN[0m
+[0;32mI (2476680) LORA_SENDER: SENT: R:0.0% S:0.1% T:46.5 L:0-AN TOÀN[0m

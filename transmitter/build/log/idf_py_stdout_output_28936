@@ -1,0 +1,2236 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\landslide_transmitter.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\transmitter\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com6'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2c4h ( 49860) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c2ec vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c314 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e734 vaddr=40080000 size=018e4h (  6372) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1db3ch (121660) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003db64 vaddr=400818e4 size=0cf6ch ( 53100) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  856d78996...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (240) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (244) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.8[0m
+[0;32mI (1840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.5[0m
+[0;32mI (7230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (11440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.8[0m
+[0;32mI (12620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (16830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.8[0m
+[0;32mI (18010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (22220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.7[0m
+[0;32mI (23400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (27610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.7[0m
+[0;32mI (28790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (33000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.6[0m
+[0;32mI (34180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (38390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.5[0m
+[0;32mI (39570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (43780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.8[0m
+[0;32mI (44960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (49170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:38.4[0m
+[0;32mI (50350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (54560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (55740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (59950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.9[0m
+[0;32mI (61130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (65340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (66520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (70730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (71910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (76120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.4[0m
+[0;32mI (77300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (81510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.5[0m
+[0;32mI (82690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (86900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (88080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (92290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (93470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (97680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (98860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (103070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (104250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (108460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.8[0m
+[0;32mI (109640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (113850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.9[0m
+[0;32mI (115030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (119240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (120420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (124630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.5[0m
+[0;32mI (125810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (130020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (131200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (135410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.2[0m
+[0;32mI (136590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (140800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (141980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (146190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.5[0m
+[0;32mI (147370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (151580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (152760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (156970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (158150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (162360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.7[0m
+[0;32mI (163540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (167750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (168930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (173140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.5[0m
+[0;32mI (174320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+���������������������������������������������������������������� (178530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6
+[0;32mI (179710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (183920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (185100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (189310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.8[0m
+[0;32mI (190490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (194700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.5[0m
+[0;32mI (195880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (200090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:42.0[0m
+[0;32mI (201270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (205480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.4[0m
+[0;32mI (206660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (210870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.5[0m
+[0;32mI (212050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (216260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.2[0m
+[0;32mI (217440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (221650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.8[0m
+[0;32mI (222830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (227040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.8[0m
+[0;32mI (228220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (232430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.7[0m
+[0;32mI (233610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (237820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (239000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (243210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (244390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (248600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.8[0m
+[0;32mI (249780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (253990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.8[0m
+[0;32mI (255170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (259380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.8[0m
+[0;32mI (260560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (264770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (265950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (270160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.7[0m
+[0;32mI (271340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (275550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.7[0m
+[0;32mI (276730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (280940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.7[0m
+[0;32mI (282120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (286330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (287510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (291720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (292900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (297110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (298290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (302500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.9[0m
+[0;32mI (303680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (307890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.0[0m
+[0;32mI (309070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (313280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.7[0m
+[0;32mI (314460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (318670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.4[0m
+[0;32mI (319850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (324060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.9[0m
+[0;32mI (325240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (329450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (330630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (334840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (336020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (340230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.0[0m
+[0;32mI (341410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (345620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (346800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (351010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.0[0m
+[0;32mI (352190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (356400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.7[0m
+[0;32mI (357580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (361790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (362970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (367180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.0[0m
+[0;32mI (368360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (372570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (373750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (377960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.8[0m
+[0;32mI (379140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (383350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.9[0m
+[0;32mI (384530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (388740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (389920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (394130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.7[0m
+[0;32mI (395310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (399520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (400700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (404910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.0[0m
+[0;32mI (406090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (410300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.0[0m
+[0;32mI (411480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (415690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (416870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (421080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.4[0m
+[0;32mI (422260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (426470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.0[0m
+[0;32mI (427650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (431860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.8[0m
+[0;32mI (433040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (437250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.8[0m
+[0;32mI (438430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2c4h ( 49860) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c2ec vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c314 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e734 vaddr=40080000 size=018e4h (  6372) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1db3ch (121660) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003db64 vaddr=400818e4 size=0cf6ch ( 53100) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  856d78996...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (240) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (244) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (1840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 11:40:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c2c4h ( 49860) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001c2ec vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001c314 vaddr=3ffb0000 size=02418h (  9240) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001e734 vaddr=40080000 size=018e4h (  6372) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1db3ch (121660) map[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003db64 vaddr=400818e4 size=0cf6ch ( 53100) load[0m
+[0;32mI (194) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     landslide_transmitter[0m
+[0;32mI (218) app_init: App version:      v5.5-dirty[0m
+[0;32mI (222) app_init: Compile time:     Oct 26 2025 11:39:48[0m
+[0;32mI (227) app_init: ELF file SHA256:  856d78996...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (236) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (240) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (244) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (254) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (259) heap_init: At 3FFB2D58 len 0002D2A8 (180 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (269) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (275) heap_init: At 4008E850 len 000117B0 (69 KiB): IRAM[0m
+[0;33mW (281) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (309) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (320) main_task: Started on CPU0[0m
+[0;32mI (330) main_task: Calling app_main()[0m
+[0;32mI (450) main_task: Returned from app_main()[0m
+[0;32mI (660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (1840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.2[0m
+[0;32mI (7230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (11440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.5[0m
+[0;32mI (12620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (16830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.7[0m
+[0;32mI (18010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (22220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (23400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (27610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.4[0m
+[0;32mI (28790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (33000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.5[0m
+[0;32mI (34180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (38390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:40.4[0m
+[0;32mI (39570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (43780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (44960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (49170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.1[0m
+[0;32mI (50350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (54560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.6[0m
+[0;32mI (55740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (59950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:41.3[0m
+[0;32mI (61130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (65340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.5[0m
+[0;32mI (66520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (70730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:4.9[0m
+[0;32mI (71910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (76120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.7[0m
+[0;32mI (77300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (81510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.8[0m
+[0;32mI (82690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (86900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.8[0m
+[0;32mI (88080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (92290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.8[0m
+[0;32mI (93470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (97680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.8[0m
+[0;32mI (98860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (103070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.4[0m
+[0;32mI (104250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (108460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (109640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (113850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.3[0m
+[0;32mI (115030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (119240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (120420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (124630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.8[0m
+[0;32mI (125810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (130020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (131200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (135410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (136590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (140800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (141980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (146190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (147370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (151580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (152760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (156970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (158150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (162360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (163540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (167750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (168930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (173140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (174320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (178530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (179710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (183920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (185100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (189310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (190490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (194700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (195880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (200090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (201270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (205480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (206660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (210870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (212050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (216260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (217440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (221650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (222830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (227040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (228220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (232430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (233610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (237820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (239000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (243210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (244390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (248600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (249780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (253990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (255170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (259380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (260560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (264770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (265950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������270160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0
+[0;32mI (271340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (275550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (276730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (280940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (282120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (286330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (287510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (291720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (292900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (297110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (298290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (302500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (303680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (307890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (309070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (313280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (314460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (318670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (319850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (324060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (325240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (329450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (330630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (334840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (336020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (340230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (341410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (345620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (346800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (351010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.7[0m
+[0;32mI (352190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (356400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (357580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (361790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (362970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (367180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (368360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (372570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (373750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (377960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (379140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (383350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (384530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (388740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (389920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (394130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (395310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (399520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (400700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (404910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (406090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (410300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (411480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (415690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (416870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (421080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (422260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (426470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (427650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (431860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (433040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (437250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (438430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (442640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (443820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (448030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (449210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (453420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (454600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (458810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (459990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (464200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (465380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (469590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (470770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (474980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (476160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (480370) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (481550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (485760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (486940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (491150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (492330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (496540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (497720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (501930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (503110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (507320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (508500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (512710) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (513890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (518100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (519280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (523490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (524670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (528880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (530060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (534270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (535450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (539660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (540840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (545050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (546230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (550440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (551620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (555830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (557010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (561220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (562400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (566610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.8[0m
+[0;32mI (567790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (572000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (573180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (577390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (578570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (582780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (583960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (588170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (589350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (593560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (594740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (598950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (600130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (604340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (605520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (609730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (610910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (615120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (616300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (620510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (621690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (625900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (627080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (631290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (632470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (636680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (637860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (642070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (643250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (647460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (648640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9
+[0;32mI (654030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (658240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.8[0m
+[0;32mI (659420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (663630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (664810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (669020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (670200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (674410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (675590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������679800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0
+[0;32mI (680980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (685190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (686370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (690580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (691760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (695970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (697150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (701360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (702540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (706750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (707930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (712140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (713320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (717530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (718710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (722920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (724100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (728310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (729490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (733700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (734880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (739090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (740270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (744480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (745660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (749870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (751050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (755260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (756440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (760650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (761830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (766040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (767220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (771430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (772610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (776820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (778000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (782210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (783390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (787600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (788780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (792990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (794170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (798380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (799560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (803770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (804950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (809160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (810340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (814550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (815730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (819940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+����������������������������������������������������������������821120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN
+[0;32mI (825330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (826510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (830720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (831900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (836110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (837290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (841500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (842680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (846890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (848070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (852280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (853460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (857670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (858850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (863060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (864240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (868450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (869630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (873840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (875020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (879230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (880410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (884620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (885800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (890010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (891190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (895400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (896580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������(900790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3
+[0;32mI (901970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (906180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (907360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (911570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (912750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (916960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (918140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (922350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (923530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (927740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (928920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (933130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (934310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (938520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.4[0m
+[0;32mI (939700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (943910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (945090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (949300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (950480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (954690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (955870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (960080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (961260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (965470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (966650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (970860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (972040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (976250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (977430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (981640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (982820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (987030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (988210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (992420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (993600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (997810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (998990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1003200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (1004380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1008590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (1009770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1013980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.3[0m
+[0;32mI (1015160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1019370) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (1020550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1024760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (1025940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1030150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (1031330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1035540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (1036720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1040930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (1042110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1046320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (1047500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1051710) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (1052890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1057100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:2.9[0m
+[0;32mI (1058280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1062490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (1063670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1067880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (1069060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1073270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (1074450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1078660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (1079840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1084050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.2[0m
+[0;32mI (1085230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1089440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.1[0m
+[0;32mI (1090620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (1094830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:3.0[0m
+[0;32mI (1096010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+                                2990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.6
+[0;32mI (6184170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6188380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (6189560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6193770) LORA_SENDER: SENT SENSORS: R:0.0 S:1.6 T:33.3[0m
+[0;32mI (6194950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6199160) LORA_SENDER: SENT SENSORS: R:0.0 S:4.7 T:33.4[0m
+[0;32mI (6200340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6204550) LORA_SENDER: SENT SENSORS: R:0.0 S:27.4 T:33.4[0m
+[0;32mI (6205730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6209940) LORA_SENDER: SENT SENSORS: R:0.0 S:26.4 T:33.5[0m
+[0;32mI (6211120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6215330) LORA_SENDER: SENT SENSORS: R:0.0 S:33.1 T:33.5[0m
+[0;32mI (6216510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6220720) LORA_SENDER: SENT SENSORS: R:0.0 S:33.2 T:33.6[0m
+����������������������������������������������������������������6221900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN
+[0;32mI (6226110) LORA_SENDER: SENT SENSORS: R:0.0 S:39.7 T:33.3[0m
+[0;32mI (6227290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6231500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.3[0m
+[0;32mI (6232680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6236890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.9[0m
+[0;32mI (6238070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6242280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.3[0m
+[0;32mI (6243460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6247670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.4[0m
+[0;32mI (6248850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6253060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.3[0m
+[0;32mI (6254240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6258450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.3[0m
+[0;32mI (6259630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6263840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.2[0m
+[0;32mI (6265020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6269230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.0[0m
+[0;32mI (6270410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6274620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.2[0m
+[0;32mI (6275800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6280010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.1[0m
+[0;32mI (6281190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6285400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:29.3[0m
+[0;32mI (6286580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6290790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.3[0m
+[0;32mI (6291970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6296180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (6297360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6301570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.9[0m
+[0;32mI (6302750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6306960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.8[0m
+[0;32mI (6308140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6312350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.9[0m
+[0;32mI (6313530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6317740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.0[0m
+[0;32mI (6318920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6323130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.8[0m
+[0;32mI (6324310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6328520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.0[0m
+[0;32mI (6329700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6333910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6335090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6339300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.8[0m
+[0;32mI (6340480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6344690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.1[0m
+[0;32mI (6345870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6350080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.2[0m
+[0;32mI (6351260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6355470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.0[0m
+[0;32mI (6356650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6360860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (6362040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6366250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.1[0m
+[0;32mI (6367430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������(6371640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4
+[0;32mI (6372820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6377030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6378210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6382420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6383600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6387810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.8[0m
+[0;32mI (6388990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6393200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (6394380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6398590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6399770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6403980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6405160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6409370) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6410550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6414760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6415940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6420150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6421330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6425540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6426720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6430930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.8[0m
+[0;32mI (6432110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6436320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6437500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6441710) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6442890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6447100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6448280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6452490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6453670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6457880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6459060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6463270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6464450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6468660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6469840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6474050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6475230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6479440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6480620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6484830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6486010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6490220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6491400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6495610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6496790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6501000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6502180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6506390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6507570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6511780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (6512960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6517170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6518350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6522560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6523740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6527950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6529130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6533340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6534520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6538730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (6539910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6544120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6545300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6549510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6550690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6554900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6556080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6560290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:30.3[0m
+[0;32mI (6561470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6565680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6566860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6571070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6572250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6576460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.8[0m
+[0;32mI (6577640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6581850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6583030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6587240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6588420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6592630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6593810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6598020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6599200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6603410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6604590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6608800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (6609980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6614190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6615370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6619580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6620760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6624970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6626150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6630360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (6631540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6635750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6636930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6641140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6642320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6646530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.4[0m
+[0;32mI (6647710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6651920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6653100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6657310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6658490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6662700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6663880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6668090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6669270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6673480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6674660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6678870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.2[0m
+[0;32mI (6680050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6684260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (6685440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6689650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6690830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6695040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.1[0m
+[0;32mI (6696220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6700430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6701610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6705820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6707000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6711210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6712390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6716600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6717780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6721990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6723170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6727380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6728560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6732770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (6733950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6738160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6739340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6743550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6744730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6748940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6750120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6754330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6755510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6759720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6760900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6765110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6766290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������6770500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7
+[0;32mI (6771680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6775890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (6777070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6781280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6782460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6786670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6787850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6792060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6793240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6797450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (6798630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6802840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6804020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6808230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.1[0m
+[0;32mI (6809410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6813620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6814800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6819010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6820190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6824400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (6825580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6829790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6830970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6835180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6836360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6840570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (6841750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6845960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.6[0m
+[0;32mI (6847140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6851350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (6852530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6856740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6857920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6862130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (6863310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6867520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6868700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6872910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6874090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6878300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (6879480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6883690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (6884870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6889080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (6890260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6894470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6895650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6899860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (6901040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6905250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.3[0m
+[0;32mI (6906430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6910640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (6911820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6916030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6917210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6921420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6922600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6926810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6927990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6932200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (6933380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6937590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (6938770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6942980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6944160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6948370) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (6949550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6953760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6954940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6959150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6960330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6964540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (6965720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6969930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (6971110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6975320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (6976500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6980710) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.4[0m
+[0;32mI (6981890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6986100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (6987280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6991490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (6992670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (6996880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (6998060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7002270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (7003450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7007660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7008840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7013050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7014230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7018440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7019620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7023830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7025010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7029220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7030400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7034610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7035790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7040000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7041180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7045390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7046570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7050780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7051960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7056170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7057350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7061560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7062740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7066950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7068130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7072340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7073520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7077730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (7078910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7083120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7084300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7088510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7089690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7093900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7095080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������(7099290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1
+[0;32mI (7100470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7104680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7105860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7110070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7111250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7115460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7116640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7120850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (7122030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7126240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7127420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7131630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7132810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7137020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7138200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7142410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7143590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7147800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7148980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7153190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7154370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7158580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7159760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7163970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7165150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7169360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7170540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7174750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (7175930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7180140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7181320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7185530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7186710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7190920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7192100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7196310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7197490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7201700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7202880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7207090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (7208270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+���������������������������������������������������������������� (7212480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3
+[0;32mI (7213660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7217870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7219050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7223260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7224440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7228650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7229830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7234040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7235220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7239430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.1[0m
+[0;32mI (7240610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7244820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7246000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7250210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7251390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7255600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7256780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7260990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7262170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7266380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7267560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7271770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7272950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7277160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7278340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7282550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7283730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7287940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7289120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7293330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7294510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7298720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7299900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7304110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7305290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7309500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7310680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7314890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7316070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7320280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7321460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7325670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7326850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7331060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7332240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7336450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7337630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7341840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.1[0m
+[0;32mI (7343020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7347230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7348410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7352620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.4[0m
+[0;32mI (7353800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7358010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.9[0m
+[0;32mI (7359190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7363400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7364580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7368790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.4[0m
+[0;32mI (7369970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7374180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7375360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7379570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7380750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7384960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7386140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7390350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7391530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7395740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7396920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7401130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7402310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7406520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7407700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7411910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7413090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7417300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7418480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7422690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7423870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7428080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7429260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7433470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7434650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7438860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7440040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7444250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7445430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7449640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7450820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7455030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.4[0m
+[0;32mI (7456210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7460420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7461600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7465810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.4[0m
+[0;32mI (7466990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7471200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (7472380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������7476590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7
+[0;32mI (7477770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7481980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7483160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7487370) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7488550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7492760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7493940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7498150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7499330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7503540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7504720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7508930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7510110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7514320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7515500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7519710) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7520890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7525100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.3[0m
+[0;32mI (7526280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7530490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7531670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7535880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7537060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7541270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7542450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7546660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7547840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7552050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7553230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7557440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (7558620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7562830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7564010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7568220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7569400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7573610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.2[0m
+[0;32mI (7574790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7579000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7580180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7584390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7585570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7589780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7590960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7595170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7596350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7600560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7601740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9
+[0;32mI (7607130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7611340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7612520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7616730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7617910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7622120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7623300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7627510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7628690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7632900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7634080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7638290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7639470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7643680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (7644860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7649070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7650250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7654460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7655640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7659850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:30.6[0m
+[0;32mI (7661030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7665240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7666420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7670630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7671810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7676020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.3[0m
+[0;32mI (7677200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7681410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7682590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7686800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7687980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7692190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7693370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7697580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7698760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7702970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7704150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7708360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7709540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7713750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7714930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7719140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7720320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7724530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7725710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7729920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7731100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7735310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.3[0m
+[0;32mI (7736490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7740700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7741880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7746090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.2[0m
+[0;32mI (7747270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7751480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:33.2[0m
+[0;32mI (7752660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7756870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (7758050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7762260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7763440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7767650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7768830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7773040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7774220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7778430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7779610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7783820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (7785000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7789210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7790390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7794600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.4[0m
+[0;32mI (7795780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7799990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7801170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7805380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7806560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7810770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7811950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7816160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.1[0m
+[0;32mI (7817340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7821550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7822730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7826940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.4[0m
+[0;32mI (7828120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7832330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7833510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7837720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7838900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7843110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7844290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7848500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7849680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7853890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7855070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7859280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7860460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7864670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7865850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7870060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7871240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7875450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7876630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7880840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (7882020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7886230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7887410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7891620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.9[0m
+[0;32mI (7892800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7897010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.5[0m
+[0;32mI (7898190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7902400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (7903580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7907790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7908970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7913180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7914360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7918570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.7[0m
+[0;32mI (7919750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7923960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7925140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7929350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.4[0m
+[0;32mI (7930530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7934740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (7935920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7940130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.7[0m
+[0;32mI (7941310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7945520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7946700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7950910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (7952090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7956300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.8[0m
+[0;32mI (7957480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7961690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7962870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7967080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (7968260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7972470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.0[0m
+[0;32mI (7973650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7977860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.5[0m
+[0;32mI (7979040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7983250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7984430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7988640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (7989820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7994030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (7995210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (7999420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.9[0m
+[0;32mI (8000600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8004810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.2[0m
+[0;32mI (8005990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8010200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:32.1[0m
+[0;32mI (8011380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8015590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:31.6[0m
+[0;32mI (8016770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8020980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8022160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8026370) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8027550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8031760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8032940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8037150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.4[0m
+[0;32mI (8038330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8042540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.3[0m
+[0;32mI (8043720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8047930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.5[0m
+[0;32mI (8049110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8053320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8054500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8058710) LORA_SENDER: SENT SENSORS: R:0.0 S:17.6 T:34.6[0m
+[0;32mI (8059890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8064100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.2[0m
+[0;32mI (8065280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8069490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8070670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8074880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8076060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8080270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8081450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8085660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8086840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8091050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8092230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8096440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8097620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8101830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8103010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8107220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8108400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8112610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8113790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8118000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8119180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8123390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8124570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8128780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.8[0m
+[0;32mI (8129960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8134170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8135350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8139560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8140740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8144950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8146130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8150340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8151520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8155730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8156910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8161120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8162300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8166510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8167690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8171900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8173080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8177290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8178470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8182680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8183860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8188070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.0[0m
+[0;32mI (8189250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8193460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8194640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8198850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8200030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8204240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8205420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8209630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8210810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8215020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8216200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8220410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8221590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8225800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8226980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8231190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8232370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8236580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8237760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8241970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8243150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8247360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8248540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8252750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.2[0m
+[0;32mI (8253930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+����������������������������������������������������������������258140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.3
+[0;32mI (8259320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8263530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8264710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8268920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8270100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8274310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8275490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8279700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8280880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8285090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8286270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8290480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8291660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8295870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8297050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8301260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8302440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8306650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8307830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8312040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8313220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8317430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8318610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8322820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8324000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8328210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8329390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8333600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8334780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8338990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8340170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8344380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8345560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8349770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.4[0m
+[0;32mI (8350950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8355160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8356340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8360550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8361730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8365940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8367120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8371330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8372510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8376720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8377900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8382110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.4[0m
+[0;32mI (8383290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8387500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.4[0m
+[0;32mI (8388680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8392890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8394070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8398280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8399460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8403670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8404850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8409060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8410240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8414450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.2[0m
+[0;32mI (8415630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8419840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8421020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8425230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.2[0m
+[0;32mI (8426410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8430620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8431800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8436010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8437190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8441400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8442580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8446790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8447970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8452180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8453360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8457570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8458750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8462960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8464140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8468350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8469530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8473740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8474920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8479130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8480310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8484520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8485700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8489910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8491090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8495300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8496480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8500690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8501870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8506080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8507260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8511470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8512650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8516860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8518040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8522250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8523430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8527640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8528820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8533030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8534210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8538420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8539600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8543810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8544990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8549200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8550380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8554590) LORA_SENDER: SENT SENSORS: R:0.0 S:5.3 T:34.8[0m
+[0;32mI (8555770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8559980) LORA_SENDER: SENT SENSORS: R:0.0 S:4.8 T:35.0[0m
+[0;32mI (8561160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8565370) LORA_SENDER: SENT SENSORS: R:0.0 S:4.9 T:34.8[0m
+[0;32mI (8566550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8570760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8571940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8576150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8577330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8581540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8582720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8586930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8588110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8592320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8593500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8597710) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8598890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8603100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8604280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8608490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8609670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8613880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8615060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8619270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8620450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8624660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8625840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8630050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8631230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8635440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8636620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8640830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8642010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8646220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8647400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8651610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8652790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8657000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8658180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8662390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8663570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8667780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8668960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8673170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8674350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8678560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8679740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8683950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8685130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8689340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8690520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8694730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8695910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8700120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8701300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8705510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8706690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8710900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8712080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8716290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8717470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8721680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8722860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8727070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8728250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8732460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8733640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8737850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8739030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8743240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8744420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8748630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8749810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8754020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8755200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8759410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8760590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8764800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8765980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8770190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8771370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8775580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8776760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8780970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8782150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8786360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8787540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8791750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8792930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8797140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8798320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8802530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8803710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8807920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8809100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8813310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8814490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8818700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8819880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8824090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8825270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8829480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8830660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8834870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.4[0m
+[0;32mI (8836050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8840260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8841440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8845650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8846830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8851040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8852220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8856430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9[0m
+[0;32mI (8857610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8861820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.5[0m
+[0;32mI (8863000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8867210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.1[0m
+[0;32mI (8868390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+���������������������������������������������������������������� (8872600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.9
+[0;32mI (8873780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8877990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.2[0m
+[0;32mI (8879170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8883380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.6[0m
+[0;32mI (8884560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8888770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:35.0[0m
+[0;32mI (8889950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8894160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8895340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8899550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.7[0m
+[0;32mI (8900730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8904940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:34.8[0m
+[0;32mI (8906120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8910330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (8911510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8915720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.3[0m
+[0;32mI (8916900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8921110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.4[0m
+[0;32mI (8922290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8926500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (8927680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8931890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.3[0m
+[0;32mI (8933070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8937280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.4[0m
+[0;32mI (8938460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8942670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (8943850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8948060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (8949240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8953450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (8954630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8958840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (8960020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8964230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (8965410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8969620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.6[0m
+[0;32mI (8970800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8975010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (8976190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8980400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.6[0m
+[0;32mI (8981580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8985790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (8986970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8991180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (8992360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (8996570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (8997750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9001960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.4[0m
+[0;32mI (9003140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9007350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (9008530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9012740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.6[0m
+[0;32mI (9013920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9018130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (9019310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9023520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (9024700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9028910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (9030090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9034300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (9035480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9039690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (9040870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9045080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.2[0m
+[0;32mI (9046260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9050470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (9051650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9055860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9057040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9061250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (9062430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9066640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (9067820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9072030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.6[0m
+[0;32mI (9073210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9077420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9078600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9082810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9083990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9088200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9089380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9093590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9094770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9098980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9100160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9104370) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9105550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9109760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9110940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9115150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9116330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9120540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9121720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9125930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9127110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9131320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9132500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9136710) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9137890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9142100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9143280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9147490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9148670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9152880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9154060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9158270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9159450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9163660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9164840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9169050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9170230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9174440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9175620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9179830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9181010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9185220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9186400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9190610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9191790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9196000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9197180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9201390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9202570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9206780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9207960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9212170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9213350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9217560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9218740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9222950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.6[0m
+[0;32mI (9224130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9228340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9229520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9233730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9234910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9239120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9240300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9244510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9245690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9249900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9251080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9255290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9256470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9260680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9261860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9266070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9267250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9271460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9272640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9276850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+����������������������������������������������������������������30) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN
+[0;32mI (9282240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9283420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9287630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9288810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9293020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9294200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9298410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9299590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9303800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9304980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9309190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9310370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9314580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9315760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9319970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9321150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9325360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9326540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9330750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9331930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9336140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9337320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9341530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9342710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9346920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9348100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9352310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9353490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9357700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9358880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9363090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9364270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9368480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9369660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9373870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9375050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9379260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9380440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9384650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9385830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9390040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9391220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9395430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9396610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9400820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9402000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9406210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9407390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9411600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9412780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9416990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9418170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9422380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9423560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9427770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9428950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9433160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9434340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9438550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9439730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9443940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9445120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9449330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9450510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9454720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9455900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9460110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9461290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9465500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9466680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9470890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9472070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9476280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9477460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9481670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9482850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9487060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9488240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9492450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9493630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9497840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9499020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9503230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9504410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9508620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9509800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9514010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9515190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9519400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9520580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9524790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9525970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9530180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9531360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9535570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9536750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9540960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9542140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9546350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9547530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9551740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9552920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9557130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9558310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9562520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9563700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9567910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9569090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9573300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9574480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9578690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9579870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9584080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9585260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9589470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9590650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9594860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.8[0m
+���������������������������������������������������������������� (9596040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN
+[0;32mI (9600250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.9[0m
+[0;32mI (9601430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9605640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.7[0m
+[0;32mI (9606820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9611030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9612210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9616420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9617600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9621810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.6[0m
+[0;32mI (9622990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9627200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9628380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9632590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9633770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9637980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9639160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9643370) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9644550) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9648760) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.6[0m
+[0;32mI (9649940) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9654150) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9655330) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9659540) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9660720) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9664930) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9666110) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9670320) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9671500) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9675710) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9676890) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9681100) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9682280) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9686490) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9687670) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9691880) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9693060) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9697270) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9698450) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9702660) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9703840) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9708050) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9709230) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9713440) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9714620) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9718830) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9720010) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9724220) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9725400) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9729610) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9730790) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9735000) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9736180) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9740390) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.6[0m
+[0;32mI (9741570) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9745780) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9746960) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9751170) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.5[0m
+[0;32mI (9752350) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9756560) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9757740) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9761950) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9763130) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9767340) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.4[0m
+[0;32mI (9768520) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9772730) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9773910) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9778120) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.8[0m
+[0;32mI (9779300) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9783510) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9784690) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9788900) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9790080) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9794290) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.3[0m
+[0;32mI (9795470) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9799680) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9800860) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9805070) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9806250) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9810460) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (9811640) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9815850) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9817030) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9821240) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9822420) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9826630) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9827810) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9832020) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9833200) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9837410) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9838590) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9842800) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9843980) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9848190) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9849370) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9853580) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9854760) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9858970) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9860150) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9864360) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9865540) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9869750) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9870930) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9875140) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9876320) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9880530) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9881710) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9885920) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9887100) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9891310) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9892490) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9896700) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9897880) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9902090) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.5[0m
+[0;32mI (9903270) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9907480) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9908660) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9912870) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.5[0m
+[0;32mI (9914050) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9918260) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9919440) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9923650) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.5[0m
+[0;32mI (9924830) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9929040) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9930220) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9934430) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.9[0m
+[0;32mI (9935610) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9939820) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (9941000) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9945210) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9946390) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9950600) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9951780) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9955990) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.5[0m
+[0;32mI (9957170) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9961380) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.5[0m
+[0;32mI (9962560) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9966770) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9967950) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9972160) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (9973340) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9977550) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9978730) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9982940) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (9984120) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9988330) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9989510) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9993720) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (9994900) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (9999110) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (10000290) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10004500) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (10005680) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10009890) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (10011070) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10015280) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (10016460) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10020670) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (10021850) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10026060) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (10027240) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10031450) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10032630) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10036840) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10038020) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10042230) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (10043410) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10047620) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (10048800) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10053010) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.5[0m
+[0;32mI (10054190) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10058400) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10059580) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10063790) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (10064970) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10069180) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.1[0m
+[0;32mI (10070360) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10074570) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (10075750) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10079960) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.7[0m
+[0;32mI (10081140) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10085350) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10086530) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10090740) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.0[0m
+[0;32mI (10091920) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10096130) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10097310) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10101520) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (10102700) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10106910) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (10108090) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10112300) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.7[0m
+[0;32mI (10113480) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10117690) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10118870) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10123080) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (10124260) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10128470) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:36.3[0m
+[0;32mI (10129650) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10133860) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.3[0m
+[0;32mI (10135040) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10139250) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10140430) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10144640) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.4[0m
+[0;32mI (10145820) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10150030) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10151210) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10155420) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (10156600) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10160810) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (10161990) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10166200) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (10167380) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10171590) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.2[0m
+[0;32mI (10172770) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m
+[0;32mI (10176980) LORA_SENDER: SENT SENSORS: R:0.0 S:0.1 T:37.1[0m
+[0;32mI (10178160) LORA_SENDER: SENT LEVEL: Level:0-AN TOAN[0m

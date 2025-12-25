@@ -1,0 +1,42 @@
+Command: ninja all
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  cmake_minimum_required() should be called prior to this top-level project()
+  call.  Please see the cmake-commands(7) manual for usage documentation of
+  both commands.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/tools/cmake/utilities.cmake:374 (list):
+  Policy CMP0007 is not set: list command no longer ignores empty elements.
+  Run "cmake --help-policy CMP0007" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.  List has value =
+  [-mlongcalls;-Wno-frame-address;;;;;;;;;;;;;;;;;;;;;;;;;;-fno-builtin-memcpy;-fno-builtin-memset;-fno-builtin-bzero;;;;;;;;;;;;;;;;;;;;;;;;;;-fno-builtin-stpcpy;-fno-builtin-strncpy;;;;;;;;;;;;;;;;;;;;;;;;;;-mlongcalls;-Wno-frame-address;;-fno-builtin-memcpy;-fno-builtin-memset;-fno-builtin-bzero;-fno-builtin-stpcpy;-fno-builtin-strncpy].
+Call Stack (most recent call first):
+  C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/tools/cmake/toolchain-esp32.cmake:10 (remove_duplicated_flags)
+  build/CMakeFiles/3.30.2/CMakeSystem.cmake:6 (include)
+  CMakeLists.txt
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/tools/cmake/utilities.cmake:374 (list):
+  Policy CMP0007 is not set: list command no longer ignores empty elements.
+  Run "cmake --help-policy CMP0007" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.  List has value =
+  [-mlongcalls;-Wno-frame-address;;;;;;;;;;;;;;;;;;;;;;;;;;-fno-builtin-memcpy;-fno-builtin-memset;-fno-builtin-bzero;;;;;;;;;;;;;;;;;;;;;;;;;;-fno-builtin-stpcpy;-fno-builtin-strncpy;;;;;;;;;;;;;;;;;;;;;;;;;;-mlongcalls;-Wno-frame-address;;-fno-builtin-memcpy;-fno-builtin-memset;-fno-builtin-bzero;-fno-builtin-stpcpy;-fno-builtin-strncpy].
+Call Stack (most recent call first):
+  C:/PROJECT_ESP32/Espressif/frameworks/esp-idf-v5.5/tools/cmake/toolchain-esp32.cmake:15 (remove_duplicated_flags)
+  build/CMakeFiles/3.30.2/CMakeSystem.cmake:6 (include)
+  CMakeLists.txt
+This warning is for project developers.  Use -Wno-dev to suppress it.
+

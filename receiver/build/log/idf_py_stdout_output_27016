@@ -1,0 +1,242 @@
+Command: C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p com8 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\landslide_receiver.elf C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\examples\get-started\landslide_warning\receiver\build\bootloader\bootloader.elf --force-color -m 'C:\PROJECT_ESP32\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\PROJECT_ESP32\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'com8'
+� SPI Speed      : 40�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 26 2025 00:22:00[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31004h (200708) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=0004102c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00041054 vaddr=3ffb0000 size=03f58h ( 16216) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00044fb4 vaddr=40080000 size=0b064h ( 45156) load[0m
+[0;32mI (186) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a4f50h (675664) map[0m
+[0;32mI (417) esp_image: segment 5: paddr=000f4f78 vaddr=4008b064 size=0e40ch ( 58380) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     landslide_receiver[0m
+[0;32mI (476) app_init: App version:      v5.5-dirty[0m
+[0;32mI (480) app_init: Compile time:     Oct 26 2025 00:21:42[0m
+[0;32mI (485) app_init: ELF file SHA256:  c10b371e3...[0m
+[0;32mI (490) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (494) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB8798 len 00027868 (158 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40099470 len 00006B90 (26 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;33mW (545) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (557) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (568) main_task: Started on CPU0[0m
+[0;32mI (578) main_task: Calling app_main()[0m
+[0;32mI (618) wifi:wifi driver task: 3ffc0850, prio:23, stack:6656, core=0[0m
+[0;32mI (638) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (638) wifi:wifi certification version: v7.0[0m
+[0;32mI (638) wifi:config NVS flash: enabled[0m
+[0;32mI (638) wifi:config nano formatting: disabled[0m
+[0;32mI (638) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (648) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (648) wifi:Init management short buffer num: 32[0m
+[0;32mI (648) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (658) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (658) wifi:Init static rx buffer num: 10[0m
+[0;32mI (668) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (668) wifi_init: rx ba win: 6[0m
+[0;32mI (668) wifi_init: accept mbox: 6[0m
+[0;32mI (678) wifi_init: tcpip mbox: 32[0m
+[0;32mI (678) wifi_init: udp mbox: 6[0m
+[0;32mI (678) wifi_init: tcp mbox: 6[0m
+[0;32mI (678) wifi_init: tcp tx win: 5760[0m
+[0;32mI (688) wifi_init: tcp rx win: 5760[0m
+[0;32mI (688) wifi_init: tcp mss: 1440[0m
+[0;32mI (688) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (698) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (698) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (708) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (788) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (818) wifi:mode : sta (c4:de:e2:ca:bd:a0)[0m
+[0;32mI (818) wifi:enable tsf[0m
+[0;32mI (838) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (838) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (848) i2c: i2c_master_cmd_begin(1552): i2c driver not installed[0m
+[0;32mI (848) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (858) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1238) wifi:connected with nhà đầm trấu, aid = 10, channel 6, 40D, bssid = 50:bd:5f:72:ff:36[0m
+[0;32mI (1238) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (1238) wifi:pm start, type: 1[0m
+
+[0;32mI (1238) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1268) wifi:<ba-add>idx:0 (ifx:0, 50:bd:5f:72:ff:36), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1268) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1408) main_task: Returned from app_main()[0m
+[0;32mI (2578) esp_netif_handlers: sta ip: 192.168.71.102, mask: 255.255.255.0, gw: 192.168.71.1[0m
+[0;32mI (3648) wifi:<ba-add>idx:1 (ifx:0, 50:bd:5f:72:ff:36), tid:2, ssn:0, winSize:64[0m
+[0;32mI (4348) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (167408) LANDSLIDE_RECEIVER: RECEIVED: R:65.4 S:100.0 T:32.0[0m
+[0;32mI (168578) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (169328) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (347758) LANDSLIDE_RECEIVER: RECEIVED: R:66.4 S:100.0 T:32.5[0m
+[0;32mI (348938) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (349638) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (528238) LANDSLIDE_RECEIVER: RECEIVED: R:66.4 S:100.0 T:32.5[0m
+[0;32mI (529368) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (530068) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (708668) LANDSLIDE_RECEIVER: RECEIVED: R:66.4 S:100.0 T:32.3[0m
+[0;32mI (709768) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (710798) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (889468) LANDSLIDE_RECEIVER: RECEIVED: R:66.8 S:100.0 T:32.5[0m
+[0;32mI (890568) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (891288) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (1069918) LANDSLIDE_RECEIVER: RECEIVED: R:66.9 S:100.0 T:32.6[0m
+[0;32mI (1071098) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (1072178) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (1250598) LANDSLIDE_RECEIVER: RECEIVED: R:66.0 S:100.0 T:32.6[0m
+[0;32mI (1251748) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (1252508) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (1431128) LANDSLIDE_RECEIVER: RECEIVED: R:65.9 S:100.0 T:32.6[0m
+[0;32mI (1432258) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (1433228) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (1792078) LANDSLIDE_RECEIVER: RECEIVED: R:67.7 S:100.0 T:32.3[0m
+[0;32mI (1793178) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (1793888) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (1972278) LANDSLIDE_RECEIVER: RECEIVED: R:65.4 S:100.0 T:32.4[0m
+[0;32mI (1973378) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (1974108) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (2152928) LANDSLIDE_RECEIVER: RECEIVED: R:65.0 S:100.0 T:32.3[0m
+[0;32mI (2154108) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (2155138) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (2333408) LANDSLIDE_RECEIVER: RECEIVED: R:65.1 S:100.0 T:32.3[0m
+[0;32mI (2334548) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (2335508) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (2514048) LANDSLIDE_RECEIVER: RECEIVED: R:64.7 S:100.0 T:32.4[0m
+[0;32mI (2515158) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (2515908) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (2694658) LANDSLIDE_RECEIVER: RECEIVED: R:64.6 S:100.0 T:32.2[0m
+[0;32mI (2695778) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (2696838) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (2875078) LANDSLIDE_RECEIVER: RECEIVED: R:64.8 S:100.0 T:32.3[0m
+[0;32mI (2876208) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (2876988) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (3055358) LANDSLIDE_RECEIVER: RECEIVED: R:65.4 S:100.0 T:32.4[0m
+[0;32mI (3056528) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (3057288) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (3235838) LANDSLIDE_RECEIVER: RECEIVED: R:65.3 S:100.0 T:32.5[0m
+[0;32mI (3236938) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (3237728) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (3416048) LANDSLIDE_RECEIVER: RECEIVED: R:65.3 S:100.0 T:32.1[0m
+[0;32mI (3417208) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (3418348) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (3596508) LANDSLIDE_RECEIVER: RECEIVED: R:65.3 S:100.0 T:32.1[0m
+[0;32mI (3597638) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (3598378) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (3777228) LANDSLIDE_RECEIVER: RECEIVED: R:65.5 S:100.0 T:32.0[0m
+[0;32mI (3778408) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (3779108) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (3957508) LANDSLIDE_RECEIVER: RECEIVED: R:65.6 S:100.0 T:32.1[0m
+[0;32mI (3958648) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (3959338) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (4138018) LANDSLIDE_RECEIVER: RECEIVED: R:65.5 S:100.0 T:32.2[0m
+[0;32mI (4139198) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (4140158) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (4318518) LANDSLIDE_RECEIVER: RECEIVED: R:65.3 S:100.0 T:32.1[0m
+[0;32mI (4319688) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (4320398) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (4499188) LANDSLIDE_RECEIVER: RECEIVED: R:65.6 S:100.0 T:32.3[0m
+[0;32mI (4500288) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (4500938) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (4679588) LANDSLIDE_RECEIVER: RECEIVED: R:66.4 S:100.0 T:32.3[0m
+[0;32mI (4680748) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (4681458) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (4860058) LANDSLIDE_RECEIVER: RECEIVED: R:64.6 S:100.0 T:31.8[0m
+[0;32mI (4861198) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (4861888) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (5040528) LANDSLIDE_RECEIVER: RECEIVED: R:64.8 S:100.0 T:32.3[0m
+[0;32mI (5041708) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (5042708) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (5221208) LANDSLIDE_RECEIVER: RECEIVED: R:64.9 S:100.0 T:32.2[0m
+[0;32mI (5222388) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (5223138) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (5401728) LANDSLIDE_RECEIVER: RECEIVED: R:64.6 S:100.0 T:31.9[0m
+[0;32mI (5402898) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (5403578) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (5582278) LANDSLIDE_RECEIVER: RECEIVED: R:64.9 S:100.0 T:32.2[0m
+[0;32mI (5583458) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (5584528) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (5762758) LANDSLIDE_RECEIVER: RECEIVED: R:64.5 S:100.0 T:31.9[0m
+[0;32mI (5763858) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (5764528) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (5943358) LANDSLIDE_RECEIVER: RECEIVED: R:64.2 S:100.0 T:32.1[0m
+[0;32mI (5944478) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (5945148) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6123828) LANDSLIDE_RECEIVER: RECEIVED: R:64.4 S:100.0 T:32.1[0m
+[0;32mI (6125008) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (6125698) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6304528) LANDSLIDE_RECEIVER: RECEIVED: R:64.2 S:100.0 T:32.1[0m
+[0;32mI (6305698) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (6306428) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6484858) LANDSLIDE_RECEIVER: RECEIVED: R:64.1 S:100.0 T:32.3[0m
+[0;32mI (6486038) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (6487048) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6665338) LANDSLIDE_RECEIVER: RECEIVED: R:63.6 S:100.0 T:32.1[0m
+[0;32mI (6666438) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (6667178) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6845738) LANDSLIDE_RECEIVER: RECEIVED: R:63.2 S:100.0 T:32.2[0m
+[0;32mI (6846838) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (6847608) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7026138) LANDSLIDE_RECEIVER: RECEIVED: R:62.7 S:100.0 T:31.7[0m
+[0;32mI (7027268) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (7027928) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7206368) LANDSLIDE_RECEIVER: RECEIVED: R:62.7 S:100.0 T:31.5[0m
+[0;32mI (7207498) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (7208568) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7387018) LANDSLIDE_RECEIVER: RECEIVED: R:62.5 S:100.0 T:32.0[0m
+[0;32mI (7388188) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (7388888) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7567488) LANDSLIDE_RECEIVER: RECEIVED: R:62.8 S:100.0 T:31.5[0m
+[0;32mI (7568648) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (7569618) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7748228) LANDSLIDE_RECEIVER: RECEIVED: R:62.2 S:100.0 T:31.9[0m
+[0;32mI (7749408) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (7750158) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7928588) LANDSLIDE_RECEIVER: RECEIVED: R:62.6 S:100.0 T:31.9[0m
+[0;32mI (7929768) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (7930478) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8109268) LANDSLIDE_RECEIVER: RECEIVED: R:62.6 S:100.0 T:31.7[0m
+[0;32mI (8110408) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (8111118) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8289518) LANDSLIDE_RECEIVER: RECEIVED: R:62.6 S:100.0 T:31.7[0m
+[0;32mI (8290678) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (8291448) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8469988) LANDSLIDE_RECEIVER: RECEIVED: R:62.6 S:100.0 T:31.6[0m
+[0;32mI (8471118) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (8472168) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8650618) LANDSLIDE_RECEIVER: RECEIVED: R:63.2 S:100.0 T:32.0[0m
+[0;32mI (8651718) LANDSLIDE_RECEIVER: RECEIVED: Level:0-AN TOAN[0m
+[0;32mI (8652398) esp-x509-crt-bundle: Certificate validated[0m
